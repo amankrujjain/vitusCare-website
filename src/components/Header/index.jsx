@@ -197,7 +197,7 @@ export default function Header({ logoSrc, variant }) {
           <Spacing md="30" lg="30" xl="30" />
           <IconBoxStyle11
             title="Location"
-            subTitle="123 Anywhere St., Any City, 12345"
+            subTitle="Sun city, Success Tower, Gurgao, Haryana "
             iconSrc="/images/contact/icon_3.svg"
           />
           <Spacing md="60" lg="60" xl="60" />
