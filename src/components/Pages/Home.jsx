@@ -207,7 +207,7 @@ export default function Home() {
       {/* Start About Section */}
       <Section>
         <AboutSection
-          imgUrl="/images/home_1/about.png"
+          imgUrl="/images/home_1/about-test.png"
           spiningImgUrl="/images/home_1/about_mini.svg"
           title="About Us"
           subTitle="Vituscare"
