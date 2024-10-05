@@ -35,16 +35,11 @@ export default function Hero({
           <div className="cs_hero_info_wrap cs_shadow_1 cs_white_bg cs_radius_15 d-flex align-items-center justify-content-evenly">
             <h1 className="blue_color">Locate Us</h1>
 
-            <div className="d-flex align-items-center w-full" style={{ flexGrow: 1 }}>
-              <input
-                type="text"
-                placeholder="Enter location"
-                className="form-control cs_input_field"
-                style={{ flexGrow: 1, marginRight: '15px' }}
-              />
-              <button type="submit" className="cs_btn cs_style_1">
-                <span>Search</span>
-              </button>
+            <div className="d-flex align-items-center w-full justify-content-center" style={{ flexGrow: 1 }}>
+              <form className="d-flex" role="search" style={{width:'80%'}}>
+                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button className="btn blue_color" style={{border:'2px solid '}} type="submit">Search</button>
+              </form>
             </div>
           </div>
 

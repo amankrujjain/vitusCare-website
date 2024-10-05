@@ -107,13 +107,14 @@ const doctorData = [
 ];
 
 export default function DepartmentDetails() {
-  pageTitle('Department Details');
+  pageTitle('Service Details');
+  // At top of browser
   return (
     <>
       <BreadcrumbStyle2 />
       <Section topMd={135} topLg={100} topXl={100}>
         <AboutSectionStyle2
-          title="Pediatric Department"
+          title="Sample things"
           subTitle="This department specializes in the care of infants, children, adolescents, and provides a range of services including preventive care, developmental screenings, and treatment of childhood illnesses and conditions."
           imgUrl="/images/departments/department_img_1.png"
         />

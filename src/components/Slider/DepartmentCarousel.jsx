@@ -38,7 +38,7 @@ export default function DepartmentCarousel({ data }) {
     autoplay: false,
     autoplaySpeed: 4000,
     speed: 1000,
-    slidesToShow: 6,
+    slidesToShow: 5,
     swipeToSlide: true,
     responsive: [
       {
@@ -87,7 +87,7 @@ export default function DepartmentCarousel({ data }) {
             >
               <>
                 <img src={item.iconUrl} alt="Icon" />
-                <p className="cs_department_title cs_medium cs_heading_color cs_fs_20 mb-0">
+                <p className="cs_department_title cs_medium cs_heading_color cs_fs_20 mb-0 red_color">
                   {item.title}
                 </p>
               </>

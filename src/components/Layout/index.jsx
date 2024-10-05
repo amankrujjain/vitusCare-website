@@ -6,7 +6,7 @@ import Header from '../Header';
 export default function Layout() {
   return (
     <>
-      <Header logoSrc="/images/vitusCare.svg" variant="cs_heading_color" />
+      <Header logoSrc="/images/logo1.png" variant="cs_heading_color" />
       <Outlet />
       <Footer />
     </>

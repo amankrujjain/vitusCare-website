@@ -64,7 +64,7 @@ const departmentData = [
 ];
 
 export default function Departments() {
-  pageTitle('Departments');
+  pageTitle('Services');
   return (
     <>
       <BannerSectionStyle5

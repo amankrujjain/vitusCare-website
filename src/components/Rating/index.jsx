@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Rating({ ratingNumber }) {
   return (
-    <div className="cs_rating cs_accent_color">
+    <div className="cs_rating red_color">
       <div className="cs_rating_bg">
         <i>
           <Icon icon="fa6-regular:star" />

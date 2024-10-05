@@ -6,7 +6,7 @@ import Banner from '../Section/BannerSection';
 import Section from '../Section';
 import FeaturesSection from '../Section/FeaturesSection';
 import TestimonialSection from '../Section/TestimonialSection';
-import BlogSection from '../Section/BlogSection';
+// import BlogSection from '../Section/BlogSection';
 import AppointmentSection from '../Section/AppointmentSection';
 import FaqSection from '../Section/FaqSection';
 import AwardSection from '../Section/AwardSection';
@@ -134,35 +134,31 @@ const awardData = [
 ];
 const departmentData = [
   {
-    title: 'Emergency Department',
+    title: 'Homeodialysis',
     iconUrl: 'images/home_1/department_icon_1.svg',
     href: '/departments/department-details',
   },
   {
-    title: 'Pediatric Departement',
+    title: 'In-centre Dialysis',
     iconUrl: 'images/home_1/department_icon_2.svg',
     href: '/departments/department-details',
   },
   {
-    title: 'Gynecology Department',
+    title: 'Allied Services',
     iconUrl: 'images/home_1/department_icon_3.svg',
     href: '/departments/department-details',
   },
   {
-    title: 'Cardiology Department',
+    title: 'Nephrology',
     iconUrl: 'images/home_1/department_icon_4.svg',
     href: '/departments/department-details',
   },
   {
-    title: 'Neurology Department',
+    title: 'Other Special Services',
     iconUrl: 'images/home_1/department_icon_5.svg',
     href: '/departments/department-details',
   },
-  {
-    title: 'Psychiatry Department',
-    iconUrl: 'images/home_1/department_icon_6.svg',
-    href: '/departments/department-details',
-  },
+  
 ];
 
 export default function Home() {
@@ -173,7 +169,7 @@ export default function Home() {
         title="Your Partner in Health and Wellness"
         subTitle="We are committed to providing you with the best medical and healthcare services to help you live healthier and happier."
         bgUrl="/images/home_1/hero_bg.jpeg"
-        imgUrl="/images/home_1/hero_img.png"
+        imgUrl="/images/home_1/hero_img_1.png"
         videoBtnText="See how we work"
         videoUrl="https://www.youtube.com/embed/VcaAVWtP48A"
         infoList={[
@@ -229,7 +225,7 @@ export default function Home() {
       {/* Start Departments Section */}
       <Section topMd={185} topLg={150} topXl={110}>
         <DepartmentSection
-          sectionTitle="Departments"
+          sectionTitle="Services"
           bgUrl="images/home_1/department_bg.svg"
           data={departmentData}
         />
@@ -238,7 +234,7 @@ export default function Home() {
       {/* End Departments Section */}
       {/* Start Award Section */}
       <Section topMd={185} topLg={140} topXl={100}>
-        <AwardSection sectionTitle="Departments" data={awardData} />
+        <AwardSection sectionTitle="Awards" data={awardData} />
       </Section>
       {/* End Award Section */}
       {/* Start Testimonial */}
@@ -267,13 +263,13 @@ export default function Home() {
       </Section>
       {/* End Banner Section */}
       {/* Start Blog Section */}
-      <Section topMd={190} topLg={145} topXl={105}>
+      {/* <Section topMd={190} topLg={145} topXl={105}>
         <BlogSection
           sectionTitle="Latest Update"
           sectionTitleUp="BLOG POSTS"
           data={blogData}
         />
-      </Section>
+      </Section> */}
       {/* End Blog Section */}
       {/* Start Appointment Section */}
       <Section topMd={190} topLg={145} topXl={105} id="appointment">

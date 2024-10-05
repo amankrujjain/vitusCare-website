@@ -14,8 +14,8 @@ export default function Testimonial() {
             <div className="cs_testimonial_1_avatar">
               <img src="/images/home_1/avatar_1.png" alt="Avatar" />
               <div className="cs_testimonial_1_avatar_right">
-                <h3 className="cs_fs_24 cs_semibold mb-0">PAULO HUBERT</h3>
-                <p className="cs_heading_color mb-0">New York, USA</p>
+                <h3 className="blue_color cs_fs_24 cs_semibold mb-0">PAULO HUBERT</h3>
+                <p className="red_color cs_heading_color mb-0">New York, USA</p>
               </div>
             </div>
           </div>
@@ -25,8 +25,8 @@ export default function Testimonial() {
             <div className="cs_testimonial_1_avatar">
               <img src="/images/home_1/avatar_2.png" alt="Avatar" />
               <div className="cs_testimonial_1_avatar_right">
-                <h3 className="cs_fs_24 cs_semibold mb-0">LAURENCE VENDETTA</h3>
-                <p className="cs_heading_color mb-0">California, USA</p>
+                <h3 className="blue_color cs_fs_24 cs_semibold mb-0">LAURENCE VENDETTA</h3>
+                <p className="red_color cs_heading_color mb-0">California, USA</p>
               </div>
             </div>
           </div>
@@ -36,8 +36,8 @@ export default function Testimonial() {
             <div className="cs_testimonial_1_avatar">
               <img src="/images/home_1/avatar_3.png" alt="Avatar" />
               <div className="cs_testimonial_1_avatar_right">
-                <h3 className="cs_fs_24 cs_semibold mb-0">CASSANDRA RAUL</h3>
-                <p className="cs_heading_color mb-0">Florida</p>
+                <h3 className="blue_color cs_fs_24 cs_semibold mb-0">CASSANDRA RAUL</h3>
+                <p className="red_color cs_heading_color mb-0">Florida</p>
               </div>
             </div>
           </div>

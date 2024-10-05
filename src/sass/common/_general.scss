@@ -460,11 +460,11 @@ hr {
   border-radius: 30px;
   outline: none;
   transition: all 0.3s ease;
-  border: 1px solid rgba($accent, 0.5);
+  border: 1px solid rgba($vitusB, 0.5);
   padding: 26px 30px;
   background-color: transparent;
   &:focus {
-    border-color: $accent;
+    border-color: $vitusB;
   }
   @media (max-width: 1700px) {
     padding: 16px 20px;
@@ -474,13 +474,13 @@ hr {
 .cs_form_field_2 {
   width: 100%;
   display: block;
-  border: 1px solid #636363;
+  border: 1px solid $vitusB;
   outline: none;
   border-radius: 6px;
   padding: 13px 20px;
   transition: all 0.3s ease;
   &:focus {
-    border-color: $accent;
+    border-color: $vitusB;
   }
 }
 textarea.cs_form_field {
@@ -490,21 +490,21 @@ textarea::placeholder,
 input::placeholder,
 .cs_form_field::placeholder,
 .cs_form_field_2::placeholder {
-  color: $secondary;
+  color: $vitusB;
 }
 
 textarea:-ms-input-placeholder,
 input:-ms-input-placeholder,
 .cs_form_field:-ms-input-placeholder,
 .cs_form_field_2:-ms-input-placeholder {
-  color: $secondary;
+  color: $vitusB;
 }
 
 textarea::-ms-input-placeholder,
 input::-ms-input-placeholder,
 .cs_form_field::-ms-input-placeholder,
 .cs_form_field_2::-ms-input-placeholder {
-  color: $secondary;
+  color: $vitusR;
 }
 .cs_with_icon_input {
   position: relative;
@@ -512,7 +512,7 @@ input::-ms-input-placeholder,
     position: absolute;
     top: 30px;
     right: 30px;
-    color: $accent;
+    color: $vitusB;
     font-size: 20px;
     pointer-events: none;
     display: flex;
@@ -663,14 +663,14 @@ input::-ms-input-placeholder,
     list-style: none;
     margin: 0;
     padding: 0;
-    border-right: 1px solid $accent;
+    border-right: 1px solid $vitusB;
     width: 50%;
     flex: none;
     @media (max-width: 991px) {
       width: 100%;
       display: flex;
       justify-content: center;
-      border-top: 1px solid $accent;
+      border-top: 1px solid $vitusB;
       border-right: 0;
       .cs_testimonial_1_avatar_right {
         display: none;
@@ -690,7 +690,7 @@ input::-ms-input-placeholder,
         right: -5px;
         top: 50%;
         margin-top: -5px;
-        background-color: $accent;
+        background-color: $vitusR;
         transition: all 0.4s ease;
         @media (max-width: 991px) {
           right: initial;
@@ -817,7 +817,7 @@ input::-ms-input-placeholder,
       content: '';
       height: 20px;
       width: 20px;
-      border: 1px solid $accent;
+      border: 1px solid $vitusB;
       border-radius: 50%;
       position: absolute;
       top: 3px;
@@ -827,7 +827,7 @@ input::-ms-input-placeholder,
       content: '';
       height: 14px;
       width: 14px;
-      background-color: $accent;
+      background-color: $vitusR;
       border-radius: 50%;
       position: absolute;
       top: 6px;
@@ -1248,7 +1248,7 @@ input::-ms-input-placeholder,
   position: relative;
   input {
     width: 100%;
-    border: 1px solid $accent;
+    border: 1px solid $vitusR;
     height: 50px;
     border-radius: 20px;
     padding: 5px 20px;
@@ -1269,9 +1269,9 @@ input::-ms-input-placeholder,
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: #274760;
+    color: $vitusB;
     &:hover {
-      color: $accent;
+      color: $vitusB ;
     }
   }
 }

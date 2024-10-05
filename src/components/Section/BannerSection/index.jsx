@@ -8,8 +8,8 @@ export default function Banner({ bgUrl, imgUrl, title, subTitle }) {
         style={{ backgroundImage: `url(${bgUrl})` }}
       >
         <img src={imgUrl} alt="Banner" className="cs_banner_img" />
-        <h2 className="cs_banner_title cs_white_color cs_fs_72">{title}</h2>
-        <p className="cs_banner_subtitle cs_heading_color cs_fs_20 cs_medium m-0">
+        <h2 className="red_color cs_banner_title cs_white_color cs_fs_72">{title}</h2>
+        <p className="blue_color cs_banner_subtitle cs_heading_color cs_fs_20 cs_medium m-0">
           {subTitle}
         </p>
       </div>
