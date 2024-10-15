@@ -9,42 +9,35 @@ import TeamSection from '../Section/TeamSection';
 import GallerySection from '../Section/GallerySection';
 import AwardSectionStyle2 from '../Section/AwardSection/AwardSectionStyle2';
 import { pageTitle } from '../../helpers/PageTitle';
-const departmentData = [
+export const serviceData = [
   {
-    title: 'Diagnostic testing',
+    title: 'Hemo - Dialysis',
     subTitle:
       'Blood tests, imaging studies, and other tests to diagnose health conditions',
-    iconUrl: '/images/icons/calendar_white.svg',
-    href: '/departments/department-details',
+    iconUrl: '/images/icons/hemo-dialysis.svg',
+    href: '/departments/hemo-dialysis',
   },
   {
-    title: 'Rehabilitation services',
+    title: 'In - Centre Dialysis',
     subTitle:
       'Physical therapy, occupational therapy, and other services to help patients recover from injuries',
-    iconUrl: '/images/icons/calendar_white.svg',
-    href: '/departments/department-details',
+    iconUrl: '/images/icons/in-centre-dialysis.svg',
+    href: '/departments/in-centre-dialysis',
   },
   {
-    title: 'Preventive care',
+    title: 'Allied Servies',
     subTitle:
       'Annual checkups, immunizations, and health screenings care preventive',
-    iconUrl: '/images/icons/calendar_white.svg',
-    href: '/departments/department-details',
+    iconUrl: '/images/icons/allied-services.svg',
+    href: '/departments/allied-services',
   },
   {
-    title: 'Treatment for acute and chronic conditions',
+    title: 'Nephrology',
     subTitle:
       'Medication management, disease management, and other treatments to improve health outcomes',
-    iconUrl: '/images/icons/calendar_white.svg',
-    href: '/departments/department-details',
-  },
-  {
-    title: 'Mental health services',
-    subTitle:
-      'Counseling, therapy, and other services to help patients manage mental health conditions',
-    iconUrl: '/images/icons/calendar_white.svg',
-    href: '/departments/department-details',
-  },
+    iconUrl: '/images/icons/nephrology.svg',
+    href: '/departments/nephrology',
+  }
 ];
 
 const featureListData = [
@@ -151,16 +144,9 @@ export default function About() {
       <BannerSectionStyle3
         bgUrl="/images/about/banner_bg.svg"
         imgUrl="/images/about/banner_img.png"
-        title="Welcome to <br />VitusCare Medical & Healthcare Center"
-        subTitle="Your Partner in Health and Wellness"
+        title="Welcome to <br />VitusCare Medlife"
+        subTitle="We Make Quality Dialysis Accessible"
       />
-      <Section topMd={200} topLg={150} topXl={110}>
-        <DepartmentSectionStyle2
-          sectionTitle="Provides Our Best Services"
-          sectionTitleUp="SERVICES"
-          data={departmentData}
-        />
-      </Section>
       <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
         <FeaturesSectionStyle2
           sectionTitle="Why Choose Us"
@@ -172,6 +158,13 @@ export default function About() {
         <FunFactSection
           bgUrl="images/about/fun_fact_bg.jpeg"
           data={funFactData}
+        />
+      </Section>
+      <Section topMd={200} topLg={150} topXl={110}>
+        <DepartmentSectionStyle2
+          sectionTitle="Provides Our Best Services"
+          sectionTitleUp="SERVICES"
+          data={serviceData}
         />
       </Section>
       <Section topMd={190} topLg={145} topXl={105}>

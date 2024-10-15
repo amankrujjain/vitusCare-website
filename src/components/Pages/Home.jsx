@@ -134,29 +134,29 @@ const awardData = [
 ];
 const departmentData = [
   {
-    title: 'Homeodialysis',
-    iconUrl: 'images/home_1/department_icon_1.svg',
-    href: '/departments/department-details',
+    title: 'Hemodialysis',
+    iconUrl: 'images/home_1/hemo-dialysis.svg',
+    href: '/departments/hemo-dialysis',
   },
   {
     title: 'In-centre Dialysis',
-    iconUrl: 'images/home_1/department_icon_2.svg',
-    href: '/departments/department-details',
+    iconUrl: 'images/home_1/in-centre-dialysis.svg',
+    href: '/departments/in-centre-dialysis',
   },
   {
     title: 'Allied Services',
-    iconUrl: 'images/home_1/department_icon_3.svg',
-    href: '/departments/department-details',
+    iconUrl: 'images/home_1/allied-services.svg',
+    href: '/departments/allied-services',
   },
   {
     title: 'Nephrology',
-    iconUrl: 'images/home_1/department_icon_4.svg',
-    href: '/departments/department-details',
+    iconUrl: 'images/home_1/nephrology.svg',
+    href: '/departments/nephrology',
   },
   {
     title: 'Other Special Services',
-    iconUrl: 'images/home_1/department_icon_5.svg',
-    href: '/departments/department-details',
+    iconUrl: 'images/home_1/special-services.svg',
+    href: '/departments/other-special-services',
   },
   
 ];

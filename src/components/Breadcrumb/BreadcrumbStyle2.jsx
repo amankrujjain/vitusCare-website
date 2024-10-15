@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react';
 import Spacing from '../Spacing';
 import { Link } from 'react-router-dom';
 
-export default function BreadcrumbStyle2() {
+export default function BreadcrumbStyle2({ serviceName }) {
   const [urlSegments, setUrlSegments] = useState([]);
+
   useEffect(() => {
     const pathSegments = window.location.pathname
       .split('/')
       .filter(segment => segment !== '');
     setUrlSegments(pathSegments);
   }, []);
+
   return (
     <>
       <Spacing md="170" />
@@ -27,7 +29,8 @@ export default function BreadcrumbStyle2() {
                       {segment}
                     </Link>
                   ) : (
-                    <span>{segment}</span>
+                    // Conditionally display serviceName or segment at the end of the breadcrumb
+                    <span>{serviceName || segment}</span>
                   )}
                 </li>
               ))}

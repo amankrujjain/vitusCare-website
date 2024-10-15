@@ -58,6 +58,27 @@ export default function Header({ logoSrc, variant }) {
                       <Link to="/blog">Blog</Link>
                     </li>
                     <li className="menu-item-has-children">
+                      <Link to="/services">Our Servies</Link>
+                      <DropDown>
+                        <ul>
+                          <li>
+                            <Link to="/departments/hemo-dialysis">Hemo Dialysis</Link>
+                          </li>
+                          <li>
+                            <Link to="/departments/in-centre-dialysis">In Centre Dialysis</Link>
+                          </li>
+                          <li>
+                            <Link to="/departments/allied-services">
+                              Allied Services
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="/departments/nephrology">Nephrology</Link>
+                          </li>
+                        </ul>
+                      </DropDown>
+                    </li>
+                    <li className="menu-item-has-children">
                       <Link to="/">Pages</Link>
                       <DropDown>
                         <ul>

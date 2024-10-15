@@ -1,12 +1,14 @@
 import React from 'react';
 import BannerSectionStyle7 from '../Section/BannerSection/BannerSectionStyle7';
 import Section from '../Section';
+import { useParams } from 'react-router-dom';
 import AppointmentSection from '../Section/AppointmentSection';
 import BreadcrumbStyle2 from '../Breadcrumb/BreadcrumbStyle2';
 import AboutSectionStyle2 from '../Section/AboutSection/AboutSectionStyle2';
 import FeaturesSectionStyle3 from '../Section/FeaturesSection/FeaturesSectionStyle3';
 import TeamSectionStyle3 from '../Section/TeamSection/TeamSectionStyle3';
 import { pageTitle } from '../../helpers/PageTitle';
+import { serviceData } from './About';
 
 const featureData = [
   {
@@ -107,15 +109,32 @@ const doctorData = [
 ];
 
 export default function DepartmentDetails() {
-  pageTitle('Service Details');
+
+  console.log("Service data", serviceData)
+  const { departmentId } = useParams();
+
+  console.log('departmentId:', departmentId);
+
+
+  const department = serviceData.find(
+    (item) => item.href.split('/').pop() === departmentId
+  );
+
+  // Log the matched department data
+  console.log('department:', department);
+  if (!department) {
+    return <div>Service not found</div>;
+  }
+
+  pageTitle(`${department.title} Details`);
   // At top of browser
   return (
     <>
-      <BreadcrumbStyle2 />
+      <BreadcrumbStyle2 serviceName={department.title}/>
       <Section topMd={135} topLg={100} topXl={100}>
         <AboutSectionStyle2
-          title="Sample things"
-          subTitle="This department specializes in the care of infants, children, adolescents, and provides a range of services including preventive care, developmental screenings, and treatment of childhood illnesses and conditions."
+          title={department.title}
+          subTitle={department.subTitle}
           imgUrl="/images/departments/department_img_1.png"
         />
       </Section>

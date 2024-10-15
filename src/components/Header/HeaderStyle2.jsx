@@ -65,7 +65,7 @@ export default function HeaderStyle2({ logoSrc, variant, btnText, btnUrl }) {
                       </DropDown> */}
                     </li>
                     <li>
-                      <Link to="/about">About</Link>
+                      <Link to="/about">About Us</Link>
                     </li>
                     <li>
                       <Link to="/doctors">Find Doctor</Link>
@@ -73,6 +73,7 @@ export default function HeaderStyle2({ logoSrc, variant, btnText, btnUrl }) {
                     <li>
                       <Link to="/blog">Blog</Link>
                     </li>
+                    
                     <li className="menu-item-has-children">
                       <Link to="/">Pages</Link>
                       <DropDown>
