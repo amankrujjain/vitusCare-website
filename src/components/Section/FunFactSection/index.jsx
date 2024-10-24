@@ -3,7 +3,7 @@ import FunFact from '../../FunFact';
 
 export default function FunFactSection({ bgUrl, data }) {
   return (
-    <div className="container">
+    <div className="container" style={{marginTop:"35px"}}>
       <div
         className="cs_funfact_1_wrap cs_radius_30 cs_bg_filed"
         style={{ backgroundImage: `url(${bgUrl})` }}

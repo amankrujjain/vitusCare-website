@@ -15,6 +15,9 @@ import Timetable from './components/Pages/Timetable';
 import Contact from './components/Pages/Contact';
 import { useEffect } from 'react';
 import ErrorPage from './components/Pages/ErrorPage';
+// import Test from './Test';
+import { Toaster } from 'react-hot-toast';
+import Centers from './components/Pages/Centers';
 
 
 function App() {
@@ -24,28 +27,56 @@ function App() {
     window.scrollTo(0, 0);
   }, [pathname]);
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="doctors" element={<Doctors />} />
-        <Route path="doctors/:doctorId" element={<DoctorDetails />} />
-        <Route path="blog" element={<Blog />} />
-        <Route path="blog/:blogId" element={<BlogDetails />} />
-        <Route path="appointments" element={<Appointments />} />
-        <Route path="departments" element={<Departments />} />
-        <Route
-          path="departments/:departmentId"
-          element={<DepartmentDetails />}
-        />
-        <Route path="pricing-plan" element={<PricingPlan />} />
-        <Route path="gallery" element={<Gallery />} />
-        <Route path="timetable" element={<Timetable />} />
-        <Route path="contact" element={<Contact />} />
-      </Route>
-      
-      <Route path="*" element={<ErrorPage />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="doctors" element={<Doctors />} />
+          <Route path="centers" element={<Centers />} />
+          <Route path="doctors/:doctorId" element={<DoctorDetails />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="blog/:blogId" element={<BlogDetails />} />
+          <Route path="appointments" element={<Appointments />} />
+          <Route path="departments" element={<Departments />} />
+          <Route
+            path="departments/:departmentId"
+            element={<DepartmentDetails />}
+          />
+          <Route path="pricing-plan" element={<PricingPlan />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="timetable" element={<Timetable />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        gutter={8}
+        containerClassName=""
+        containerStyle={{}}
+        toastOptions={{
+          // Define default options
+          className: '',
+          duration: 5000,
+          style: {
+            background: '#2C2F76',
+            color: '#fff',
+          },
+
+          // Default options for specific types
+          success: {
+            duration: 2000,
+            theme: {
+              primary: 'green',
+              secondary: '#2C2F76',
+            },
+          },
+        }}
+      />
+    </>
   );
 }
 

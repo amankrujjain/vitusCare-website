@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Banner({ bgUrl, imgUrl, title, subTitle }) {
   return (
-    <div className="container">
+    <div className="container" >
       <div
         className="cs_banner cs_style_1 cs_bg_filed"
         style={{ backgroundImage: `url(${bgUrl})` }}

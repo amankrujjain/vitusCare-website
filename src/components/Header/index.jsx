@@ -28,12 +28,48 @@ export default function Header({ logoSrc, variant }) {
   return (
     <>
       <header
-        className={`cs_site_header cs_style1 cs_sticky_header ${
-          mobileToggle ? 'cs_mobile_toggle_active' : ''
-        } ${variant} ${isSticky ? 'cs_active_sticky' : ''}`}
+        className={`cs_site_header cs_style1 cs_sticky_header ${mobileToggle ? 'cs_mobile_toggle_active' : ''
+          } ${variant} ${isSticky ? 'cs_active_sticky' : ''}`}
       >
+        <nav className="blue_color cs_nav" style={{ justifyContent: "center", backgroundColor: "#e6e9ff", width: "100vw" }}>
+          <ul
+            className={`${mobileToggle ? 'cs_nav_list cs_active' : 'cs_nav_list'
+              }`}
+          >
+            <li>
+              <Link to="/appointments">Careers</Link>
+            </li>
+            <li className="menu-item-has-children justify-end">
+              <Link to="/partner-with-us">Partner with us</Link>
+              <DropDown>
+                <ul>
+                  <li>
+                    <Link to="/partner-with-us/doctors">For Doctors</Link>
+                  </li>
+                  <li>
+                    <Link to="/partner-with-us/hospitals">For Hospitals</Link>
+                  </li>
+                </ul>
+              </DropDown>
+            </li>
+            <button style={{ backgroundColor: "#2C2F76", border: "none", borderRadius: "20px", color: "white", padding: "0 15px" }}>
+              <Link to="/doctors">Find a center</Link>
+            </button>
+          </ul>
+          <span
+            className={
+              mobileToggle
+                ? 'cs_menu_toggle cs_teggle_active'
+                : 'cs_menu_toggle'
+            }
+            onClick={() => setMobileToggle(!mobileToggle)}
+          >
+            <span></span>
+          </span>
+        </nav>
         <div className="cs_main_header">
           <div className="container">
+
             <div className="cs_main_header_in">
               <div className="cs_main_header_left">
                 <Link className="cs_site_branding" to="/">
@@ -41,21 +77,17 @@ export default function Header({ logoSrc, variant }) {
                 </Link>
                 <nav className="blue_color cs_nav">
                   <ul
-                    className={`${
-                      mobileToggle ? 'cs_nav_list cs_active' : 'cs_nav_list'
-                    }`}
+                    className={`${mobileToggle ? 'cs_nav_list cs_active' : 'cs_nav_list'
+                      }`}
                   >
                     <li className="cs_nav">
                       <Link to="/">Home</Link>
                     </li>
-                    <li>
+                    <li className="cs_nav">
                       <Link to="/about">About</Link>
                     </li>
                     <li>
-                      <Link to="/doctors">Find Centre</Link>
-                    </li>
-                    <li>
-                      <Link to="/blog">Blog</Link>
+                      <Link to="/blog">Kidney Knowledge Center</Link>
                     </li>
                     <li className="menu-item-has-children">
                       <Link to="/services">Our Servies</Link>
@@ -113,9 +145,10 @@ export default function Header({ logoSrc, variant }) {
                         </ul>
                       </DropDown>
                     </li>
-                    <li>
-                      <Link to="/contact">Contact</Link>
-                    </li>
+                    <button style={{ backgroundColor: "#2C2F76", border: "none", borderRadius: "20px", color: "white", height: "50px", marginTop: "25px", padding:"0 15px" }}>
+                      <Link to="tel:+919862898628"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="#ee2327" d="M311.3 374.7c-8.2-16.9-18.8-29.2-37.1-21.7l-36.1 13.4c-28.9 13.4-43.3 0-57.7-20.1l-64.9-147.8c-8.1-16.9-3.9-32.8 14.4-40.3l50.5-20.1c18.3-7.5 15.4-23.4 7.2-40.3l-43.3-80.6c-8.2-16.9-25-21-43.3-13.5c-36.6 15.2-66.9 38.8-86.5 73.9c-24 42.9-12 102.5-7.2 127.6s21.6 69 43.3 114.2s40.7 80.7 57.7 100.8s57.7 75.1 108.2 87.3c41.4 10 86 1.6 122.6-13.5c18.3-7.5 18.4-23.4 10.2-40.4zm102.2-256.6h-59.1l78.8 78.8H256v39.4h177.2L354.5 315h59.1l98.5-98.5z" /></svg> +91 98628 98628</Link>
+                    </button>
+
                   </ul>
                   <span
                     className={
@@ -131,24 +164,6 @@ export default function Header({ logoSrc, variant }) {
               </div>
               <div className="cs_main_header_right">
                 <div className="cs_toolbox">
-                  <button
-                    className="cs_toolbox_btn cs_search_toggle_btn blue_color"
-                    type="button"
-                    onClick={() => setSearchToggle(!searchToggle)}
-                  >
-                    <svg
-                      width={30}
-                      height={30}
-                      viewBox="0 0 30 30"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M13.1684 0C5.91146 0 0 5.90944 0 13.164C0 20.4184 5.91146 26.3394 13.1684 26.3394C16.2681 26.3394 19.1188 25.2535 21.3719 23.4505L26.8571 28.931C27.1339 29.1962 27.5036 29.3426 27.887 29.3386C28.2704 29.3347 28.6371 29.1809 28.9084 28.91C29.1797 28.6392 29.3342 28.2729 29.3386 27.8896C29.3431 27.5064 29.1972 27.1365 28.9322 26.8595L23.4471 21.3762C25.2521 19.1204 26.3397 16.2662 26.3397 13.164C26.3397 5.90944 20.4254 0 13.1684 0ZM13.1684 2.926C18.8435 2.926 23.4099 7.49078 23.4099 13.164C23.4099 18.8371 18.8435 23.4134 13.1684 23.4134C7.4933 23.4134 2.92695 18.8371 2.92695 13.164C2.92695 7.49078 7.4933 2.926 13.1684 2.926Z"
-                        fill="#2C2F76"
-                      />
-                    </svg>
-                  </button>
                   <button
                     className="cs_toolbox_btn cs_sidebar_toggle_btn blue_color"
                     type="button"

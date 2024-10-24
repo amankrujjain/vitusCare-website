@@ -3,6 +3,7 @@ import SectionHeading from '../../SectionHeading';
 import Spacing from '../../Spacing';
 import Testimonial from '../../Testimonial';
 
+
 export default function TestimonialSection({ sectionTitle, sectionTitleDown }) {
   return (
     <div className="container">

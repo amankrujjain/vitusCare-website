@@ -1310,6 +1310,23 @@ input::-ms-input-placeholder,
     }
   }
 
+  .cs_doctor_profile_right2 {
+    flex: 1;
+    // padding: 180px 85px 100px 0px;
+    @media (max-width: 1700px) {
+      // padding: 150px 85px 70px 0px;
+    }
+    @media (max-width: 1400px) {
+      // padding: 150px 0px 70px 0px;
+    }
+    @media (max-width: 1199px) {
+      // padding: 150px 0px 0px 0px;
+    }
+    @media (max-width: 991px) {
+      // padding: 25px 0px 0px 0px;
+      width: 100%;
+    }
+  }
   .cs_doctor_profile_right {
     flex: 1;
     padding: 180px 85px 100px 0px;
@@ -1417,6 +1434,9 @@ input::-ms-input-placeholder,
         }
       }
     }
+  }
+  .general_visibility_hidden{
+    visibility: hidden;
   }
   .cs_doctor_img {
     max-width: 45%;

@@ -6,6 +6,7 @@ import Banner from '../Section/BannerSection';
 import Section from '../Section';
 import FeaturesSection from '../Section/FeaturesSection';
 import TestimonialSection from '../Section/TestimonialSection';
+import TestimonialSectionStyle2 from '../Section/TestimonialSection/TestimonialSectionStyle2'
 // import BlogSection from '../Section/BlogSection';
 import AppointmentSection from '../Section/AppointmentSection';
 import FaqSection from '../Section/FaqSection';
@@ -161,6 +162,37 @@ const departmentData = [
   
 ];
 
+const testimonialData = [
+  {
+    text: 'I recently had to bring my child to VitusCare for a minor injury, and I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive.”',
+    ratingNumber: '5',
+    avatarImgUrl: '/images/home_1/avatar_2.png',
+    avatarName: 'PAULO HUBERT',
+    avatarDesignation: 'New York, USA',
+  },
+  {
+    text: 'I recently had to bring my child to VitusCare for a minor injury, and I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive.”',
+    ratingNumber: '4.5',
+    avatarImgUrl: '/images/home_1/avatar_2.png',
+    avatarName: 'PAULO HUBERT',
+    avatarDesignation: 'New York, USA',
+  },
+  {
+    text: 'I recently had to bring my child to VitusCare for a minor injury, and I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive.”',
+    ratingNumber: '5',
+    avatarImgUrl: '/images/home_1/avatar_2.png',
+    avatarName: 'PAULO HUBERT',
+    avatarDesignation: 'New York, USA',
+  },
+  {
+    text: 'I recently had to bring my child to VitusCare for a minor injury, and I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive.”',
+    ratingNumber: '4.5',
+    avatarImgUrl: '/images/home_1/avatar_2.png',
+    avatarName: 'PAULO HUBERT',
+    avatarDesignation: 'New York, USA',
+  },
+];
+
 export default function Home() {
   pageTitle('Home');
   return (
@@ -234,21 +266,25 @@ export default function Home() {
       {/* End Departments Section */}
       {/* Start Award Section */}
       <Section topMd={185} topLg={140} topXl={100}>
-        <AwardSection sectionTitle="Awards" data={awardData} />
+        <AwardSection sectionTitle="VitusCare In News" data={awardData} />
       </Section>
       {/* End Award Section */}
       {/* Start Testimonial */}
+     {/* not using testimonial index file */}
       <Section
-        topMd={185}
-        topLg={140}
-        topXl={100}
+        className="cs_bg_filed"
+        style={{ backgroundImage: `url(/images/home_2/testimonial_bg.svg)`, marginTop:"35px" }}
+        topMd={190}
+        topLg={145}
+        topXl={105}
         bottomMd={200}
         bottomLg={150}
         bottomXl={110}
       >
-        <TestimonialSection
-          sectionTitle="Some Reviews"
-          sectionTitleDown="Of our clients"
+        <TestimonialSectionStyle2
+          sectionTitle="What Our Patients Say <br /> About Us"
+          sectionTitleUp="TESTIMONIALS"
+          data={testimonialData}
         />
       </Section>
       {/* End Testimonial */}
@@ -272,13 +308,13 @@ export default function Home() {
       </Section> */}
       {/* End Blog Section */}
       {/* Start Appointment Section */}
-      <Section topMd={190} topLg={145} topXl={105} id="appointment">
+      {/* <Section topMd={190} topLg={145} topXl={105} id="appointment">
         <AppointmentSection
           sectionTitle="Appointment"
           sectionTitleUp="BOOK AN"
           imgUrl="/images/home_1/appointment.jpeg"
         />
-      </Section>
+      </Section> */}
       {/* End Appointment Section */}
       {/* Start FAQ Section */}
       <Section topMd={190} topLg={145} topXl={105}>

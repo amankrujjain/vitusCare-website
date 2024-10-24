@@ -68,7 +68,7 @@ const featureListData = [
 ];
 
 const funFactData = [
-  { number: '20+', title: 'Years of experience' },
+  { number: '50+', title: 'Years of experience' },
   { number: '95%', title: 'Patient satisfaction rating' },
   { number: '5000+', title: 'Patients served annually' },
   { number: '10+', title: 'Healthcare providers on staff' },
