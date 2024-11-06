@@ -29,7 +29,7 @@ export default function AppointmentForm({onSuccess}) {
         <input
           type="text"
           className="cs_form_field"
-          placeholder="+91 986 289 8628"
+          placeholder="986 289 8628"
         />
         <div className="cs_height_42 cs_height_xl_25" />
       </div>
@@ -102,7 +102,7 @@ export default function AppointmentForm({onSuccess}) {
             href="tel:+919262892628"
             style={{ marginLeft: '10px', fontSize: '18px', fontWeight: 'bold', color: '#2c2f76', textDecoration: 'none' }}
           >
-            +91 92628 92628
+            92628 92628
           </a>
         </div>
       </div>

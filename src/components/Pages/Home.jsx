@@ -294,7 +294,8 @@ export default function Home() {
           bgUrl="images/home_1/cta_bg.svg"
           imgUrl="images/home_1/cta_img.png"
           title="Don’t Let Your Health Take a Backseat!"
-          subTitle="Schedule an appointment with one of our experienced medical professionals today!"
+          subTitle="get your quick health check up with our GFR calculator!"
+          buttonUrl="/grf-calculator"
         />
       </Section>
       {/* End Banner Section */}

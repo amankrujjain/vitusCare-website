@@ -11,102 +11,58 @@ export default function Header({ logoSrc, variant }) {
   const [mobileToggle, setMobileToggle] = useState(false);
   const [sideNav, setSideNav] = useState(false);
   const [searchToggle, setSearchToggle] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
+      setIsSticky(window.scrollY > 0);
     };
     window.addEventListener('scroll', handleScroll);
-    // Cleanup function to remove the event listener
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
     <>
       <header
-        className={`cs_site_header cs_style1 cs_sticky_header ${mobileToggle ? 'cs_mobile_toggle_active' : ''
-          } ${variant} ${isSticky ? 'cs_active_sticky' : ''}`}
+        className={`cs_site_header cs_style1 cs_sticky_header ${mobileToggle ? 'cs_mobile_toggle_active' : ''} ${variant} ${isSticky ? 'cs_active_sticky' : ''}`}
       >
         <nav className="blue_color cs_nav" style={{ justifyContent: "center", backgroundColor: "#e6e9ff", width: "100vw" }}>
-          <ul
-            className={`${mobileToggle ? 'cs_nav_list cs_active' : 'cs_nav_list'
-              }`}
-          >
-            <li>
-              <Link to="/appointments">Careers</Link>
-            </li>
+          <ul className={`${mobileToggle ? 'cs_nav_list cs_active' : 'cs_nav_list'}`}>
+            <li><Link to="/appointments">Careers</Link></li>
             <li className="menu-item-has-children justify-end">
               <Link to="/partner-with-us">Partner with us</Link>
               <DropDown>
                 <ul>
-                  <li>
-                    <Link to="/partner-with-us/doctors">For Doctors</Link>
-                  </li>
-                  <li>
-                    <Link to="/partner-with-us/hospitals">For Hospitals</Link>
-                  </li>
+                  <li><Link to="/partner-with-us/doctors">For Doctors</Link></li>
+                  <li><Link to="/partner-with-us/hospitals">For Hospitals</Link></li>
                 </ul>
               </DropDown>
             </li>
             <button style={{ backgroundColor: "#2C2F76", border: "none", borderRadius: "20px", color: "white", padding: "0 15px" }}>
-              <Link to="/doctors">Find a center</Link>
+              <Link to="find-our-centers">Find a center</Link>
             </button>
           </ul>
-          <span
-            className={
-              mobileToggle
-                ? 'cs_menu_toggle cs_teggle_active'
-                : 'cs_menu_toggle'
-            }
-            onClick={() => setMobileToggle(!mobileToggle)}
-          >
-            <span></span>
-          </span>
         </nav>
+
         <div className="cs_main_header">
           <div className="container">
-
             <div className="cs_main_header_in">
               <div className="cs_main_header_left">
                 <Link className="cs_site_branding" to="/">
                   <img src={logoSrc} alt="Logo" width={210} />
                 </Link>
                 <nav className="blue_color cs_nav">
-                  <ul
-                    className={`${mobileToggle ? 'cs_nav_list cs_active' : 'cs_nav_list'
-                      }`}
-                  >
-                    <li className="cs_nav">
-                      <Link to="/">Home</Link>
-                    </li>
-                    <li className="cs_nav">
-                      <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                      <Link to="/blog">Kidney Knowledge Center</Link>
-                    </li>
+                  <ul className={`${mobileToggle ? 'cs_nav_list cs_active' : 'cs_nav_list'}`}>
+                    <li className="cs_nav"><Link to="/">Home</Link></li>
+                    <li className="cs_nav"><Link to="/about">About</Link></li>
+                    <li><Link to="/blog">Kidney Knowledge Center</Link></li>
                     <li className="menu-item-has-children">
-                      <Link to="/services">Our Servies</Link>
+                      <Link to="#">Our Services</Link>
                       <DropDown>
                         <ul>
-                          <li>
-                            <Link to="/departments/hemo-dialysis">Hemo Dialysis</Link>
-                          </li>
-                          <li>
-                            <Link to="/departments/in-centre-dialysis">In Centre Dialysis</Link>
-                          </li>
-                          <li>
-                            <Link to="/departments/allied-services">
-                              Allied Services
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="/departments/nephrology">Nephrology</Link>
-                          </li>
+                          <li><Link to="/departments/hemo-dialysis">Hemo Dialysis</Link></li>
+                          <li><Link to="/departments/in-centre-dialysis">In Centre Dialysis</Link></li>
+                          <li><Link to="/departments/allied-services">Allied Services</Link></li>
+                          <li><Link to="/departments/nephrology">Nephrology</Link></li>
                         </ul>
                       </DropDown>
                     </li>
@@ -114,54 +70,48 @@ export default function Header({ logoSrc, variant }) {
                       <Link to="/">Pages</Link>
                       <DropDown>
                         <ul>
-                          <li>
-                            <Link to="/appointments">Appointments</Link>
-                          </li>
-                          <li>
-                            <Link to="/departments">Departments</Link>
-                          </li>
-                          <li>
-                            <Link to="/departments/department-details">
-                              Department Details
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="/doctors">Doctors</Link>
-                          </li>
-                          <li>
-                            <Link to="doctors/doctor-details">
-                              Doctor Details
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="/pricing-plan">Pricing Plan</Link>
-                          </li>
-                          <li>
-                            <Link to="/gallery">Gallery</Link>
-                          </li>
-                          <li>
-                            <Link to="/timetable">Timetable</Link>
-                          </li>
+                          <li><Link to="/appointments">Appointments</Link></li>
+                          <li><Link to="/departments">Departments</Link></li>
+                          <li><Link to="/departments/department-details">Department Details</Link></li>
+                          <li><Link to="/doctors">Doctors</Link></li>
+                          <li><Link to="/doctors/doctor-details">Doctor Details</Link></li>
+                          <li><Link to="/pricing-plan">Pricing Plan</Link></li>
+                          <li><Link to="/gallery">Gallery</Link></li>
+                          <li><Link to="/timetable">Timetable</Link></li>
                         </ul>
                       </DropDown>
                     </li>
-                    <button style={{ backgroundColor: "#2C2F76", border: "none", borderRadius: "20px", color: "white", height: "50px", marginTop: "25px", padding:"0 15px" }}>
-                      <Link to="tel:+919862898628"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="#ee2327" d="M311.3 374.7c-8.2-16.9-18.8-29.2-37.1-21.7l-36.1 13.4c-28.9 13.4-43.3 0-57.7-20.1l-64.9-147.8c-8.1-16.9-3.9-32.8 14.4-40.3l50.5-20.1c18.3-7.5 15.4-23.4 7.2-40.3l-43.3-80.6c-8.2-16.9-25-21-43.3-13.5c-36.6 15.2-66.9 38.8-86.5 73.9c-24 42.9-12 102.5-7.2 127.6s21.6 69 43.3 114.2s40.7 80.7 57.7 100.8s57.7 75.1 108.2 87.3c41.4 10 86 1.6 122.6-13.5c18.3-7.5 18.4-23.4 10.2-40.4zm102.2-256.6h-59.1l78.8 78.8H256v39.4h177.2L354.5 315h59.1l98.5-98.5z" /></svg> +91 98628 98628</Link>
+
+                    {/* Mobile-only links */}
+                    <li className="your-class"><Link to="/appointments">Careers</Link></li>
+                    <li className="menu-item-has-children your-class">
+                      <Link to="/partner-with-us">Partner with us</Link>
+                      <DropDown>
+                        <ul>
+                          <li><Link to="/partner-with-us/doctors">For Doctors</Link></li>
+                          <li><Link to="/partner-with-us/hospitals">For Hospitals</Link></li>
+                        </ul>
+                      </DropDown>
+                    </li>
+                    <button className="your-class" style={{ backgroundColor: "#2C2F76", border: "none", borderRadius: "20px", color: "white", padding: "0 15px" }}>
+                      <Link to="find-our-centers">Find a center</Link>
                     </button>
 
+                    <button className='responsive-button'>
+                      <Link to="tel:+919862898628">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                          <path fill="#ee2327" d="M311.3 374.7c-8.2-16.9-18.8-29.2-37.1-21.7l-36.1 13.4c-28.9 13.4-43.3 0-57.7-20.1l-64.9-147.8c-8.1-16.9-3.9-32.8 14.4-40.3l50.5-20.1c18.3-7.5 15.4-23.4 7.2-40.3l-43.3-80.6c-8.2-16.9-25-21-43.3-13.5c-36.6 15.2-66.9 38.8-86.5 73.9c-24 42.9-12 102.5-7.2 127.6s21.6 69 43.3 114.2s40.7 80.7 57.7 100.8s57.7 75.1 108.2 87.3c41.4 10 86 1.6 122.6-13.5c18.3-7.5 18.4-23.4 10.2-40.4zm102.2-256.6h-59.1l78.8 78.8H256v39.4h177.2L354.5 315h59.1l98.5-98.5z" />
+                        </svg> Call For Dialysis - 98628 98628
+                      </Link>
+                    </button>
                   </ul>
-                  <span
-                    className={
-                      mobileToggle
-                        ? 'cs_menu_toggle cs_teggle_active'
-                        : 'cs_menu_toggle'
-                    }
-                    onClick={() => setMobileToggle(!mobileToggle)}
-                  >
+                  <span className={mobileToggle ? 'cs_menu_toggle cs_toggle_active' : 'cs_menu_toggle'} onClick={() => setMobileToggle(!mobileToggle)}>
                     <span></span>
                   </span>
                 </nav>
               </div>
+
+              {/* Sidebar button */}
               <div className="cs_main_header_right">
                 <div className="cs_toolbox">
                   <button
@@ -196,6 +146,8 @@ export default function Header({ logoSrc, variant }) {
           </div>
         </div>
       </header>
+
+      {/* Sidebar Component */}
       <div className={`cs_sidenav ${sideNav ? 'active' : ''}`}>
         <div
           className="cs_sidenav_overlay"
@@ -211,75 +163,27 @@ export default function Header({ logoSrc, variant }) {
           </button>
           <div className="cs_logo_box">
             <img src="/images/logo1.png" alt="Logo" />
-            <div className="cs_height_15" />
-            {/* <h3 className="red_title cs_fs_24 cs_semibold mb-0">
-              Your Partner in Health and Wellness
-            </h3> */}
+            <Spacing md="15" />
           </div>
-          <Spacing md="35" lg="35" xl="35" />
+          <Spacing md="35" lg="50" />
           <hr />
-          <Spacing md="35" lg="50" xl="35" />
+          <Spacing md="35" lg="50" />
           <IconBoxStyle11
             title="Phone"
-            subTitle="+91-9862898628"
+            subTitle="98628 98628"
             iconSrc="/images/contact/icon_1.svg"
           />
-          <Spacing md="30" lg="30" xl="30" />
+          <Spacing md="30" lg="30" />
           <IconBoxStyle11
             title="Email"
             subTitle="support@vituscare.com"
             iconSrc="/images/contact/icon_2.svg"
           />
-          <Spacing md="30" lg="30" xl="30" />
-          <IconBoxStyle11
-            title="Location"
-            subTitle="Sun city, Success Tower, Gurgao, Haryana "
-            iconSrc="/images/contact/icon_3.svg"
-          />
-          <Spacing md="60" lg="60" xl="60" />
-          <Newsletter />
-          <Spacing md="70" lg="50" xl="50" />
+          <Spacing md="70" lg="50" />
           <hr />
-          <Spacing md="70" lg="50" xl="50" />
+          <Spacing md="70" lg="50" />
           <SocialWidget />
         </div>
-      </div>
-      <div className={`cs_header_search blue_color ${searchToggle ? 'active' : ''}`}>
-        <div className="cs_header_search_in blue_color">
-          <div className="container">
-            <div className="cs_header_search_box blue_color">
-              <form className="cs_search_form blue_color">
-                <input type="text" placeholder="Search Doctors" />
-                <button className="cs_search_btn blue_color">
-                  <svg
-                    width={18}
-                    height={18}
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.07914 0C3.62682 0 0 3.62558 0 8.07641C0 12.5272 3.62682 16.1599 8.07914 16.1599C9.98086 16.1599 11.7299 15.4936 13.1122 14.3875L16.4775 17.7498C16.6473 17.9126 16.8741 18.0024 17.1094 18C17.3446 17.9975 17.5695 17.9032 17.736 17.737C17.9025 17.5708 17.9972 17.3461 17.9999 17.111C18.0027 16.8758 17.9132 16.6489 17.7506 16.4789L14.3853 13.1148C15.4928 11.7308 16.16 9.97968 16.16 8.07641C16.16 3.62558 12.5315 0 8.07914 0ZM8.07914 1.79517C11.561 1.79517 14.3625 4.59577 14.3625 8.07641C14.3625 11.557 11.561 14.3647 8.07914 14.3647C4.59732 14.3647 1.79575 11.557 1.79575 8.07641C1.79575 4.59577 4.59732 1.79517 8.07914 1.79517Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </button>
-              </form>
-              <button
-                className="cs_close"
-                type="button"
-                onClick={() => setSearchToggle(!searchToggle)}
-              >
-                {/* need to ass the same color cross svg */}
-                <img src="/images/icons/close.svg" alt="Close" />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          className="cs_sidenav_overlay"
-          onClick={() => setSearchToggle(!searchToggle)}
-        />
       </div>
     </>
   );

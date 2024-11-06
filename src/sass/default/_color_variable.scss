@@ -12,3 +12,29 @@ $accent: #307bc4;
 $text_color: #7c8088;
 $vitusB: #2C2F76;
 $vitusR: #EE2327;
+
+
+// -------------------------------------------------
+
+// Creen sizes
+
+// Define breakpoints for different screen sizes
+$breakpoint-small: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-large: 1024px;
+$breakpoint-extra-large: 1280px;
+
+// Default: hidden on all screen sizes
+.your-class {
+  display: none;
+
+  // Show only on small and tablet screens
+  @media (max-width: $breakpoint-large) and (min-width: $breakpoint-small) {
+    display: block;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    display: block;
+  }
+}
+

@@ -154,12 +154,6 @@ export default function About() {
           data={featureListData}
         />
       </Section>
-      <Section>
-        <FunFactSection
-          bgUrl="images/about/fun_fact_bg.jpeg"
-          data={funFactData}
-        />
-      </Section>
       <Section topMd={200} topLg={150} topXl={110}>
         <DepartmentSectionStyle2
           sectionTitle="Provides Our Best Services"

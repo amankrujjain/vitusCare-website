@@ -6,7 +6,7 @@ export default function FunFact({ number, title }) {
     <div className="cs_funfact cs_style_1 text-center">
       <h2 className="cs_funfact_number cs_fs_72">
         {number === '51,00,000' ? (
-          <CountUp start={5000000} end={5100000} duration={2} enableScrollSpy />
+          <CountUp start={5000000} end={5100000} duration={200000} enableScrollSpy />
         ) : (
           number
         )}

@@ -1,3 +1,59 @@
+
+.responsive-button {
+  background-color: #2C2F76;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  height: 50px;
+  padding: 0 15px;
+  margin-top: 25px;
+  font-size: 16px; // Base font size for desktop
+
+  svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+
+  // Adjustments for tablets and smaller screens
+  @media (max-width: 1024px) {
+    height: 45px;
+    padding: 0 12px;
+    font-size: 14px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 40px;
+    padding: 0 10px;
+    font-size: 12px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    height: 35px;
+    padding: 0 8px;
+    font-size: 16px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+
+
+// ----------------------------------------------------------
+
 .cs_site_header.cs_style1.cs_active_sticky {
   background-color: #fff;
 }

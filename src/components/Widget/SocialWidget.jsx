@@ -17,9 +17,6 @@ export default function SocialWidget() {
           <Icon icon="fa-brands:linkedin-in" />
         </Link>
         <Link to="/">
-          <Icon icon="fa-brands:twitter" />
-        </Link>
-        <Link to="/">
           <Icon icon="fa-brands:instagram" />
         </Link>
       </div>

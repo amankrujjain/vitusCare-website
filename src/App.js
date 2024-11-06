@@ -18,6 +18,7 @@ import ErrorPage from './components/Pages/ErrorPage';
 // import Test from './Test';
 import { Toaster } from 'react-hot-toast';
 import Centers from './components/Pages/Centers';
+import GfrCalculator from './components/Pages/GfrCalculator';
 
 
 function App() {
@@ -43,6 +44,8 @@ function App() {
             path="departments/:departmentId"
             element={<DepartmentDetails />}
           />
+          <Route path='/find-our-centers'element={<Centers/>}/>
+          <Route path='/gfr-calculator' element={<GfrCalculator/>}/>
           <Route path="pricing-plan" element={<PricingPlan />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="timetable" element={<Timetable />} />
@@ -50,6 +53,7 @@ function App() {
         </Route>
 
         <Route path="*" element={<ErrorPage />} />
+      {/* <Test/> */}
       </Routes>
       <Toaster
         position="top-center"

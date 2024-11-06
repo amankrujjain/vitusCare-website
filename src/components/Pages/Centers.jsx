@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import BannerSectionStyle5 from '../Section/BannerSection/BannerSectionStyle5';
 import BannerSectionStyle4 from '../Section/BannerSection/BannerSectionStyle4';
-import TeamSectionStyle2 from '../Section/TeamSection/TeamSectionStyle2'; // You can reuse this for layout
+import TeamSectionStyle2 from '../Section/TeamSection/TeamSectionStyle2'; // Reuse this for layout
 import Section from '../Section';
 import { pageTitle } from '../../helpers/PageTitle';
+import CenterListStyle from '../Section/centers/CenterListStryle';
 
 export default function Centers() {
   pageTitle('Centers');
@@ -17,9 +18,10 @@ export default function Centers() {
   useEffect(() => {
     const fetchCenters = async () => {
       try {
-        const response = await fetch('http://localhost:7000/api/centres'); // Replace with your API endpoint
+        const response = await fetch('http://localhost:7000/api/get-all-centres'); // Replace with your API endpoint
         const data = await response.json();
-        setCenters(data.centers || []); // Assuming API returns { centers: [] }
+        console.log('data retrieved', data)
+        setCenters(data.centres || []); // Assuming API returns { centres: [] }
         setLoading(false);
       } catch (err) {
         setError('Failed to fetch centers');
@@ -38,40 +40,31 @@ export default function Centers() {
     return <p>{error}</p>;
   }
 
+  // Map center data to match the card design
+  const centerData = centers.map((center) => ({
+    imgUrl: '/images/centers/center_placeholder.png', // Placeholder image
+    department: center.city, // Use city as the department
+    name: center.name_of_centre, // Center name
+    address: center.address_of_centre, // Address of the center
+    phone: center.phone, // Phone number
+    state: center.state, // State
+    city: center.city, // City
+    mapLocation: center.map_location, // Google Maps location link
+    pinCode: center.pin_code, // Pin code
+    social: [] // If you have social links or can leave empty
+  }));
+  console.log("Centre data", centerData)
+  
+
   return (
     <>
       <BannerSectionStyle5
-        bgUrl="/images/centers/banner_bg.svg"
-        imgUrl="/images/centers/banner_img.png"
         title="Our Locations"
         subTitle="Find all our centers spread across different cities"
       />
 
       <Section topMd={65} bottomMd={200} bottomLg={150} bottomXl={110}>
-        <div className="cs_centers_list">
-          {centers.length > 0 ? (
-            centers.map((center, index) => (
-              <div key={index} className="center_card">
-                <h3 className="center_name">{center.name_of_centre}</h3>
-                <p className="center_address">{center.address_of_centre}</p>
-                <p className="center_city_state">
-                  {center.city}, {center.state}
-                </p>
-                <p className="center_pincode">Pin Code: {center.pin_code}</p>
-                <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${center.latitude},${center.longitude}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="view_on_map_link"
-                >
-                  View on Map
-                </a>
-              </div>
-            ))
-          ) : (
-            <p>No centers available.</p>
-          )}
-        </div>
+        <CenterListStyle data={centerData} />
       </Section>
 
       <Section className="cs_footer_margin_0">
