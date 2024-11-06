@@ -4,36 +4,43 @@ import { pageTitle } from '../../helpers/PageTitle';
 import Section from '../Section';
 import Feature from '../Section/FeaturesSection/Feature';
 
-
-
 export default function GFRCalculator() {
     const [age, setAge] = useState('');
     const [creatinine, setCreatinine] = useState('');
     const [gender, setGender] = useState('');
+    const [weight, setWeight] = useState('');
     const [gfr, setGFR] = useState(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (!age || !creatinine || !gender) {
+        if (!age || !creatinine || !gender || !weight) {
             toast.error("Please fill all fields");
             return;
         }
 
-        const gfrResult = calculateGFR(age, creatinine, gender);
+        const gfrResult = calculateGFR(age, creatinine, gender, weight);
         setGFR(gfrResult);
 
         toast.success("GFR Calculated!");
     };
 
-    const calculateGFR = (age, creatinine, gender) => {
-        const factor = gender === "female" ? 0.85 : 1;
-        const gfrValue = ((140 - age) * factor) / creatinine;
-        return gfrValue.toFixed(2); // Simplified formula for demonstration
+    const calculateGFR = (age, creatinine, gender, weight) => {
+        let gfrValue = ((140 - age) * weight) / (72 * creatinine);
+        if (gender === "female") {
+            gfrValue *= 0.85;
+        }
+        
+        // Round to two decimal places based on the custom rule
+        let roundedGFR = Math.floor(gfrValue * 100) / 100;
+        if ((gfrValue * 100) % 1 >= 0.5) {
+            roundedGFR = Math.ceil(gfrValue * 100) / 100;
+        }
+        
+        return roundedGFR.toFixed(2);
     };
 
     pageTitle('GFR-Calculator');
-
 
     return (
         <>
@@ -86,6 +93,18 @@ export default function GFRCalculator() {
                                     <div className="cs_height_42 cs_height_xl_25" />
                                 </div>
 
+                                <div className="col-lg-6">
+                                    <label className="cs_input_label cs_heading_color">Weight (kg)</label>
+                                    <input
+                                        type="number"
+                                        className="cs_form_field"
+                                        placeholder="Enter Your Weight"
+                                        value={weight}
+                                        onChange={(e) => setWeight(e.target.value)}
+                                    />
+                                    <div className="cs_height_42 cs_height_xl_25" />
+                                </div>
+
                                 <div className="col-lg-12">
                                     <button className="cs_btn cs_style_1" type="submit">
                                         <span>Calculate GFR</span>
@@ -94,7 +113,10 @@ export default function GFRCalculator() {
 
                                 {gfr && (
                                     <div className="col-lg-12" style={{ marginTop: '20px', textAlign: 'center' }}>
-                                        <p>Your GFR is: <strong>{gfr} mL/min/1.73m²</strong></p>
+                                        <hr />
+                                        <h1>Result is:</h1>
+                                        <span style={{color:'red'}}>{gfr}</span><strong> milliliters per minute</strong>
+                                        <hr />
                                     </div>
                                 )}
                             </form>
@@ -106,7 +128,6 @@ export default function GFRCalculator() {
                 <Feature
                     sectionTitle="What Is GFR Calculator"
                     imgUrl="images/about/why_choose_us.jpeg"
-                    
                 />
             </Section>
         </>
