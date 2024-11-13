@@ -5,10 +5,10 @@ import BrandsSection from '../Section/BrandsSection';
 import Banner from '../Section/BannerSection';
 import Section from '../Section';
 import FeaturesSection from '../Section/FeaturesSection';
-import TestimonialSection from '../Section/TestimonialSection';
+// import TestimonialSection from '../Section/TestimonialSection';
 import TestimonialSectionStyle2 from '../Section/TestimonialSection/TestimonialSectionStyle2'
 // import BlogSection from '../Section/BlogSection';
-import AppointmentSection from '../Section/AppointmentSection';
+// import AppointmentSection from '../Section/AppointmentSection';
 import FaqSection from '../Section/FaqSection';
 import AwardSection from '../Section/AwardSection';
 import DepartmentSection from '../Section/DepartmentSection';
