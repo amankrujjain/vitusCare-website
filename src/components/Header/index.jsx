@@ -61,8 +61,8 @@ export default function Header({ logoSrc, variant }) {
                         <ul>
                           <li><Link to="/departments/hemo-dialysis">Hemo Dialysis</Link></li>
                           <li><Link to="/departments/in-centre-dialysis">In Centre Dialysis</Link></li>
-                          <li><Link to="/departments/allied-services">Allied Services</Link></li>
-                          <li><Link to="/departments/nephrology">Nephrology</Link></li>
+                          {/* <li><Link to="/departments/allied-services">Allied Services</Link></li>
+                          <li><Link to="/departments/nephrology">Nephrology</Link></li> routes to be removed as well*/ }
                         </ul>
                       </DropDown>
                     </li>

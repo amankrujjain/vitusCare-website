@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import parse from 'html-react-parser';
+import React, { useState, useEffect } from 'react';
 import VideoModal from '../VideoModal';
 import FunFactSection from '../Section/FunFactSection';
 import Section from '../Section';
-import toast from 'react-hot-toast';
+import ControlledCarousel from '../Carousel/ControlledCarousel';
 
 const funFactData = [
   { number: '50+', title: 'Operational Cities' },
@@ -20,33 +19,63 @@ export default function Hero({
   btnText,
   btnUrl,
 }) {
+  const words = ["Affordable.", "Accessible.", "Available."];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+
+  useEffect(() => {
+    const typingDelay = 2000; // Typing animation duration
+    const eraseDelay = 1000; // Erasing animation duration
+    const delay = isTyping ? typingDelay : eraseDelay;
+
+    const timer = setTimeout(() => {
+      if (isTyping) {
+        setIsTyping(false); // Switch to erasing after typing completes
+      } else {
+        setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+        setIsTyping(true); // Switch back to typing after erasing
+      }
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [isTyping, currentWordIndex, words.length]);
+
   return (
     <>
       <section className="cs_hero cs_style_1">
-        <div className="cs_hero_wrap cs_bg_filed">
-          <div className="container">
-            <div className="cs_hero_text">
-              <h1 className="blue_color cs_hero_title cs_fs_94">
-                {typeof title === 'string' ? parse(title) : ''}
-              </h1>
-              <p className="text_color cs_hero_subtitle cs_fs_20 cs_heading_color">
-                {typeof subTitle === 'string' ? parse(subTitle) : ''}
-              </p>
-              <div className="cs_hero_btn_wrap ">
-                <VideoModal
-                  videoUrl={videoUrl}
-                  videoBtnText={videoBtnText}
-                  variant="cs_heading_color red_blue"
-                />
-              </div>
+        <div style={{ height: "100vh" }}>
+          <ControlledCarousel />
+          <div className="cs_hero_text">
+            <h1 className="cs_hero_title cs_fs_94"
+            style={{color:"white"}}
+            >
+              Making Quality Dialysis{" "}
+              <span
+                className="typing-text"
+                style={{
+                  animation: isTyping ? "typing 2s steps(20, end) forwards" : "erasing 1s steps(20, end) forwards",
+                  
+                }}
+              >
+                {words[currentWordIndex]}
+              </span>
+            </h1>
+            <div className="cs_hero_btn_wrap" style={{
+              position: "absolute",
+              left: "250px",
+              bottom: "300px",
+            }}>
+              <VideoModal
+                videoUrl={videoUrl}
+                videoBtnText={videoBtnText}
+                variant="cs_heading_color red_blue"
+              />
             </div>
-            <img src={imgUrl} alt="Hero" className="cs_hero_img" />
           </div>
         </div>
       </section>
 
-      {/* Fun Fact Section */}
-      <Section>
+      <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
         <FunFactSection
           bgUrl="images/about/fun_fact_bg.jpeg"
           data={funFactData}

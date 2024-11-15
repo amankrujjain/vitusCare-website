@@ -38,7 +38,7 @@ export default function VideoModal({ videoUrl, videoBtnText, variant }) {
             />
           </svg>
         </span>
-        <span className="cs_text_btn_text">{videoBtnText}</span>
+        <span className="cs_text_btn_text" style={{color:"white"}}>{videoBtnText}</span>
       </span>
 
       <div className={toggle ? 'cs_video_popup active' : 'cs_video_popup'}>

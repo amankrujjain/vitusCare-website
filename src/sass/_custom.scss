@@ -94,6 +94,59 @@
     position: relative;
     z-index: 1;
   }
+  //title moving effect
+
+
+  .typing-text {
+    display: inline-block;
+    vertical-align: bottom;
+    overflow: hidden;
+    white-space: nowrap;
+    color: red; /* Set text color to red */
+    border-right: 3px solid white; /* Cursor with red color */
+    animation: blink 0.7s step-end infinite; /* Blinking cursor */
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 55%;
+    }
+  }
+  
+  @keyframes erasing {
+    from {
+      width: 55%;
+    }
+    to {
+      width: 0;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  /* Media query for smaller screens (e.g., tablets) */
+@media (max-width: 768px) {
+  .typing-text {
+    font-size: 1.5rem; /* Adjust font size */
+    border-right: 2px solid white; /* Thinner cursor */
+  }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 480px) {
+  .typing-text {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+    border-right: 1.5px solid white; /* Even thinner cursor */
+  }
+}
+  
 
   .cs_hero_text {
     position: initial;
