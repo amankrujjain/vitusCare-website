@@ -14,6 +14,7 @@ import Gallery from './components/Pages/Gallery';
 import Timetable from './components/Pages/Timetable';
 import Contact from './components/Pages/Contact';
 import ForHospitals from './components/Pages/ForHospitals';
+import CenterDetails from './components/Pages/CenterDetails';
 
 import { useEffect } from 'react';
 import ErrorPage from './components/Pages/ErrorPage';
@@ -49,6 +50,8 @@ function App() {
             element={<DepartmentDetails />}
           />
           <Route path='/find-our-centers'element={<Centers/>}/>
+          <Route path="/centers/:id" element={<CenterDetails />} />
+
           <Route path='/gfr-calculator' element={<GfrCalculator/>}/>
           <Route path="pricing-plan" element={<PricingPlan />} />
           <Route path="gallery" element={<Gallery />} />
