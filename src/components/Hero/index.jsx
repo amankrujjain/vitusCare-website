@@ -46,25 +46,32 @@ export default function Hero({
         <div style={{ height: "100vh" }}>
           <ControlledCarousel />
           <div className="cs_hero_text">
-            <h1 className="cs_hero_title cs_fs_94"
-            style={{color:"white"}}
+            <h1
+              className={`cs_hero_title cs_fs_94 ${window.innerWidth <= 500 ? "mobile" : ""
+                }`}
+              style={{ color: "white" }}
             >
               Making Quality Dialysis{" "}
               <span
                 className="typing-text"
                 style={{
-                  animation: isTyping ? "typing 2s steps(20, end) forwards" : "erasing 1s steps(20, end) forwards",
-                  
+                  animation: isTyping
+                    ? "typing 2s steps(20, end) forwards"
+                    : "erasing 1s steps(20, end) forwards",
                 }}
               >
                 {words[currentWordIndex]}
               </span>
             </h1>
-            <div className="cs_hero_btn_wrap" style={{
-              position: "absolute",
-              left: "250px",
-              bottom: "300px",
-            }}>
+            <div
+              className="cs_hero_btn_wrap"
+              style={{
+                position: window.innerWidth <= 500 ? "relative" : "absolute",
+                left: window.innerWidth <= 500 ? "30%" : "250px",
+                bottom: window.innerWidth <= 500 ? "50px" : "300px",
+                transform: window.innerWidth <= 500 ? "translateX(-50%)" : "none",
+              }}
+            >
               <VideoModal
                 videoUrl={videoUrl}
                 videoBtnText={videoBtnText}
@@ -74,7 +81,6 @@ export default function Hero({
           </div>
         </div>
       </section>
-
       <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
         <FunFactSection
           bgUrl="images/about/fun_fact_bg.jpeg"

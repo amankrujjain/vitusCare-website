@@ -13,12 +13,16 @@ import PricingPlan from './components/Pages/PricingPlan';
 import Gallery from './components/Pages/Gallery';
 import Timetable from './components/Pages/Timetable';
 import Contact from './components/Pages/Contact';
+import ForHospitals from './components/Pages/ForHospitals';
+
 import { useEffect } from 'react';
 import ErrorPage from './components/Pages/ErrorPage';
 // import Test from './Test';
 import { Toaster } from 'react-hot-toast';
 import Centers from './components/Pages/Centers';
 import GfrCalculator from './components/Pages/GfrCalculator';
+import SetupDialysis from './components/forHospitalItems/dialysisUnit/SetupDialysis';
+import OutsourceUnit from './components/forHospitalItems/dialysisUnit/OutsourceUnit';
 
 
 function App() {
@@ -50,6 +54,9 @@ function App() {
           <Route path="gallery" element={<Gallery />} />
           <Route path="timetable" element={<Timetable />} />
           <Route path="contact" element={<Contact />} />
+          <Route path='/partner-with-us/hospitals' element={<ForHospitals/>}/>
+          <Route path='/partner-with-us/hospitals/new-dialysis-unit' element={<SetupDialysis/>}/>
+          <Route path='/partner-with-us/hospitals/outsource-vituscare' element={<OutsourceUnit/>}/>
         </Route>
 
         <Route path="*" element={<ErrorPage />} />
