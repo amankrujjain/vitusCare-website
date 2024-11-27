@@ -10,21 +10,25 @@ export default function CenterDetailsSection({
   bgUrl,
   imgUrl,
   name,
-  location,
-  contactInfo,
-  contactInfoHeading,
-  services,
-  servicesHeading,
-  operatingHours,
-  operatingHoursHeading,
-  awards,
-  awardsHeading,
+  department,
+  designation,
+  description,
   social,
+  Enquiry,
+  contactInfoHeading,
+  degrees,
+  degreesHeading,
+  experiences,
+  experiencesHeading,
+  awards,
+  awardHeading,
+  schedules,
+  scheduleHeading,
 }) {
   return (
-    <div className="cs_center_details">
+    <div className="cs_doctor_details">
       <div
-        className="cs_center_details_bg cs_bg_filed"
+        className="cs_doctor_details_bg cs_bg_filed"
         style={{
           backgroundImage: `url(${bgUrl})`,
         }}
@@ -32,57 +36,62 @@ export default function CenterDetailsSection({
       <Spacing md="85" />
       <div className="container">
         <div className="row">
-          {/* Left Column */}
           <div className="col-lg-5">
-            <div className="cs_single_center overflow-hidden cs_radius_20">
-              <img src={imgUrl} alt="Center" className="w-100" />
+            <div className="cs_single_doctor overflow-hidden cs_radius_20">
+              <img src={imgUrl} alt="Doctor" className="w-100" />
               <h3 className="cs_white_color cs_accent_bg mb-0 text-center cs_semibold cs_fs_24">
-                {location}
+                {department}
               </h3>
             </div>
             <Spacing md="94" lg="60" />
-            {/* Contact Info */}
             <ListStyle2
               heading={contactInfoHeading}
-              iconUrl="/images/icons/contact.svg"
-              data={contactInfo}
+              iconUrl="/images/icons/schedule.svg"
+              data={Enquiry}
             />
             <Spacing md="66" lg="60" />
-            {/* Operating Hours */}
             <ListStyle3
-              heading={operatingHoursHeading}
-              iconUrl="/images/icons/clock.svg"
-              data={operatingHours}
+              heading={scheduleHeading}
+              iconUrl="/images/icons/schedule.svg"
+              data={schedules}
+            />
+            <ListStyle3
+              heading={scheduleHeading}
+              iconUrl="/images/icons/schedule.svg"
+              data={schedules}
             />
           </div>
-
-          {/* Right Column */}
           <div className="col-lg-6 offset-lg-1 position-relative">
             <Spacing md="55" />
             <h2 className="cs_fs_48 mb-0 cs_semibold">{name}</h2>
+            <Spacing md="12" />
+            <h3 className="cs_semibold cs_fs_24 mb-0">{designation}</h3>
             <Spacing md="32" />
-            {/* Social Links */}
-            {social && (
-              <div className="cs_social_links cs_accent_bg cs_radius_15">
-                {social.map((item, index) => (
-                  <Link to={item.href} key={index} className="cs_social_icon">
-                    <Icon icon={item.icon} />
-                  </Link>
-                ))}
-              </div>
-            )}
+            <p className="mb-0 cs_heading_color">{description}</p>
+            <div className="cs_social_links cs_accent_bg cs_radius_15">
+              {social?.map((item, index) => (
+                <Link to={item.href} key={index}>
+                  <Icon icon={item.icon} />
+                </Link>
+              ))}
+            </div>
+            <Spacing md="200" xl="150" lg="80" />
             <Spacing md="35" lg="0" />
-            {/* Services */}
             <List
-              heading={servicesHeading}
-              iconUrl="/images/icons/service.svg"
-              data={services}
+              heading={degreesHeading}
+              iconUrl="/images/icons/graduation.svg"
+              data={degrees}
             />
             <Spacing md="70" lg="50" />
-            {/* Awards */}
             <List
-              heading={awardsHeading}
-              iconUrl="/images/icons/award.svg"
+              heading={experiencesHeading}
+              iconUrl="/images/icons/experience.svg"
+              data={experiences}
+            />
+            <Spacing md="70" lg="50" />
+            <List
+              heading={awardHeading}
+              iconUrl="/images/icons/award2.svg"
               data={awards}
             />
           </div>
