@@ -24,6 +24,7 @@
     "react-slick": "^0.29.0",
     "react-typed": "^2.0.12",
     "react-water-wave": "^2.0.1",
+    "reactstrap": "^9.2.3",
     "sass": "^1.69.5",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"

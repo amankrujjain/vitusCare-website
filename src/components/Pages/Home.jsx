@@ -4,7 +4,7 @@ import AboutSection from '../Section/AboutSection';
 import BrandsSection from '../Section/BrandsSection';
 import Banner from '../Section/BannerSection';
 import Section from '../Section';
-import FeaturesSection from '../Section/FeaturesSection';
+import FeaturesSection from '../Section/FeaturesSection/FeaturesSectionStyle4';
 // import TestimonialSection from '../Section/TestimonialSection';
 import TestimonialSectionStyle2 from '../Section/TestimonialSection/TestimonialSectionStyle2'
 // import BlogSection from '../Section/BlogSection';
@@ -109,28 +109,32 @@ const blogData = [
 ];
 const awardData = [
   {
-    title: 'Malcolm Baldrige National Quality Award',
+    title: 'Vituscare in Zee News Coverage',
     subTitle:
       'This award recognizes healthcare organizations that have demonstrated excellence in leadership, strategic planning, customer and employee satisfaction, and operational efficiency.',
     iconUrl: 'images/icons/award.svg',
+    url:'https://zeenews.india.com/hindi/health/how-to-managing-diabetes-to-prevent-kidney-disease-doctor-told-steps-for-a-healthier-lifestyle/2514635'
   },
   {
-    title: 'HIMSS Davies Award',
+    title: 'Changing Dialysis Care & Making It More Easily Available',
     subTitle:
       'This award recognizes healthcare organizations that have used health information technology to improve patient outcomes and reduce costs.',
     iconUrl: 'images/icons/award.svg',
+    url:'https://thebetterindia.com/373563/vitus-care-renal-care-dialysis-tier-2-cities-chronic-kidney-disease-prabhat-shrivastava/'
   },
   {
-    title: 'Healthgrades National’s Best Hospital',
+    title: 'Accessible Affordable Dialysis Therapy Vituscare',
     subTitle:
       'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
     iconUrl: 'images/icons/award.svg',
+    url:"https://yourstory.com/2022/09/accessible-affordable-dialysis-therapy-vituscare-kidney-care-india"
   },
   {
     title: 'Joint Commission Gold Seal of Approval',
     subTitle:
       'This recognition is given to hospitals that have met rigorous standards for patient safety and quality of care.',
     iconUrl: 'images/icons/award.svg',
+    url:'#'
   },
 ];
 const departmentData = [

@@ -80,7 +80,7 @@
 };
 
 .blue_color{
-  color:$vitusB;
+  color:$vitusB !important;
 }
 
 .text_color{
@@ -130,6 +130,8 @@
       border-color: transparent;
     }
   }
+
+
 
   /* Media query for smaller screens (e.g., tablets) */
 @media (max-width: 768px) {
@@ -470,4 +472,32 @@ input[type='time']::-webkit-inner-spin-button,
 input[type='time']::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
+}
+
+
+// additional css components
+
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.image-box-wrapper:hover .image-box-image {
+  transform: scale(1.1); /* Zoom in the image */
+}
+
+.image-box-wrapper:hover .image-box-overlay {
+  opacity: 1; /* Make the overlay visible */
+  transform: scale(1) rotateX(0deg); /* Restore size and remove tilt */
+}
+
+.image-box-wrapper:hover .image-box-overlay h5,
+.image-box-wrapper:hover .image-box-overlay p {
+  transform: translateY(0); /* Move text to original position */
+  opacity: 1; /* Fade in the text */
 }

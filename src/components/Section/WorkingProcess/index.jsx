@@ -1,7 +1,7 @@
 import React from 'react';
-import SectionHeading from '../../SectionHeading';
 import Spacing from '../../Spacing';
 import IconBoxStyle3 from '../../IconBox/IconBoxStyle3';
+import Custom from '../../SectionHeading/Custom';
 
 export default function WorkingProcess({
   sectionTitle,
@@ -14,7 +14,7 @@ export default function WorkingProcess({
     <div className="cs_shape_wrap">
       <div className="cs_shape_1 cs_position_2" />
       <div className="container">
-        <SectionHeading
+        <Custom
           title={sectionTitle}
           titleUp={sectionTitleUp}
           titleDown={sectionTitleDown}

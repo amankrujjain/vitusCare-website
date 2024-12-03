@@ -10,8 +10,8 @@ export default function IconBoxStyle3({ title, subTitle, iconUrl, number }) {
         </div>
       </div>
       <div className="cs_iconbox_right">
-        <h4 className="cs_iconbox_number">{number}</h4>
-        <h2 className="cs_iconbox_title cs_fs_32 cs_semibold">
+      <h4 className="cs_iconbox_number">{number}</h4>
+        <h2 className="cs_iconbox_title cs_fs_32 cs_semibold" style={{color:'#2C2F76'}}>
           {parse(title)}
         </h2>
         <p className="cs_iconbox_subtitle m-0">{parse(subTitle)}</p>
