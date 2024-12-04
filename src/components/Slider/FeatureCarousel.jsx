@@ -5,6 +5,7 @@ import Spacing from '../Spacing';
 import IconBoxStyle10 from '../IconBox/IconBoxStyle10';
 
 export default function FeatureCarousel({ sectionTitle, data }) {
+  console.log("Checking data inside icon box", data)
   const sliderRef = useRef(null);
 
   const next = () => {

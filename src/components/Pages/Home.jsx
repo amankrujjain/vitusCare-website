@@ -113,28 +113,28 @@ const awardData = [
     subTitle:
       'This award recognizes healthcare organizations that have demonstrated excellence in leadership, strategic planning, customer and employee satisfaction, and operational efficiency.',
     iconUrl: 'images/icons/award.svg',
-    url:'https://zeenews.india.com/hindi/health/how-to-managing-diabetes-to-prevent-kidney-disease-doctor-told-steps-for-a-healthier-lifestyle/2514635'
+    url: 'https://zeenews.india.com/hindi/health/how-to-managing-diabetes-to-prevent-kidney-disease-doctor-told-steps-for-a-healthier-lifestyle/2514635'
   },
   {
     title: 'Changing Dialysis Care & Making It More Easily Available',
     subTitle:
       'This award recognizes healthcare organizations that have used health information technology to improve patient outcomes and reduce costs.',
     iconUrl: 'images/icons/award.svg',
-    url:'https://thebetterindia.com/373563/vitus-care-renal-care-dialysis-tier-2-cities-chronic-kidney-disease-prabhat-shrivastava/'
+    url: 'https://thebetterindia.com/373563/vitus-care-renal-care-dialysis-tier-2-cities-chronic-kidney-disease-prabhat-shrivastava/'
   },
   {
     title: 'Accessible Affordable Dialysis Therapy Vituscare',
     subTitle:
       'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
     iconUrl: 'images/icons/award.svg',
-    url:"https://yourstory.com/2022/09/accessible-affordable-dialysis-therapy-vituscare-kidney-care-india"
+    url: "https://yourstory.com/2022/09/accessible-affordable-dialysis-therapy-vituscare-kidney-care-india"
   },
   {
     title: 'Joint Commission Gold Seal of Approval',
     subTitle:
       'This recognition is given to hospitals that have met rigorous standards for patient safety and quality of care.',
     iconUrl: 'images/icons/award.svg',
-    url:'#'
+    url: '#'
   },
 ];
 const departmentData = [
@@ -163,7 +163,7 @@ const departmentData = [
     iconUrl: 'images/home_1/special-services.svg',
     href: '/departments/other-special-services',
   },
-  
+
 ];
 
 const testimonialData = [
@@ -252,7 +252,9 @@ export default function Home() {
               featureListTitle:
                 'VitusCare is a team of experienced medical professionals',
               featureListSubTitle:
-                'Dedicated to providing top-quality healthcare services. We believe in a holistic approach to healthcare that focuses on treating the whole person, not just the illness or symptoms.',
+                `About Us
+VitusCare is North India’s leading dialysis care provider, dedicated to making **quality dialysis** accessible across Tier 2, 3, and 4 cities. With over 50 centers and a focus on **Accessibility, Affordability, and Awareness**, we ensure every patient receives reliable, affordable, and informed care. Our state-of-the-art facilities, expert teams, and adherence to global protocols set us apart as a trusted partner in improving lives through exceptional dialysis services. 
+`,
             },
           ]}
         />
@@ -274,10 +276,10 @@ export default function Home() {
       </Section>
       {/* End Award Section */}
       {/* Start Testimonial */}
-     {/* not using testimonial index file */}
+      {/* not using testimonial index file */}
       <Section
         className="cs_bg_filed"
-        style={{ backgroundImage: `url(/images/home_2/testimonial_bg.svg)`, marginTop:"35px" }}
+        style={{ backgroundImage: `url(/images/home_2/testimonial_bg.svg)`, marginTop: "35px" }}
         topMd={190}
         topLg={145}
         topXl={105}

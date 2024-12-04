@@ -97,19 +97,19 @@ const SetupDialysis = () => {
         {
             icon: 'mdi:clipboard-text-outline', // Represents making a record
             title: '45L',
-            description: 'ESRD Cases recorded',
+            description: 'ESRD* Cases recorded',
             color: 'text-primary',
         },
         {
             icon: 'mdi:checkbox-marked-circle-outline', // Represents choosing something
             title: '4%',
-            description: 'ESRD cases opt for dialysis',
+            description: 'ESRD* cases opt for dialysis',
             color: 'text-success',
         },
         {
             icon: 'mdi:chart-line', // Represents an increasing graph
             title: '2.2L',
-            description: 'New ESRD cases every year',
+            description: 'New ESRD* cases every year',
             color: 'text-danger',
         },
         {
@@ -121,13 +121,13 @@ const SetupDialysis = () => {
         {
             icon: 'mdi:heart-pulse', // Represents a life line
             title: '~3%',
-            description: 'of deaths in India due to CKD',
+            description: 'of deaths in India due to CKD*',
             color: 'text-info',
         },
         {
             icon: 'fa:globe', // Represents global
             title: '2-3 yrs',
-            description: '15-20 years in USA & Europe',
+            description: 'Life expectancy with dialysis',
             color: 'text-secondary',
         },
     ];
@@ -135,19 +135,19 @@ const SetupDialysis = () => {
     const smallDivData = [
         {
             icon: 'material-symbols:check-circle-outline', // Valid
-            content: 'India has only ~6000 dialysis centres, with 90% located in Tier 1 & 2 cities. lack of access leads to low frequency of treatment',
+            content: 'India has only ~ 6,000 dialysis centres, with 90% located in Tier 1 & 2 cities. lack of access leads to low frequency of treatment.',
         },
         {
             icon: 'mdi:stethoscope', // Valid
-            content: 'Currently ~1.8L patients undergo dialysis and every year ~2.2L patients are added; doubling of capacity is required',
+            content: 'Currently ~1.8L patients undergo dialysis and every year ~2.2L patients are added doubling of capacity is required.',
         },
         {
             icon: 'mdi:shield-check-outline', // Valid
-            content: 'Shortage of skilled and trained technicians',
+            content: 'Shortage of skilled and trained technicians.',
         },
         {
             icon: 'mdi:heart-outline', // Valid
-            content: 'Patient infection rates are the high in poorly run centers; thereby affecting life expectancy even after dialysis',
+            content: 'Patient infection rates are the high in poorly run centers; thereby affecting life expectancy even after dialysis.',
         },
     ];
 
@@ -170,7 +170,7 @@ const SetupDialysis = () => {
 
     const imageBoxData = [
         {
-            imgSrc: "/images/c-banner-3.jpg",
+            imgSrc: "/images/2.png",
             title: "Advanced Dialysis Solutions",
             subtitle: "Cutting-edge technology to ensure the best care for patients.",
         },
@@ -219,8 +219,7 @@ const SetupDialysis = () => {
                 <div className="container my-5">
                     {/* Title and Subtitle */}
                     <div className="text-center mb-5">
-                        <h1 className="fw-bold blue_color">Why Dialysis?</h1>
-                       
+                        <h1 className="fw-bold blue_color">Why Dialysis in India?</h1>
                     </div>
 
                     {/* Icon Boxes */}
@@ -234,13 +233,40 @@ const SetupDialysis = () => {
                                         style={{ fontSize: '48px' }}
                                     />
                                     <h5 className="mt-3 red_color" style={{ fontSize: '48px' }}>{feature.title}</h5>
-                                    <p className="text-muted" style={{ fontSize: '28px' }}>{feature.description}</p>
+                                    <p className="text-muted" style={{ fontSize: '28px' }}>
+                                        {feature.description.split('*').map((part, i, arr) => (
+                                            <React.Fragment key={i}>
+                                                {part}
+                                                {i < arr.length - 1 && (
+                                                    <span style={{ color: 'red' }}>*</span>
+                                                )}
+                                            </React.Fragment>
+                                        ))}
+                                    </p>
                                 </div>
                             </div>
                         ))}
                     </div>
+
+                    {/* Full Form Section */}
+                    <div className="mt-5">
+                        <div className="row">
+                            <div className="col-md-6">
+                                <div className="p-3 border rounded">
+                                    <strong style={{ color: 'red' }}>ERSD</strong>: End-Stage Renal Disease
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="p-3 border rounded">
+                                    <strong style={{ color: 'red' }}>CKD</strong>: Chronic Kidney Disease
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </Section>
+
+
 
             <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
                 <div className="container my-5">
@@ -298,6 +324,7 @@ const SetupDialysis = () => {
                 </div>
             </Section>
 
+
             {/* accordian */}
 
             <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
@@ -335,77 +362,6 @@ const SetupDialysis = () => {
 
                     </div>
                 </div>
-            </Section>
-
-            {/* mid section */}
-            <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110} style={{ backgroundColor: "#f9f9f9" }}>
-                <Container>
-                    <Row className="align-items-center">
-                        {/* Left Column: Text Section */}
-                        <Col md={6} className="text-start">
-                            <h1
-                                className="fw-bold"
-                                style={{ color: "#002060", fontSize: "56px", lineHeight: "1.5" }}
-                            >
-                                BOOST YOUR BOTTOM LINE WITH{" "}
-                                <span style={{ color: "#ff0000" }}>VitusCare</span>!
-                            </h1>
-                            <h2
-                                className="fw-bold"
-                                style={{ fontSize: "28px", lineHeight: "1.5" }}
-                            >
-                                WE <span style={{ color: "#ff0000" }}>INVEST</span> BETWEEN <span style={{ color: "#ff0000" }}>75 LAKH TO 1 CR</span> PER CENTER.
-                            </h2>
-                            <p
-                                className="fw-medium mt-4"
-                                style={{ color: "#002060", fontSize: "20px", fontWeight: "500" }}
-                            >
-                                Unlock New Revenue Streams:
-                            </p>
-                            <p
-                                className="mt-2"
-                                style={{
-                                    color: "#002060",
-                                    fontSize: "18px",
-                                    fontWeight: "400",
-                                    borderTop: "2px solid red",
-                                    paddingTop: "10px",
-                                }}
-                            >
-                                Direct earnings through revenue sharing from dialysis procedures
-                            </p>
-                        </Col>
-
-                        {/* Right Column: Carousel Section */}
-                        <Col md={6} className="text-center">
-                            <Carousel
-                                indicators={false}
-                                controls={true}
-                                className="carousel-circle"
-                                interval={3000}
-                            >
-                                {carouselItems.map((item, index) => (
-                                    <Carousel.Item key={index} className="text-center">
-                                        <div
-                                            className="rounded-circle mx-auto d-flex align-items-center justify-content-center"
-                                            style={{
-                                                width: "320px",
-                                                height: "320px",
-                                                backgroundColor: "#002060", // Set the background to red
-                                                fontSize: "24px",
-                                                fontWeight: "bold",
-                                                color: "white", // Text color set to white
-                                            }}
-                                        >
-                                            {item.text}
-                                        </div>
-                                    </Carousel.Item>
-                                ))}
-                            </Carousel>
-                        </Col>
-
-                    </Row>
-                </Container>
             </Section>
 
             {/* why  choose us */}
@@ -501,6 +457,78 @@ const SetupDialysis = () => {
             </Section>
 
 
+            {/* mid section */}
+            <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110} style={{ backgroundColor: "#f9f9f9" }}>
+                <Container>
+                    <Row className="align-items-center">
+                        {/* Left Column: Text Section */}
+                        <Col md={6} className="text-start">
+                            <h1
+                                className="fw-bold"
+                                style={{ color: "#002060", fontSize: "56px", lineHeight: "1.5" }}
+                            >
+                                BOOST YOUR BOTTOM LINE WITH{" "}
+                                <span style={{ color: "#ff0000" }}>VitusCare</span>!
+                            </h1>
+                            <h2
+                                className="fw-bold"
+                                style={{ fontSize: "28px", lineHeight: "1.5" }}
+                            >
+                                WE <span style={{ color: "#ff0000" }}>INVEST</span> BETWEEN <span style={{ color: "#ff0000" }}>75 LAKH TO 1 CR</span> PER CENTER.
+                            </h2>
+                            <p
+                                className="fw-medium mt-4"
+                                style={{ color: "#002060", fontSize: "20px", fontWeight: "500" }}
+                            >
+                                Unlock New Revenue Streams:
+                            </p>
+                            <p
+                                className="mt-2"
+                                style={{
+                                    color: "#002060",
+                                    fontSize: "18px",
+                                    fontWeight: "400",
+                                    borderTop: "2px solid red",
+                                    paddingTop: "10px",
+                                }}
+                            >
+                                Direct earnings through revenue sharing from dialysis procedures
+                            </p>
+                        </Col>
+
+                        {/* Right Column: Carousel Section */}
+                        <Col md={6} className="text-center">
+                            <Carousel
+                                indicators={false}
+                                controls={true}
+                                className="carousel-circle"
+                                interval={3000}
+                            >
+                                {carouselItems.map((item, index) => (
+                                    <Carousel.Item key={index} className="text-center">
+                                        <div
+                                            className="rounded-circle mx-auto d-flex align-items-center justify-content-center"
+                                            style={{
+                                                width: "320px",
+                                                height: "320px",
+                                                backgroundColor: "#002060", // Set the background to red
+                                                fontSize: "24px",
+                                                fontWeight: "bold",
+                                                color: "white", // Text color set to white
+                                            }}
+                                        >
+                                            {item.text}
+                                        </div>
+                                    </Carousel.Item>
+                                ))}
+                            </Carousel>
+                        </Col>
+
+                    </Row>
+                </Container>
+            </Section>
+
+            
 
             {/* Working Process Section */}
             <Section topMd={105} bottomMd={105}>
