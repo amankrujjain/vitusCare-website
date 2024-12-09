@@ -13,23 +13,27 @@ import FaqSection from '../Section/FaqSection';
 import AwardSection from '../Section/AwardSection';
 import DepartmentSection from '../Section/DepartmentSection';
 import { pageTitle } from '../../helpers/PageTitle';
+
+
+// the subtitle to be set with in 50 words 
 const featureListData = [
   {
     iconSrc: '/images/home_1/compassion.svg',
-    title: 'Compassion',
+    title: 'World-Class Facilities',
     subTitle:
-      'We understand that seeking medical care can be a stressful and emotional experience, and we strive to create a welcoming and supportive environment that puts our patients at ease and every one.',
+      `State-of-the-art, imported Fresenius dialysis machines for precision care. High-quality dialyzers ensure optimal performance. RO TDS strictly maintained per WHO/ISN guidelines for water safety.`,
   },
   {
     iconSrc: '/images/home_1/excellence.svg',
-    title: 'Excellence',
+    title: 'Expert Team of Technicians',
     subTitle:
-      'We are committed to providing excellent medical care and services to our patients. We believe in continuously improving our skills, knowledge, and resources to ensure that we deliver the highest quality care possible.',
+      'Highly-skilled technicians recruited with stringent standards. Trained under the comprehensive VitusCare protocol. Regular refresher training and surprise audits to uphold excellence',
   },
   {
     iconSrc: '/images/home_1/integrity.svg',
-    title: 'Integrity',
-    subTitle: `We believe in practicing medicine with integrity and honesty. We are transparent in our communication and decision-making processes, and we always put our patient's interests first & provide best solution.`,
+    title: 'Unmatched Clinical Protocols',
+    subTitle: `Developed by leading nephrologists & kidney care experts. Benchmarked against global standards for reliability. Every session audited to guarantee complete and effective dialysis
+`,
   },
   {
     iconSrc: '/images/home_1/respect.svg',
@@ -39,9 +43,9 @@ const featureListData = [
   },
   {
     iconSrc: '/images/home_1/teamwork.svg',
-    title: 'Teamwork',
+    title: 'Strict Infection Control',
     subTitle:
-      'We believe in working collaboratively with our team membersvand other healthcare professionals to provide comprehensive and effective care to our patients.',
+      'Robust infection control measures in place. Regular sterilization of machines and equipment.Dedicated machines, staff, and consumables for positive patients to ensure safety',
   },
 ];
 const brandData = [
@@ -109,13 +113,6 @@ const blogData = [
 ];
 const awardData = [
   {
-    title: 'Vituscare in Zee News Coverage',
-    subTitle:
-      'This award recognizes healthcare organizations that have demonstrated excellence in leadership, strategic planning, customer and employee satisfaction, and operational efficiency.',
-    iconUrl: 'images/icons/award.svg',
-    url: 'https://zeenews.india.com/hindi/health/how-to-managing-diabetes-to-prevent-kidney-disease-doctor-told-steps-for-a-healthier-lifestyle/2514635'
-  },
-  {
     title: 'Changing Dialysis Care & Making It More Easily Available',
     subTitle:
       'This award recognizes healthcare organizations that have used health information technology to improve patient outcomes and reduce costs.',
@@ -123,25 +120,39 @@ const awardData = [
     url: 'https://thebetterindia.com/373563/vitus-care-renal-care-dialysis-tier-2-cities-chronic-kidney-disease-prabhat-shrivastava/'
   },
   {
-    title: 'Accessible Affordable Dialysis Therapy Vituscare',
+    title: 'Tomorrow Capital Invests In Kidney Start Up VitusCare',
+    subTitle:
+      'This recognition is given to hospitals that have met rigorous standards for patient safety and quality of care.',
+    iconUrl: 'images/icons/award.svg',
+    url: 'https://timesofindia.indiatimes.com/business/india-business/tomorrow-capital-invests-in-kidney-start-up-vituscare/articleshow/109354003.cms'
+  },
+  {
+    title: 'Top 3 ways to improve kidney health',
+    subTitle:
+      'This award recognizes healthcare organizations that have demonstrated excellence in leadership, strategic planning, customer and employee satisfaction, and operational efficiency.',
+    iconUrl: 'images/icons/award.svg',
+    url: 'https://zeenews.india.com/hindi/health/how-to-managing-diabetes-to-prevent-kidney-disease-doctor-told-steps-for-a-healthier-lifestyle/2514635'
+  },
+  {
+    title: ' Available, accessible, affordable: VitusCare is focusing on the 3 As of kidney care in Tier II and III India',
     subTitle:
       'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
     iconUrl: 'images/icons/award.svg',
     url: "https://yourstory.com/2022/09/accessible-affordable-dialysis-therapy-vituscare-kidney-care-india"
   },
   {
-    title: 'Joint Commission Gold Seal of Approval',
+    title: 'ESRD rising at alarming rate, particularly among adults aged 25-55',
     subTitle:
-      'This recognition is given to hospitals that have met rigorous standards for patient safety and quality of care.',
+      'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
     iconUrl: 'images/icons/award.svg',
-    url: '#'
+    url: "https://health.economictimes.indiatimes.com/news/industry/esrd-rising-at-alarming-rate-particularly-among-adults-aged-25-55/113941095"
   },
 ];
 const departmentData = [
   {
-    title: 'Hemodialysis',
+    title: 'Home Dialysis',
     iconUrl: 'images/home_1/hemo-dialysis.svg',
-    href: '/departments/hemo-dialysis',
+    href: '/departments/home-dialysis',
   },
   {
     title: 'In-centre Dialysis',
@@ -149,20 +160,11 @@ const departmentData = [
     href: '/departments/in-centre-dialysis',
   },
   {
-    title: 'Allied Services',
-    iconUrl: 'images/home_1/allied-services.svg',
-    href: '/departments/allied-services',
-  },
-  {
-    title: 'Nephrology',
+    title: 'Nephrologist Consultation',
     iconUrl: 'images/home_1/nephrology.svg',
     href: '/departments/nephrology',
   },
-  {
-    title: 'Other Special Services',
-    iconUrl: 'images/home_1/special-services.svg',
-    href: '/departments/other-special-services',
-  },
+ 
 
 ];
 
@@ -246,14 +248,14 @@ export default function Home() {
           imgUrl="/images/home_1/about-test.png"
           spiningImgUrl="/images/home_1/about_mini.svg"
           title="About Us"
-          subTitle="Vituscare"
+          subTitle=""
           featureList={[
             {
               featureListTitle:
-                'VitusCare is a team of experienced medical professionals',
+                'This are is to be removed',
               featureListSubTitle:
-                `About Us
-VitusCare is North India’s leading dialysis care provider, dedicated to making **quality dialysis** accessible across Tier 2, 3, and 4 cities. With over 50 centers and a focus on **Accessibility, Affordability, and Awareness**, we ensure every patient receives reliable, affordable, and informed care. Our state-of-the-art facilities, expert teams, and adherence to global protocols set us apart as a trusted partner in improving lives through exceptional dialysis services. 
+                `
+VitusCare is North India’s leading dialysis care provider, dedicated to making quality dialysis accessible across Tier 2, 3, and 4 cities. With over 50 centers and a focus on Accessibility, Affordability, and Awareness, we ensure every patient receives reliable, affordable, and informed care. Our state-of-the-art facilities, expert teams, and adherence to global protocols set us apart as a trusted partner in improving lives through exceptional dialysis services. 
 `,
             },
           ]}
@@ -298,8 +300,8 @@ VitusCare is North India’s leading dialysis care provider, dedicated to making
       <Section>
         <Banner
           bgUrl="images/home_1/cta_bg.svg"
-          imgUrl="images/home_1/cta_img.png"
-          title="Don’t Let Your Health Take a Backseat!"
+          imgUrl="images/egfr.webp"
+          title="Find About Your Kidney Health Now !"
           subTitle="get your quick health check up with our GFR calculator!"
           buttonUrl="/grf-calculator"
         />
@@ -327,8 +329,8 @@ VitusCare is North India’s leading dialysis care provider, dedicated to making
       <Section topMd={190} topLg={145} topXl={105}>
         <FaqSection
           data={faqData}
-          sectionTitle="Usually Asked"
-          sectionTitleUp="What People"
+          sectionTitle="Frequently Asked Questions"
+          sectionTitleUp=""
         />
       </Section>
       {/* End FAQ Section */}

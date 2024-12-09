@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Section from '../../Section';
 import { Icon } from '@iconify/react';
-import WorkingProcess from '../../Section/WorkingProcess';
-import CustomBanner from '../../Section/BannerSection/BannerSectionStyle4';
+import DepartmentSectionStyle6 from '../../Section/DepartmentSection/DepartmentSectionStyle6';
+import FeaturesSectionStyle3 from '../../Section/FeaturesSection/FeaturesSectionStyle3';
 import { Accordion, AccordionItem, AccordionHeader, AccordionBody } from "reactstrap";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
+import AboutSectionStyle5 from '../../Section/AboutSection/AboutSectionStyle5'
 
 const SetupDialysis = () => {
 
@@ -13,19 +14,19 @@ const SetupDialysis = () => {
     const accordionData = [
         {
             header: "CAPEX & OPEX",
-            body: "Starting and managing a dialysis unit requires significant capital both in form of capex and working capital",
+            body: "Starting and managing a dialysis unit requires a significant investment.",
         },
         {
             header: "OPERATIONAL COMPLEXITY",
-            body: "Managing a dialysis unit involves a significant operational challenges, including inventory management, employee/technician management, and equipment maintenance",
+            body: "Managing a dialysis unit involves significant operational challenges, including inventory management, employee/technician management, and equipment maintenance.",
         },
         {
             header: "COST MANAGEMENT",
-            body: "Cost towards operations and consumables become effective only beyond a certain scale",
+            body: "Cost towards operations and consumables become effective only beyond a certain scale.",
         },
         {
-            header: "PATIENT ACQUISITION",
-            body: "Reaching out to dialysis patients requires a focused approach vs a multi-specialty way of marketing",
+            header: "PATIENT AWARENESS",
+            body: "Acquiring dialysis patients requires a focused approach vs a multi-specialty way of marketing.",
         },
         {
             header: "NEPHROLOGIST TIE-UP / TECHNICIAN TRAINING & UPSKILLING",
@@ -36,57 +37,57 @@ const SetupDialysis = () => {
     const workingProcessData = [
         {
             title: 'CAPEX INVESTMENT',
-            subTitle:
-                'All expenses required to setup the unit and <br/> potential to invest further with growth',
+            subTitle: `Upto 1 crore depending on scale of operations and potential to invest further with growth.`,
             iconUrl: '/images/home_2/wording_process_icon_1.svg',
             number: '01',
         },
         {
             title: 'COMPLETE SOURCING',
-            subTitle:
-                'Equipment and consumables',
+            subTitle: `Equipment & consumables (25+ unique consumables required for every session) Hence, several treatment combinations are required while administering the therapy.
+`,
             iconUrl: '/images/home_2/wording_process_icon_2.svg',
             number: '02',
         },
         {
             title: 'INVENTORY CONTROL',
-            subTitle:
-                'Requires managing different vendors each with <br/> a different payment terms and delivery timelines',
+            subTitle: `No single supplier of all consumables, requires managing 25 different vendors each with a different MOQ, payment terms and delivery timelines
+`,
             iconUrl: '/images/home_2/wording_process_icon_3.svg',
             number: '03',
         },
         {
             title: 'HUMAN RESOURCE',
-            subTitle:
-                'Onboarding, skills and regular refresher <br/> training of technicians and nurses',
+            subTitle: `Onboarding, skilling and regular refresher training of technicians and nurses, apart from interventions by Clinical & Biomedical specialists (high attrition roles managed efficiently by our hub & spoke approach)
+`,
             iconUrl: '/images/home_2/wording_process_icon_4.svg',
             number: '04',
         },
         {
             title: 'CLINICAL & BEHAVIORAL TRAINING',
             subTitle:
-                'Continuous clinical and behavioural training by <br/> leading industry experts to enable high quality patient <br/> care and retention',
+                `Continuous clinical and behavioral training by leading industry experts to enable high quality patient care and retention
+`,
             iconUrl: '/images/home_2/wording_process_icon_5.svg',
             number: '05',
         },
         {
             title: 'MARKETING',
             subTitle:
-                'CO-branded marketing initiatives across <br/> multiple channels to each patints',
+                'Co-branded marketing initiatives across multiple channels to onboard patients',
             iconUrl: '/images/home_2/wording_process_icon_5.svg',
             number: '06',
         },
         {
             title: 'EQUIPMENT MAINTENANCE',
             subTitle:
-                'Rigorous preventive maintenance schedule <br/> and dedicated terms for reactivee maintenance',
+                'Rigorous preventive maintenance schedule and dedicated teams for reactive maintenance to ensure longevity and quality of equipment',
             iconUrl: '/images/home_2/wording_process_icon_5.svg',
             number: '07',
         },
         {
             title: 'HOLISTIC SOLUTION',
             subTitle:
-                'Billing support and managemen <br/> + Nephrologist tie-up',
+                'Billing support and management + Nephrologist tie-up',
             iconUrl: '/images/home_2/wording_process_icon_5.svg',
             number: '08',
         },
@@ -152,6 +153,7 @@ const SetupDialysis = () => {
     ];
 
     const carouselItems = [
+        { text: "DIALYSIS REVENUE SHARE" },
         { text: "WORD OF MOUTH" },
         { text: "OPD REVENUES" },
         { text: "ICU/IPD REVENUES" },
@@ -170,17 +172,17 @@ const SetupDialysis = () => {
 
     const imageBoxData = [
         {
-            imgSrc: "/images/2.png",
+            imgSrc: "/images/capex.png",
             title: "Advanced Dialysis Solutions",
             subtitle: "Cutting-edge technology to ensure the best care for patients.",
         },
         {
-            imgSrc: "/images/c-banner-3.jpg",
+            imgSrc: "/images/opex.png",
             title: "Comprehensive Revenue Model",
             subtitle: "Unlock multiple revenue streams with our tailored approach.",
         },
         {
-            imgSrc: "/images/c-banner-3.jpg",
+            imgSrc: "/images/operational-involvement.png",
             title: "Expert Guidance",
             subtitle: "Experienced professionals to assist you every step of the way.",
         },
@@ -204,6 +206,33 @@ const SetupDialysis = () => {
         },
     ];
 
+    const sirfQuality = [
+        {
+            title: 'Vaccinations Department',
+            subTitle:
+                'India has only ~ 6,000 dialysis centres, with 90% located in Tier 1 & 2 cities. lack of access leads to low frequency of treatment.',
+            iconUrl: '/images/departments/icon_9.svg',
+        },
+        {
+            title: 'Management of acute illnesses',
+            subTitle:
+                'Currently ~1.8L patients undergo dialysis and every year ~2.2L patients are added doubling of capacity is required.',
+            iconUrl: '/images/departments/icon_10.svg',
+        },
+        {
+            title: 'Treatment of chronic conditions',
+            subTitle:
+                'Shortage of skilled and trained technicians.',
+            iconUrl: '/images/departments/icon_11.svg',
+        },
+        {
+            title: 'Developmental screenings',
+            subTitle:
+                'Patient infection rates are the high in poorly run centers; thereby affecting life expectancy even after dialysis.',
+            iconUrl: '/images/departments/icon_12.svg',
+        },
+    ];
+
     return (
         <>
             {/* <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
@@ -219,7 +248,7 @@ const SetupDialysis = () => {
                 <div className="container my-5">
                     {/* Title and Subtitle */}
                     <div className="text-center mb-5">
-                        <h1 className="fw-bold blue_color">Why Dialysis in India?</h1>
+                        <h1 className="fw-bold blue_color">Need For Dialysis in India?</h1>
                     </div>
 
                     {/* Icon Boxes */}
@@ -266,62 +295,12 @@ const SetupDialysis = () => {
                 </div>
             </Section>
 
-
-
-            <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
-                <div className="container my-5">
-                    {/* Title and Subtitle */}
-                    <div className="text-center mb-5">
-                        <h1 className="fw-bold blue_color">A Challenge Of Access & Quality</h1>
-                    </div>
-
-                    {/* Row of Small Divs with Icon and Content */}
-                    <div className="row">
-                        {smallDivData.map((item, index) => (
-                            <div
-                                className="col-md-6 mb-4 d-flex justify-content-center"
-                                key={index}
-                            >
-                                {/* Icon Box */}
-                                <div
-                                    className="d-flex align-items-center justify-content-start text-start"
-                                    style={{
-                                        width: '100%',
-                                        maxWidth: '500px',
-                                        minHeight: '80px',
-                                        padding: '10px 15px',
-                                        border: '1px solid #e0e0e0',
-                                        borderRadius: '8px',
-                                        backgroundColor: '#f9f9f9',
-                                        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-                                    }}
-                                >
-                                    {/* Icon */}
-                                    <div
-                                        className="d-flex align-items-center justify-content-center border rounded-circle"
-                                        style={{
-                                            width: '50px',
-                                            height: '50px',
-                                            backgroundColor: '#f0f8ff',
-                                            flexShrink: 0, // Prevents resizing of the icon
-                                        }}
-                                    >
-                                        <Icon
-                                            icon={item.icon}
-                                            className="text-primary"
-                                            style={{ fontSize: '24px' }}
-                                        />
-                                    </div>
-
-                                    {/* Content */}
-                                    <div className="ms-3 flex-grow-1">
-                                        <p className="mb-0 text-muted" style={{ fontSize: '18px' }}>{item.content}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+            <Section topMd={170} topLg={145} topXl={90}>
+                <FeaturesSectionStyle3
+                    sectionTitle="ACCESS & QUALITY"
+                    sectionTitleUp="A CHALLENGE OF"
+                    data={sirfQuality}
+                />
             </Section>
 
 
@@ -336,7 +315,7 @@ const SetupDialysis = () => {
                         {/* Content Side */}
                         <div className="col-md-6">
                             <div style={{ fontSize: "44px", fontWeight: "bold", lineHeight: "1.5" }}>
-                                <p className='blue_color'><span className='red_color'>STARTING</span> AND <span className='red_color'>MANAGING</span>  A DIALYSIS CENTER REMAIS CHALLENGING FOR <span className='red_color'>73%</span> OF PRIVATE HOSPITALS OF <span className='red_color'>INDIA</span></p>
+                                <p className='blue_color'><span className='red_color'>STARTING</span> AND <span className='red_color'>MANAGING</span>  A DIALYSIS CENTER REMAINS CHALLENGING FOR <span className='red_color'> &gt 73%</span> OF PRIVATE HOSPITALS OF <span className='red_color'>INDIA</span></p>
                             </div>
                         </div>
 
@@ -374,7 +353,7 @@ const SetupDialysis = () => {
                             Why Choose VitusCare?
                         </h2>
                         <p className="text-muted blue_color" style={{ fontSize: "28px" }}>
-                            <span className="red_color">VITUSCARE</span> YOUR PLUG AND PLAY QUALITY DIALYSIS
+                            YOUR PLUG AND PLAY QUALITY DIALYSIS
                             PARTNER WITH <span className="red_color">3X BENEFITS</span>
                         </p>
                     </div>
@@ -398,7 +377,7 @@ const SetupDialysis = () => {
                                         alt={item.title}
                                         className="image-box-image"
                                         style={{
-                                            width: "100%",
+                                            width: "450px",
                                             height: "350px",
                                             borderRadius: "10%", // Initial rounded corners
                                             objectFit: "cover",
@@ -470,18 +449,7 @@ const SetupDialysis = () => {
                                 BOOST YOUR BOTTOM LINE WITH{" "}
                                 <span style={{ color: "#ff0000" }}>VitusCare</span>!
                             </h1>
-                            <h2
-                                className="fw-bold"
-                                style={{ fontSize: "28px", lineHeight: "1.5" }}
-                            >
-                                WE <span style={{ color: "#ff0000" }}>INVEST</span> BETWEEN <span style={{ color: "#ff0000" }}>75 LAKH TO 1 CR</span> PER CENTER.
-                            </h2>
-                            <p
-                                className="fw-medium mt-4"
-                                style={{ color: "#002060", fontSize: "20px", fontWeight: "500" }}
-                            >
-                                Unlock New Revenue Streams:
-                            </p>
+
                             <p
                                 className="mt-2"
                                 style={{
@@ -492,8 +460,16 @@ const SetupDialysis = () => {
                                     paddingTop: "10px",
                                 }}
                             >
-                                Direct earnings through revenue sharing from dialysis procedures
+                                
                             </p>
+                            
+                            <p
+                                className="fw-medium mt-4"
+                                style={{ color: "#002060", fontSize: "20px", fontWeight: "500" }}
+                            >
+                                Unlock <span style={{color:'red'}}>MULTIPLE</span> Revenue streams 
+                            </p>
+                            
                         </Col>
 
                         {/* Right Column: Carousel Section */}
@@ -528,11 +504,11 @@ const SetupDialysis = () => {
                 </Container>
             </Section>
 
-            
+
 
             {/* Working Process Section */}
             <Section topMd={105} bottomMd={105}>
-                <WorkingProcess
+                <DepartmentSectionStyle6
                     sectionTitle="Hassle Free END-TO-END"
                     sectionTitleUp="How Do We Do It?"
                     sectionTitleDown="SPENDS & MANAGEMENT OF THE CENTER"
@@ -592,6 +568,17 @@ const SetupDialysis = () => {
                     </Row>
                 </Container>
             </Section>
+            <Section topMd={170} topLg={120} topXl={100}>
+                <AboutSectionStyle5
+                    imgUrl="/images/dialysis-banner.png"
+                    titleUp=""
+                    title=""
+                    subTitle=""
+                    supportTitle="#SirfQualityDialysis"
+                    supportSubTitle=""
+                />
+            </Section>
+
         </>
     );
 };

@@ -11,11 +11,11 @@ import AwardSectionStyle2 from '../Section/AwardSection/AwardSectionStyle2';
 import { pageTitle } from '../../helpers/PageTitle';
 export const serviceData = [
   {
-    title: 'Hemo - Dialysis',
+    title: 'Home - Dialysis',
     subTitle:
       'Blood tests, imaging studies, and other tests to diagnose health conditions',
-    iconUrl: '/images/icons/hemo-dialysis.svg',
-    href: '/departments/hemo-dialysis',
+    iconUrl: '/images/icons/home-dialysis.svg',
+    href: '/departments/home-dialysis',
   },
   {
     title: 'In - Centre Dialysis',
@@ -78,38 +78,42 @@ const funFactData = [
 const teamData = [
   {
     imgUrl: 'images/about/doctor_1.png',
-    name: 'Dr. James Lee, MD',
-    designation: 'Head of Cardiologist',
+    name: 'Setu Goyal',
+    designation: 'Founder',
     description:
       'With expertise in managing complex heart conditions and performing advanced cardiac procedures',
     social: [
-      { icon: 'fa6-brands:facebook-f', href: '/about' },
       { icon: 'fa6-brands:linkedin-in', href: '/about' },
-      { icon: 'fa6-brands:twitter', href: '/about' },
     ],
   },
   {
     imgUrl: 'images/about/doctor_2.png',
-    name: 'Dr. John Smith, MD',
-    designation: 'Emergency Medicine Physician',
+    name: 'Dr. Saurabh, MD',
+    designation: 'Founder',
     description:
       'With expertise in treating acute illnesses and injuries in medicine physician',
     social: [
-      { icon: 'fa6-brands:facebook-f', href: '/about' },
       { icon: 'fa6-brands:linkedin-in', href: '/about' },
-      { icon: 'fa6-brands:twitter', href: '/about' },
     ],
   },
   {
     imgUrl: 'images/about/doctor_3.png',
-    name: 'Dr. Susan Bones, MD',
-    designation: 'Board-certified Pediatrician',
+    name: 'Prabhat Shrivastava',
+    designation: 'Founder',
     description:
       'With experience in managing complex medical conditions in children',
     social: [
-      { icon: 'fa6-brands:facebook-f', href: '/about' },
       { icon: 'fa6-brands:linkedin-in', href: '/about' },
-      { icon: 'fa6-brands:twitter', href: '/about' },
+    ],
+  },
+  {
+    imgUrl: 'images/about/doctor_3.png',
+    name: 'Pankaj Tandon',
+    designation: 'CO - Founder',
+    description:
+      'With experience in managing complex medical conditions in children',
+    social: [
+      { icon: 'fa6-brands:linkedin-in', href: '/about' },
     ],
   },
 ];
@@ -121,21 +125,7 @@ const galleryData = [
   { imgUrl: '/images/about/portfolio_4_lg.jpeg' },
   { imgUrl: '/images/about/portfolio_5_lg.jpeg' },
 ];
-const awardData = [
-  {
-    iconUrl: '/images/icons/award.svg',
-    title: 'Malcolm Baldrige National Quality Award',
-  },
-  { iconUrl: '/images/icons/award.svg', title: 'HIMSS Davies Award' },
-  {
-    iconUrl: '/images/icons/award.svg',
-    title: 'Healthgrades National’s Best Hospital',
-  },
-  {
-    iconUrl: '/images/icons/award.svg',
-    title: 'Joint Commission Gold Seal of Approval',
-  },
-];
+
 
 export default function About() {
   pageTitle('About');
@@ -154,16 +144,9 @@ export default function About() {
           data={featureListData}
         />
       </Section>
-      <Section topMd={200} topLg={150} topXl={110}>
-        <DepartmentSectionStyle2
-          sectionTitle="Provides Our Best Services"
-          sectionTitleUp="SERVICES"
-          data={serviceData}
-        />
-      </Section>
       <Section topMd={190} topLg={145} topXl={105}>
         <TeamSection
-          sectionTitle="Experts Doctor"
+          sectionTitle="Experts Team"
           sectionTitleUp="MEET OUR"
           data={teamData}
         />
@@ -173,21 +156,6 @@ export default function About() {
           sectionTitle="Our Facilities and <br />Latest Activities"
           sectionTitleUp="HAVE A LOOK AT"
           data={galleryData}
-        />
-      </Section>
-      <Section
-        topMd={190}
-        topLg={145}
-        topXl={105}
-        bottomMd={200}
-        bottomLg={150}
-        bottomXl={110}
-      >
-        <AwardSectionStyle2
-          sectionTitle="Winning Awards and <br />Recognition"
-          sectionTitleUp="AWARDS"
-          sectionSubTitle="We have been recognized for our commitment to <br />excellence in healthcare."
-          data={awardData}
         />
       </Section>
       <Section className="cs_footer_margin_0">

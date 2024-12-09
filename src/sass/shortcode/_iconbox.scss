@@ -520,7 +520,7 @@
   .cs_iconbox_icon {
     height: 72px;
     width: 72px;
-    border: 1px solid $accent;
+    border: 1px solid red;
     margin-bottom: 25px;
     margin-left: auto;
     margin-right: auto;
@@ -531,12 +531,12 @@
     transform: translateY(-30px);
     .cs_iconbox_title,
     .cs_iconbox_subtitle {
-      color: $primary;
+      color: #2C2F76;
     }
   }
 }
 .cs_iconbox_8_wrap {
-  background: linear-gradient(172deg, #d2eaef 0%, #86bbf1 100%);
+  background-color: #2C2F76;
   @media (max-width: 1400px) {
     padding: 40px 15px;
   }

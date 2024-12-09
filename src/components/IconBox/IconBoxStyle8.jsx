@@ -6,7 +6,7 @@ export default function IconBoxStyle8({ title, subTitle, iconUrl }) {
       <div className="cs_iconbox_icon rounded-circle cs_center">
         <img src={iconUrl} alt="Icon" />
       </div>
-      <h2 className="cs_iconbox_title cs_semibold cs_fs_32">{title}</h2>
+      {/* <h2 className="cs_iconbox_title cs_semibold cs_fs_32z blue_color">{title}</h2> */}
       <p className="cs_iconbox_subtitle m-0">{subTitle}</p>
     </div>
   );

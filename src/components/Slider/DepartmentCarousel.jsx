@@ -38,7 +38,7 @@ export default function DepartmentCarousel({ data }) {
     autoplay: false,
     autoplaySpeed: 4000,
     speed: 1000,
-    slidesToShow: 5,
+    slidesToShow: 3,
     swipeToSlide: true,
     responsive: [
       {
