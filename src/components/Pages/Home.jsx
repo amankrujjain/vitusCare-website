@@ -19,20 +19,20 @@ import { pageTitle } from '../../helpers/PageTitle';
 const featureListData = [
   {
     iconSrc: '/images/home_1/compassion.svg',
-    title: 'World-Class Facilities',
+    title: 'Elite Amenities',
     subTitle:
-      `State-of-the-art, imported Fresenius dialysis machines for precision care. High-quality dialyzers ensure optimal performance. RO TDS strictly maintained per WHO/ISN guidelines for water safety.`,
+      `Imported Fresenius dialysis machines deliver precision care. High-quality dialyzers and RO TDS per WHO/ISN ensure optimal safety.`,
   },
   {
     iconSrc: '/images/home_1/excellence.svg',
-    title: 'Expert Team of Technicians',
+    title: 'Skilled Experts',
     subTitle:
-      'Highly-skilled technicians recruited with stringent standards. Trained under the comprehensive VitusCare protocol. Regular refresher training and surprise audits to uphold excellence',
+      'Highly-skilled technicians recruited with stringent standards, trained under VitusCare protocols, with regular training and audits.',
   },
   {
     iconSrc: '/images/home_1/integrity.svg',
-    title: 'Unmatched Clinical Protocols',
-    subTitle: `Developed by leading nephrologists & kidney care experts. Benchmarked against global standards for reliability. Every session audited to guarantee complete and effective dialysis
+    title: 'Superior Standards',
+    subTitle: `Designed by top nephrologists, adhering to global standards. Every session audited to ensure reliable, complete, and effective dialysis care.
 `,
   },
   {
@@ -43,9 +43,9 @@ const featureListData = [
   },
   {
     iconSrc: '/images/home_1/teamwork.svg',
-    title: 'Strict Infection Control',
+    title: 'Rigorous Hygiene',
     subTitle:
-      'Robust infection control measures in place. Regular sterilization of machines and equipment.Dedicated machines, staff, and consumables for positive patients to ensure safety',
+      'Strict infection control with regular sterilization. Dedicated machines, staff, and consumables for patients ensuring safety and hygiene.',
   },
 ];
 const brandData = [
