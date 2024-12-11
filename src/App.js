@@ -24,6 +24,7 @@ import Centers from './components/Pages/Centers';
 import GfrCalculator from './components/Pages/GfrCalculator';
 import SetupDialysis from './components/forHospitalItems/dialysisUnit/SetupDialysis';
 import OutsourceUnit from './components/forHospitalItems/dialysisUnit/OutsourceUnit';
+import ForDoctor from './components/Pages/ForDoctor';
 
 
 function App() {
@@ -51,7 +52,7 @@ function App() {
           />
           <Route path='/find-our-centers'element={<Centers/>}/>
           <Route path="/centers/:id" element={<CenterDetails />} />
-
+          <Route path='/partner-with-us/doctors' element={<ForDoctor/>}/>
           <Route path='/gfr-calculator' element={<GfrCalculator/>}/>
           <Route path="pricing-plan" element={<PricingPlan />} />
           <Route path="gallery" element={<Gallery />} />

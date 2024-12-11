@@ -29,7 +29,7 @@ export default function AppointmentForm({onSuccess}) {
         <input
           type="text"
           className="cs_form_field"
-          placeholder="986 289 8628"
+          placeholder="98628 98628"
         />
         <div className="cs_height_42 cs_height_xl_25" />
       </div>
@@ -62,15 +62,10 @@ export default function AppointmentForm({onSuccess}) {
         <label className="cs_input_label cs_heading_color">Department</label>
         <div className="cs_select_wrap">
           <select className="cs_form_field">
-            <option value="homeodialysis">Homeodialysis</option>
+            <option value="homeodialysis">Home Dialysis</option>
             <option value="in-centre-dialysis">In-centre Dialysis</option>
-            <option value="nephrology">Nephrology</option>
-            <option value="psychiatry">Psychiatry</option>
-            <option value="cardiology">Cardiology</option>
-            <option value="neurology">Neurology</option>
-            <option value="obstetricsGynecology">
-              Obstetrics and Gynecology
-            </option>
+            <option value="nephrologist-consultation">Nephrologist Consultation</option>
+           
           </select>
         </div>
         <div className="cs_height_42 cs_height_xl_25" />
@@ -88,7 +83,7 @@ export default function AppointmentForm({onSuccess}) {
 
       {/* Text for Missed Call Option */}
       <div className="col-lg-12" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <p style={{ fontSize: '16px', fontWeight: 'bold', color: '#EE2327' }}>Or give a missed call on</p>
+        <p style={{ fontSize: '16px', fontWeight: 'bold', color: '#EE2327' }}>Or give a call on</p>
 
         {/* Phone Number and Icon */}
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -102,7 +97,7 @@ export default function AppointmentForm({onSuccess}) {
             href="tel:+919262892628"
             style={{ marginLeft: '10px', fontSize: '18px', fontWeight: 'bold', color: '#2c2f76', textDecoration: 'none' }}
           >
-            92628 92628
+            98628 98628
           </a>
         </div>
       </div>

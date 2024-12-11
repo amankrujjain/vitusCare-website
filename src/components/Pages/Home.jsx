@@ -245,14 +245,14 @@ export default function Home() {
       {/* Start About Section */}
       <Section>
         <AboutSection
-          imgUrl="/images/home_1/about-test.png"
-          spiningImgUrl="/images/home_1/about_mini.svg"
+          imgUrl="/images/tier-2-ladies-with-logo-entrance.png"
+          spiningImgUrl="#"
           title="About Us"
           subTitle=""
           featureList={[
             {
               featureListTitle:
-                'This are is to be removed',
+                '',
               featureListSubTitle:
                 `
 VitusCare is North India’s leading dialysis care provider, dedicated to making quality dialysis accessible across Tier 2, 3, and 4 cities. With over 50 centers and a focus on Accessibility, Affordability, and Awareness, we ensure every patient receives reliable, affordable, and informed care. Our state-of-the-art facilities, expert teams, and adherence to global protocols set us apart as a trusted partner in improving lives through exceptional dialysis services. 

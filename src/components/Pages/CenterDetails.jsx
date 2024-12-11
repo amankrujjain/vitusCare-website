@@ -66,11 +66,9 @@ export default function CenterDetails() {
           ]}
           contactInfoHeading="Enquiry"
           schedules={[
-            { day: 'Monday', time: '09.00-12.00' },
-            { day: 'Wednesday', time: '15.00-18.00' },
-            { day: 'Friday', time: '09.00-12.00' },
+            { day: 'Everyday', time: centerData.center.additional_details.Timing_of_centre },
           ]}
-          scheduleHeading="Appointment Schedules"
+          scheduleHeading="Hospital Timings"
           degrees={[
             {
               title: 'University of California, San Francisco.',
@@ -86,7 +84,7 @@ export default function CenterDetails() {
               subTitle: 'Master of Public Health degree',
             },
           ]}
-          degreesHeading="Degrees"
+          degreesHeading="Available At The Center"
           experiences={[
             {
               title:

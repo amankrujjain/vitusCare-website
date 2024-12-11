@@ -23,7 +23,7 @@ export default function Custom({
       )}
 
       {title && (
-        <h2 className="blue_color cs_section_title cs_fs_72 m-0">{parse(title)}</h2>
+        <h2 className="blue_color cs_section_title cs_fs_72 m-0">{parse(title + "!")}</h2>
       )}
       {titleDown && (
         <>
