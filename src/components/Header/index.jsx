@@ -55,34 +55,7 @@ export default function Header({ logoSrc, variant }) {
                     <li className="cs_nav"><Link to="/">Home</Link></li>
                     <li className="cs_nav"><Link to="/about">About</Link></li>
                     <li><Link to="/blog">Kidney Knowledge Center</Link></li>
-                    <li className="menu-item-has-children">
-                      <Link to="#">Our Services</Link>
-                      <DropDown>
-                        <ul>
-                          <li><Link to="/departments/in-centre-dialysis">In Centre Dialysis</Link></li>
-                          <li><Link to="/departments/home-dialysis">Home Dialysis</Link></li>
-                          <li><Link to="#">Nephrologist Consultation</Link></li>
-
-                          {/* <li><Link to="/departments/allied-services">Allied Services</Link></li>
-                          <li><Link to="/departments/nephrology">Nephrology</Link></li> routes to be removed as well*/ }
-                        </ul>
-                      </DropDown>
-                    </li>
-                    <li className="menu-item-has-children">
-                      <Link to="/">Pages</Link>
-                      <DropDown>
-                        <ul>
-                          <li><Link to="/appointments">Appointments</Link></li>
-                          <li><Link to="/departments">Departments</Link></li>
-                          <li><Link to="/departments/department-details">Department Details</Link></li>
-                          <li><Link to="/doctors">Doctors</Link></li>
-                          <li><Link to="/doctors/doctor-details">Doctor Details</Link></li>
-                          <li><Link to="/pricing-plan">Pricing Plan</Link></li>
-                          <li><Link to="/gallery">Gallery</Link></li>
-                          <li><Link to="/timetable">Timetable</Link></li>
-                        </ul>
-                      </DropDown>
-                    </li>
+                    <li><Link to="/departments">Our Services</Link></li>
 
                     {/* Mobile-only links */}
                     <li className="your-class"><Link to="/appointments">Careers</Link></li>

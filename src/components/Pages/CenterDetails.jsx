@@ -53,12 +53,10 @@ export default function CenterDetails() {
           designation={centerData.center.name_of_centre}
           description={centerData.center.address_of_centre}
           social={[
-            { icon: 'fa6-brands:facebook-f', href: '/about' },
-            { icon: 'fa6-brands:linkedin-in', href: '/about' },
-            { icon: 'fa6-brands:twitter', href: '/about' },
+            { icon: 'fa:map-marker', href: 'https://maps.app.goo.gl/tS6UsCPW4jb4vjBA9' },
           ]}
           Enquiry={[
-            { iconUrl: '/images/icons/call.svg', title: centerData.center.phone },
+            { iconUrl: '/images/icons/call.svg', title: '98628 98628' },
             {
               iconUrl: '/images/icons/envlope.svg',
               title: 'support@vituscare.com',
@@ -66,51 +64,56 @@ export default function CenterDetails() {
           ]}
           contactInfoHeading="Enquiry"
           schedules={[
-            { day: 'Everyday', time: centerData.center.additional_details.Timing_of_centre },
+            { day: 'Monday', time: '8:30 AM - 6:30 PM' },
+            { day: 'Tuesday', time: '8:30 AM - 6:30 PM' },
+            { day: 'Wednesday', time: '8:30 AM - 6:30 PM' },
+            { day: 'Thrusday', time: '8:30 AM - 6:30 PM' },
+            { day: 'Friday', time: '8:30 AM - 6:30 PM' },
+            { day: 'Saturday', time: '8:30 AM - 6:30 PM' },
           ]}
-          scheduleHeading="Hospital Timings"
+          scheduleHeading="Nephro OPD Timings"
           degrees={[
             {
-              title: 'University of California, San Francisco.',
-              subTitle: 'Medical degree',
+              title: 'Types Of Dialysis Available',
+              subTitle: 'Single-use | Re-use | Emergency',
             },
             {
               title:
-                'University of California, Los Angeles (UCLA) Medical Center.',
-              subTitle: 'Completed residency training in psychiatry',
+                '100% free dialysis ',
+              subTitle: 'CM Fund | TPA ( All major partners) | Cash Option also avaiilable',
             },
             {
-              title: 'University of California, Berkeley.',
-              subTitle: 'Master of Public Health degree',
+              subTitle: 'All types of dialysis ( Leading brands only)',
+            },
+            {
+              subTitle:"Nephrologist OPD"
+            },
+            {
+              subTitle:'Emergency Doctor'
+            },
+            {
+              subTitle:'EPO, Supplements'
             },
           ]}
           degreesHeading="Available At The Center"
           experiences={[
             {
               title:
-                'Worked in community mental health clinics, private practice, and academic medical centers.',
+                'NABH Level 2 Accredited',
             },
             {
               title:
-                'Expertise in the treatment of mood disorders, anxiety disorders, and psychotic disorders.',
+                'Empaneled with CGHS, ESI, all major TPA partners',
             },
             {
               title: `Special interest in women's mental health and perinatal psychiatry.`,
             },
             {
               title:
-                'Experience managing complex cases that involve both mental health and medical issues.',
+                'Multi - Speciaity Hospital with ICU facility',
             },
           ]}
-          experiencesHeading="Experiences"
-          awards={[
-            { title: 'Fellow of the American Psychiatric Association (FAPA).' },
-            {
-              title:
-                'Recognized for research contributions with grants from the National Institute of Mental Health (NIMH) and the American Foundation for Suicide Prevention.',
-            },
-          ]}
-          awardHeading="Awards/Achievements"
+          experiencesHeading="About the hospital"
         />
       </Section>
       <Section bottomMd={200} bottomLg={150} bottomXl={110}>

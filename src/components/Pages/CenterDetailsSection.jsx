@@ -55,11 +55,12 @@ export default function CenterDetailsSection({
               iconUrl="/images/icons/schedule.svg"
               data={schedules}
             />
+            {/* <Spacing md="66" lg="60" />
             <ListStyle3
               heading={scheduleHeading}
               iconUrl="/images/icons/schedule.svg"
               data={schedules}
-            />
+            /> */}
           </div>
           <div className="col-lg-6 offset-lg-1 position-relative">
             <Spacing md="55" />
@@ -87,12 +88,6 @@ export default function CenterDetailsSection({
               heading={experiencesHeading}
               iconUrl="/images/icons/experience.svg"
               data={experiences}
-            />
-            <Spacing md="70" lg="50" />
-            <List
-              heading={awardHeading}
-              iconUrl="/images/icons/award2.svg"
-              data={awards}
             />
           </div>
         </div>
