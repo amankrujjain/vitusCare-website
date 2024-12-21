@@ -77,19 +77,9 @@ const funFactData = [
 
 const teamData = [
   {
-    imgUrl: 'images/about/doctor_1.png',
-    name: 'Setu Goyal',
-    designation: 'Founder',
-    description:
-      'With expertise in managing complex heart conditions and performing advanced cardiac procedures',
-    social: [
-      { icon: 'fa6-brands:linkedin-in', href: '/about' },
-    ],
-  },
-  {
-    imgUrl: 'images/about/doctor_2.png',
+    imgUrl: '/images/about/Mr.Saurabh.png',
     name: 'Dr. Saurabh, MD',
-    designation: 'Founder',
+    designation: ' Founder and Chief Medical Officer',
     description:
       'With expertise in treating acute illnesses and injuries in medicine physician',
     social: [
@@ -97,9 +87,9 @@ const teamData = [
     ],
   },
   {
-    imgUrl: 'images/about/doctor_3.png',
+    imgUrl: 'images/about/Prabhat.png',
     name: 'Prabhat Shrivastava',
-    designation: 'Founder',
+    designation: 'Founder and CEO',
     description:
       'With experience in managing complex medical conditions in children',
     social: [
@@ -107,9 +97,9 @@ const teamData = [
     ],
   },
   {
-    imgUrl: 'images/about/doctor_3.png',
+    imgUrl: '/images/about/Pankaj-Tandon.png',
     name: 'Pankaj Tandon',
-    designation: 'CO - Founder',
+    designation: ' Founder and CFO',
     description:
       'With experience in managing complex medical conditions in children',
     social: [
@@ -140,13 +130,13 @@ export default function About() {
       <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
         <FeaturesSectionStyle2
           sectionTitle="Why Choose Us"
-          imgUrl="images/about/why_choose_us.jpeg"
+          imgUrl="images/about/Why choose us.png"
           data={featureListData}
         />
       </Section>
       <Section topMd={190} topLg={145} topXl={105}>
         <TeamSection
-          sectionTitle="Experts Team"
+          sectionTitle="Expert Team"
           sectionTitleUp="MEET OUR"
           data={teamData}
         />

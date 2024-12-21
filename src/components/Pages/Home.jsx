@@ -147,22 +147,44 @@ const awardData = [
     iconUrl: 'images/icons/award.svg',
     url: "https://health.economictimes.indiatimes.com/news/industry/esrd-rising-at-alarming-rate-particularly-among-adults-aged-25-55/113941095"
   },
+  {
+    title: 'VitusCare on track to achieve Rs 100 Cr ARR by 2026',
+    subTitle:
+      'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
+    iconUrl: 'images/icons/award.svg',
+    url: "https://yourstory.com/2024/12/vituscare-track-achieve-rs-100cr-arr-2026"
+  },
+  {
+    title: 'Tomorrow Capital-Backed Dialysis Firm VitusCare On Road To Raise Fresh Funds',
+    subTitle:
+      'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
+    iconUrl: 'images/icons/award.svg',
+    url: "https://www.vccircle.com/tomorrowcapital-backed-dialysis-firm-vituscare-on-road-to-raise-fresh-funds"
+  },
+  ,
+  {
+    title: 'Health in 2024: The Top Trends That Shaped Preventive Care in India',
+    subTitle:
+      'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
+    iconUrl: 'images/icons/award.svg',
+    url: "https://www.news18.com/lifestyle/health-and-fitness-health-in-2024-the-top-trends-that-shaped-preventive-care-in-india-9159413.html"
+  },
 ];
 const departmentData = [
   {
     title: 'Home Dialysis',
     iconUrl: 'images/home_1/hemo-dialysis.svg',
-    href: '/departments/home-dialysis',
+    href: '#',
   },
   {
     title: 'In-centre Dialysis',
     iconUrl: 'images/home_1/in-centre-dialysis.svg',
-    href: '/departments/in-centre-dialysis',
+    href: '#',
   },
   {
     title: 'Nephrologist Consultation',
     iconUrl: 'images/home_1/nephrology.svg',
-    href: '/departments/nephrology',
+    href: '#',
   },
  
 

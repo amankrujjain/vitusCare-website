@@ -5,6 +5,7 @@ import WorkingProcess from '../../Section/WorkingProcess';
 import CustomBanner from '../../Section/BannerSection/BannerSectionStyle4';
 import { Accordion, AccordionItem, AccordionHeader, AccordionBody } from "reactstrap";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
+import DialysisUnitForm from '../../AppointmentForm/DialysisUnitForm'
 
 const OutsourceUnit = () => {
 
@@ -35,7 +36,7 @@ const OutsourceUnit = () => {
     // Sample data for the WorkingProcess component
     const workingProcessData = [
         {
-            title: 'CAPEX INVESTMENT',
+            title: 'Upfront Buyout',
             subTitle:
                 'All expenses required to setup the unit and <br/> potential to invest further with growth',
             iconUrl: '/images/home_2/wording_process_icon_1.svg',
@@ -82,14 +83,7 @@ const OutsourceUnit = () => {
                 'Rigorous preventive maintenance schedule <br/> and dedicated terms for reactivee maintenance',
             iconUrl: '/images/home_2/wording_process_icon_5.svg',
             number: '07',
-        },
-        {
-            title: 'HOLISTIC SOLUTION',
-            subTitle:
-                'Billing support and managemen <br/> + Nephrologist tie-up',
-            iconUrl: '/images/home_2/wording_process_icon_5.svg',
-            number: '08',
-        },
+        }
     ];
 
     // Feature data with random icons
@@ -188,17 +182,17 @@ const OutsourceUnit = () => {
 
     const imageBoxData2 = [
         {
-            imgSrc: "/images/c-banner-3.jpg",
+            imgSrc: "/images/clinical-protocols.png",
             title: "Best-in-Class Clinical Protocols",
             subtitle: "Dedicated central team with experience from top institutions Medanta, Fortis, Tata Memorial, Max ensuring protocol compliance. Real-time checks withh periodic and surprises audits",
         },
         {
-            imgSrc: "/images/c-banner-3.jpg",
+            imgSrc: "/images/partnership.png",
             title: "Win-Win Partnership",
             subtitle: "Tailored commercial propositions for hospital, nephrologist and VitusCare. Transparent paperwork, streamlined billing, and comprehensive reviews Patient-focused partnership: VitusCare manages all operations and challenges",
         },
         {
-            imgSrc: "/images/c-banner-3.jpg",
+            imgSrc: "/images/market-expertise.png",
             title: "Market Expertise",
             subtitle: "Deep understanding of marketing assessment and pricing strategies. Rapid 'go to market' and launch approach driving utilization proven track record in patient acquisition and retention",
         },
@@ -213,124 +207,10 @@ const OutsourceUnit = () => {
                     subTitle="Test banner"
                 />
             </Section> */}
-
-            {/* Section for Title, Subtitle, and Icon Boxes */}
-            <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
-                <div className="container my-5">
-                    {/* Title and Subtitle */}
-                    <div className="text-center mb-5">
-                        <h1 className="fw-bold blue_color">Why Dialysis in India?</h1>
-                    </div>
-
-                    {/* Icon Boxes */}
-                    <div className="row gy-4">
-                        {featureData.map((feature, index) => (
-                            <div className="col-md-4 text-center" key={index}>
-                                <div className="p-4 border rounded">
-                                    <Icon
-                                        icon={feature.icon}
-                                        className={`fs-1 ${feature.color}`}
-                                        style={{ fontSize: '48px' }}
-                                    />
-                                    <h5 className="mt-3 red_color" style={{ fontSize: '48px' }}>{feature.title}</h5>
-                                    <p className="text-muted" style={{ fontSize: '28px' }}>
-                                        {feature.description.split('*').map((part, i, arr) => (
-                                            <React.Fragment key={i}>
-                                                {part}
-                                                {i < arr.length - 1 && (
-                                                    <span style={{ color: 'red' }}>*</span>
-                                                )}
-                                            </React.Fragment>
-                                        ))}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Full Form Section */}
-                    <div className="mt-5">
-                        <div className="row">
-                            <div className="col-md-6">
-                                <div className="p-3 border rounded">
-                                    <strong style={{ color: 'red' }}>ERSD</strong>: End-Stage Renal Disease
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="p-3 border rounded">
-                                    <strong style={{ color: 'red' }}>CKD</strong>: Chronic Kidney Disease
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </Section>
-
-
-
-            <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
-                <div className="container my-5">
-                    {/* Title and Subtitle */}
-                    <div className="text-center mb-5">
-                        <h1 className="fw-bold blue_color">A Challenge Of Access & Quality</h1>
-                    </div>
-
-                    {/* Row of Small Divs with Icon and Content */}
-                    <div className="row">
-                        {smallDivData.map((item, index) => (
-                            <div
-                                className="col-md-6 mb-4 d-flex justify-content-center"
-                                key={index}
-                            >
-                                {/* Icon Box */}
-                                <div
-                                    className="d-flex align-items-center justify-content-start text-start"
-                                    style={{
-                                        width: '100%',
-                                        maxWidth: '500px',
-                                        minHeight: '80px',
-                                        padding: '10px 15px',
-                                        border: '1px solid #e0e0e0',
-                                        borderRadius: '8px',
-                                        backgroundColor: '#f9f9f9',
-                                        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-                                    }}
-                                >
-                                    {/* Icon */}
-                                    <div
-                                        className="d-flex align-items-center justify-content-center border rounded-circle"
-                                        style={{
-                                            width: '50px',
-                                            height: '50px',
-                                            backgroundColor: '#f0f8ff',
-                                            flexShrink: 0, // Prevents resizing of the icon
-                                        }}
-                                    >
-                                        <Icon
-                                            icon={item.icon}
-                                            className="text-primary"
-                                            style={{ fontSize: '24px' }}
-                                        />
-                                    </div>
-
-                                    {/* Content */}
-                                    <div className="ms-3 flex-grow-1">
-                                        <p className="mb-0 text-muted" style={{ fontSize: '18px' }}>{item.content}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </Section>
-
-
-            {/* accordian */}
-
             <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
                 <div className="container">
                     <div className="text-center mb-5">
-                        <h1 className="fw-bold blue_color">Why Choose Us?</h1>
+                        <h1 className="fw-bold blue_color">Why Choose VitusCare?</h1>
                     </div>
                     <div className="row align-items-center">
                         {/* Content Side */}
@@ -364,172 +244,74 @@ const OutsourceUnit = () => {
                 </div>
             </Section>
 
-            {/* why  choose us */}
-
-            <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
-                <Container>
-                    {/* Section Title */}
-                    <div className="text-center mb-4">
-                        <h2 className="fw-bold" style={{ fontSize: "46px", color: "#002060" }}>
-                            Why Choose VitusCare?
-                        </h2>
-                        <p className="text-muted blue_color" style={{ fontSize: "28px" }}>
-                            <span className="red_color">VITUSCARE</span> YOUR PLUG AND PLAY QUALITY DIALYSIS
-                            PARTNER WITH <span className="red_color">3X BENEFITS</span>
-                        </p>
-                    </div>
-
-                    {/* Image Boxes */}
-                    <Row>
-                        {imageBoxData.map((item, index) => (
-                            <Col md={4} className="mb-4" key={index}>
-                                <div
-                                    className="image-box-wrapper"
-                                    style={{
-                                        position: "relative",
-                                        overflow: "hidden",
-                                        borderRadius: "10px",
-                                        cursor: "pointer",
-                                    }}
-                                >
-                                    {/* Image */}
-                                    <img
-                                        src={item.imgSrc}
-                                        alt={item.title}
-                                        className="image-box-image"
-                                        style={{
-                                            width: "100%",
-                                            height: "350px",
-                                            borderRadius: "10%", // Initial rounded corners
-                                            objectFit: "cover",
-                                            transition: "transform 0.6s ease-in-out", // Smooth scaling
-                                        }}
-                                    />
-                                    {/* Title and Subtitle */}
-                                    <div
-                                        className="image-box-overlay"
-                                        style={{
-                                            position: "absolute",
-                                            top: 0,
-                                            left: 0,
-                                            width: "100%",
-                                            height: "100%",
-                                            backgroundColor: "rgba(0, 0, 0, 0.7)", // Overlay background
-                                            color: "#fff",
-                                            display: "flex",
-                                            flexDirection: "column",
-                                            justifyContent: "center",
-                                            alignItems: "center",
-                                            opacity: 0, // Hidden by default
-                                            transform: "scale(0.9) rotateX(-10deg)", // Shrink and tilt initially
-                                            transition: "opacity 0.6s ease, transform 0.6s ease", // Smooth appearance
-                                        }}
-                                    >
-                                        <h5
+             {/* mid section */}
+                        <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110} style={{ backgroundColor: "#f9f9f9" }}>
+                            <Container>
+                                <Row className="align-items-center">
+                                    {/* Left Column: Text Section */}
+                                    <Col md={6} className="text-start">
+                                        <h1
                                             className="fw-bold"
-                                            style={{
-                                                fontSize: "20px",
-                                                marginBottom: "10px",
-                                                transform: "translateY(20px)",
-                                                opacity: 0,
-                                                transition: "all 0.5s ease-in-out 0.2s", // Delay for the title
-                                            }}
+                                            style={{ color: "#002060", fontSize: "56px", lineHeight: "1.5" }}
                                         >
-                                            {item.title}
-                                        </h5>
-                                        <p
-                                            style={{
-                                                fontSize: "16px",
-                                                textAlign: "center",
-                                                transform: "translateY(20px)",
-                                                opacity: 0,
-                                                transition: "all 0.5s ease-in-out 0.4s", // Delay for the description
-                                            }}
-                                        >
-                                            {item.subtitle}
-                                        </p>
-                                    </div>
-                                </div>
-                            </Col>
-                        ))}
-                    </Row>
-                </Container>
-            </Section>
-
-
-            {/* mid section */}
-            <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110} style={{ backgroundColor: "#f9f9f9" }}>
-                <Container>
-                    <Row className="align-items-center">
-                        {/* Left Column: Text Section */}
-                        <Col md={6} className="text-start">
-                            <h1
-                                className="fw-bold"
-                                style={{ color: "#002060", fontSize: "56px", lineHeight: "1.5" }}
-                            >
-                                BOOST YOUR BOTTOM LINE WITH{" "}
-                                <span style={{ color: "#ff0000" }}>VitusCare</span>!
-                            </h1>
-                            <h2
-                                className="fw-bold"
-                                style={{ fontSize: "28px", lineHeight: "1.5" }}
-                            >
-                                WE <span style={{ color: "#ff0000" }}>INVEST</span> BETWEEN <span style={{ color: "#ff0000" }}>75 LAKH TO 1 CR</span> PER CENTER.
-                            </h2>
-                            <p
-                                className="fw-medium mt-4"
-                                style={{ color: "#002060", fontSize: "20px", fontWeight: "500" }}
-                            >
-                                Unlock New Revenue Streams:
-                            </p>
-                            <p
-                                className="mt-2"
-                                style={{
-                                    color: "#002060",
-                                    fontSize: "18px",
-                                    fontWeight: "400",
-                                    borderTop: "2px solid red",
-                                    paddingTop: "10px",
-                                }}
-                            >
-                                Direct earnings through revenue sharing from dialysis procedures
-                            </p>
-                        </Col>
-
-                        {/* Right Column: Carousel Section */}
-                        <Col md={6} className="text-center">
-                            <Carousel
-                                indicators={false}
-                                controls={true}
-                                className="carousel-circle"
-                                interval={3000}
-                            >
-                                {carouselItems.map((item, index) => (
-                                    <Carousel.Item key={index} className="text-center">
-                                        <div
-                                            className="rounded-circle mx-auto d-flex align-items-center justify-content-center"
-                                            style={{
-                                                width: "320px",
-                                                height: "320px",
-                                                backgroundColor: "#002060", // Set the background to red
-                                                fontSize: "24px",
-                                                fontWeight: "bold",
-                                                color: "white", // Text color set to white
-                                            }}
-                                        >
-                                            {item.text}
-                                        </div>
-                                    </Carousel.Item>
-                                ))}
-                            </Carousel>
-                        </Col>
-
-                    </Row>
-                </Container>
-            </Section>
-
+                                            BOOST YOUR BOTTOM LINE WITH{" "}
+                                            <span style={{ color: "#ff0000" }}>VitusCare</span>!
+                                        </h1>
             
-
+                                        <p
+                                            className="mt-2"
+                                            style={{
+                                                color: "#002060",
+                                                fontSize: "18px",
+                                                fontWeight: "400",
+                                                borderTop: "2px solid red",
+                                                paddingTop: "10px",
+                                            }}
+                                        >
+            
+                                        </p>
+            
+                                        <p
+                                            className="fw-medium mt-4"
+                                            style={{ color: "#002060", fontSize: "20px", fontWeight: "500" }}
+                                        >
+                                            <span style={{ color: 'red' }}>Enhance</span> Your Revenue streams
+                                        </p>
+            
+                                    </Col>
+            
+                                    {/* Right Column: Carousel Section */}
+                                    <Col md={6} className="text-center">
+                                        <Carousel
+                                            indicators={false}
+                                            controls={true}
+                                            className="carousel-circle"
+                                            interval={3000}
+                                        >
+                                            {carouselItems.map((item, index) => (
+                                                <Carousel.Item key={index} className="text-center">
+                                                    <div
+                                                        className="rounded-circle mx-auto d-flex align-items-center justify-content-center"
+                                                        style={{
+                                                            width: "320px",
+                                                            height: "320px",
+                                                            backgroundColor: "#002060", // Set the background to red
+                                                            fontSize: "24px",
+                                                            fontWeight: "bold",
+                                                            color: "white", // Text color set to white
+                                                        }}
+                                                    >
+                                                        {item.text}
+                                                    </div>
+                                                </Carousel.Item>
+                                            ))}
+                                        </Carousel>
+                                    </Col>
+            
+                                </Row>
+                            </Container>
+                        </Section>
+            
             {/* Working Process Section */}
             <Section topMd={105} bottomMd={105}>
                 <WorkingProcess
@@ -592,6 +374,14 @@ const OutsourceUnit = () => {
                     </Row>
                 </Container>
             </Section>
+
+            <Section topMd={100} topLg={120} topXl={100}>
+                            <div className="col-lg-7" style={{width:'70%', margin:'0 auto', padding:'4px'}}>
+                                <h2 className="red_color cs_fs_40 cs_medium mb-0">Reach Out To Us</h2>
+                                <div className="cs_height_42 cs_height_xl_25" />
+                                <DialysisUnitForm />
+                            </div>
+                        </Section>
         </>
     );
 };

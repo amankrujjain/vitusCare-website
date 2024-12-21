@@ -26,18 +26,11 @@ export default function Header({ logoSrc, variant }) {
         className={`cs_site_header cs_style1 cs_sticky_header ${mobileToggle ? 'cs_mobile_toggle_active' : ''} ${variant} ${isSticky ? 'cs_active_sticky' : ''}`}
       >
         <nav className="blue_color cs_nav" style={{ justifyContent: "center", backgroundColor: "#e6e9ff", width: "100vw" }}>
+          
           <ul className={`${mobileToggle ? 'cs_nav_list cs_active' : 'cs_nav_list'}`}>
-            <li><Link to="/appointments">Careers</Link></li>
-            <li className="menu-item-has-children justify-end">
-              <Link to="#">Partner with us</Link>
-              <DropDown>
-                <ul>
-                  <li><Link to="/partner-with-us/doctors">For Doctors</Link></li>
-                  <li><Link to="/partner-with-us/hospitals">For Hospitals</Link></li>
-                </ul>
-              </DropDown>
-            </li>
-            <button style={{ backgroundColor: "#2C2F76", border: "none", borderRadius: "20px", color: "white", padding: "0 15px" }}>
+
+
+            <button style={{ backgroundColor: "#2C2F76", border: "none", borderRadius: "20px", color: "white", padding: "10px 15px" }}>
               <Link to="find-our-centers">Find a center</Link>
             </button>
           </ul>
@@ -55,10 +48,20 @@ export default function Header({ logoSrc, variant }) {
                     <li className="cs_nav"><Link to="/">Home</Link></li>
                     <li className="cs_nav"><Link to="/about">About</Link></li>
                     <li><Link to="/blog">Kidney Knowledge Center</Link></li>
-                    <li><Link to="/departments">Our Services</Link></li>
+                    <li><Link to="/career">Careers</Link></li>
+                    <li className="menu-item-has-children justify-end">
+                      <Link to="#">Partner with us</Link>
+                      <DropDown>
+                        <ul>
+                          <li><Link to="/partner-with-us/doctors">For Doctors</Link></li>
+                          <li><Link to="/partner-with-us/hospitals">For Hospitals</Link></li>
+                        </ul>
+                      </DropDown>
+                    </li>
+                    <li><Link to="/feedback">Feedback</Link></li>
 
                     {/* Mobile-only links */}
-                    <li className="your-class"><Link to="/appointments">Careers</Link></li>
+                    <li className="your-class"><Link to="/career">Careers</Link></li>
                     <li className="menu-item-has-children your-class">
                       <Link to="/partner-with-us">Partner with us</Link>
                       <DropDown>
@@ -74,9 +77,12 @@ export default function Header({ logoSrc, variant }) {
 
                     <button className='responsive-button'>
                       <Link to="tel:+919862898628">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
-                          <path fill="#ee2327" d="M311.3 374.7c-8.2-16.9-18.8-29.2-37.1-21.7l-36.1 13.4c-28.9 13.4-43.3 0-57.7-20.1l-64.9-147.8c-8.1-16.9-3.9-32.8 14.4-40.3l50.5-20.1c18.3-7.5 15.4-23.4 7.2-40.3l-43.3-80.6c-8.2-16.9-25-21-43.3-13.5c-36.6 15.2-66.9 38.8-86.5 73.9c-24 42.9-12 102.5-7.2 127.6s21.6 69 43.3 114.2s40.7 80.7 57.7 100.8s57.7 75.1 108.2 87.3c41.4 10 86 1.6 122.6-13.5c18.3-7.5 18.4-23.4 10.2-40.4zm102.2-256.6h-59.1l78.8 78.8H256v39.4h177.2L354.5 315h59.1l98.5-98.5z" />
-                        </svg>   98628 98628
+                      <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><g fill="none" stroke="#f00" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}><path strokeDasharray={64} strokeDashoffset={64} d="M8 3c0.5 0 2.5 4.5 2.5 5c0 1 -1.5 2 -2 3c-0.5 1 0.5 2 1.5 3c0.39 0.39 2 2 3 1.5c1 -0.5 2 -2 3 -2c0.5 0 5 2 5 2.5c0 2 -1.5 3.5 -3 4c-1.5 0.5 -2.5 0.5 -4.5 0c-2 -0.5 -3.5 -1 -6 -3.5c-2.5 -2.5 -3 -4 -3.5 -6c-0.5 -2 -0.5 -3 0 -4.5c0.5 -1.5 2 -3 4 -3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0"></animate><animateTransform id="lineMdPhoneCallLoop0" fill="freeze" attributeName="transform" begin="0.6s;lineMdPhoneCallLoop0.begin+2.7s" dur="0.5s" type="rotate" values="0 12 12;15 12 12;0 12 12;-12 12 12;0 12 12;12 12 12;0 12 12;-15 12 12;0 12 12"></animateTransform></path><path strokeDasharray={4} strokeDashoffset={4} d="M15.76 8.28c-0.5 -0.51 -1.1 -0.93 -1.76 -1.24M15.76 8.28c0.49 0.49 0.9 1.08 1.2 1.72"><animate fill="freeze" attributeName="stroke-dashoffset" begin="lineMdPhoneCallLoop0.begin+0s" dur="2.7s" keyTimes="0;0.111;0.259;0.37;1" values="4;0;0;4;4"></animate></path><path strokeDasharray={6} strokeDashoffset={6} d="M18.67 5.35c-1 -1 -2.26 -1.73 -3.67 -2.1M18.67 5.35c0.99 1 1.72 2.25 2.08 3.65"><animate fill="freeze" attributeName="stroke-dashoffset" begin="lineMdPhoneCallLoop0.begin+0.2s" dur="2.7s" keyTimes="0;0.074;0.185;0.333;0.444;1" values="6;6;0;0;6;6"></animate></path></g></svg>   98628 98628
+                      </Link>
+                    </button>
+                    <button className='responsive-button' style={{marginLeft:'10px'}}>
+                      <Link to="find-our-centers">
+                        Find a center
                       </Link>
                     </button>
                   </ul>

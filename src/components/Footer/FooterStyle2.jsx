@@ -5,11 +5,12 @@ import TextWidget from '../Widget/TextWidget';
 import SocialWidget from '../Widget/SocialWidget';
 import NewsletterStyle2 from '../Widget/NewsletterStyle2';
 const menuDataOne = [
+  { title: 'Home', href: '/' },
   { title: 'About Us', href: '/about' },
-  { title: 'Departments', href: '/departments' },
-  { title: 'Doctors', href: '/doctors' },
-  { title: 'Timetable', href: '/timetable' },
-  { title: 'Appointment', href: '/appointments' },
+  { title: 'Blogs', href: '/blogs' },
+  { title: 'Career', href: '/career' },
+  { title: 'FeedBack', href: '/feedback' },
+
 ];
 
 const menuDataTwo = [
@@ -26,17 +27,13 @@ const menuDataThree = [
 export default function FooterStyle2() {
   return (
     <footer className="cs_footer cs_style_2 cs_accent_bg cs_white_color">
-      <NewsletterStyle2
-        title="Be Our <br />Subscribers"
-        subTitle="To get the latest news about health <br /> from our experts"
-      />
       <div className="container">
         <div className="cs_footer_in">
           <div className="cs_footer_col">
             <div className="cs_footer_item">
               <TextWidget
-                logoUrl="/images/footer_logo_white.svg"
-                text="VitusCare Medical & Healthcare Center"
+                logoUrl="/images/vc-logo.png"
+                text="VitusCare Medife PVT LTD"
               />
               <ContactInfoWidget />
             </div>
@@ -44,11 +41,6 @@ export default function FooterStyle2() {
           <div className="cs_footer_col">
             <div className="cs_footer_item">
               <MenuWidget data={menuDataOne} />
-            </div>
-          </div>
-          <div className="cs_footer_col">
-            <div className="cs_footer_item">
-              <MenuWidget data={menuDataTwo} />
             </div>
           </div>
           <div className="cs_footer_col">

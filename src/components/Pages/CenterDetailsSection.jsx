@@ -24,6 +24,7 @@ export default function CenterDetailsSection({
   awardHeading,
   schedules,
   scheduleHeading,
+  slogan
 }) {
   return (
     <div className="cs_doctor_details">
@@ -37,7 +38,25 @@ export default function CenterDetailsSection({
       <div className="container">
         <div className="row">
           <div className="col-lg-5">
-            <div className="cs_single_doctor overflow-hidden cs_radius_20">
+            <div className="cs_single_doctor overflow-hidden cs_radius_20 position-relative">
+              {/* Diagonal Ribbon */}
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '180px',
+                  right: '-25px',
+                  backgroundColor: 'red',
+                  color: 'white',
+                  transform: 'rotate(45deg)',
+                  transformOrigin: 'top right',
+                  width: '300px',
+                  textAlign: 'center',
+                  fontWeight: 'bold',
+                  zIndex: 2,
+                }}
+              >
+                slots available Call Now !!
+              </div>
               <img src={imgUrl} alt="Doctor" className="w-100" />
               <h3 className="cs_white_color cs_accent_bg mb-0 text-center cs_semibold cs_fs_24">
                 {department}
@@ -64,7 +83,9 @@ export default function CenterDetailsSection({
           </div>
           <div className="col-lg-6 offset-lg-1 position-relative">
             <Spacing md="55" />
-            <h2 className="cs_fs_48 mb-0 cs_semibold">{name}</h2>
+            <h2 className="cs_fs_48 mb-0 cs_semibold">{slogan}</h2>
+            <Spacing md="55" />
+            <h2 className="cs_fs_30 mb-0 cs_semibold">{'Now In '+name}</h2>
             <Spacing md="12" />
             <h3 className="cs_semibold cs_fs_24 mb-0">{designation}</h3>
             <Spacing md="32" />

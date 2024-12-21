@@ -48,7 +48,8 @@ export default function CenterDetails() {
         <CenterDetailsSection
           bgUrl="/images/doctors/doctor_details_bg.svg"
           imgUrl="/images/doctors/doctor_details.jpeg"
-          name={"#SirfQualityDialysis in - " + centerData.center.state}
+          slogan={"#SirfQualityDialysis"}
+          name={centerData.center.city}
           department={centerData.center.name_of_centre}
           designation={centerData.center.name_of_centre}
           description={centerData.center.address_of_centre}
@@ -106,9 +107,6 @@ export default function CenterDetails() {
                 'Empaneled with CGHS, ESI, all major TPA partners',
             },
             {
-              title: `Special interest in women's mental health and perinatal psychiatry.`,
-            },
-            {
               title:
                 'Multi - Speciaity Hospital with ICU facility',
             },
@@ -119,7 +117,7 @@ export default function CenterDetails() {
       <Section bottomMd={200} bottomLg={150} bottomXl={110}>
         <AppointmentSectionStyle2
           bgUrl="/images/home_2/appointment_bg.svg"
-          imgUrl="/images/home_2/appointment_img.png"
+          imgUrl="/images/home_2/Appointment.png"
           sectionTitle="Appointment"
           sectionTitleUp="BOOK AN"
         />

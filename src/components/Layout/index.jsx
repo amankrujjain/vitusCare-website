@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import Footer from '../Footer';
+import Footer2 from '../Footer/FooterStyle2';
 import Header from '../Header';
 import Appointment from '../AppointmentForm/index';
 
@@ -29,7 +29,7 @@ export default function Layout() {
       link:'/',
     },
     {
-      label: 'Services',
+      label: 'Career',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path
@@ -87,7 +87,7 @@ export default function Layout() {
     <>
       <Header logoSrc="/images/logo1.png" variant="cs_heading_color" />
       <Outlet />
-      <Footer />
+      <Footer2 />
 
       {/* Fixed "Book an Appointment" Div for PC View */}
       {!isMobile && (
