@@ -242,7 +242,35 @@ const testimonialData = [
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'रामु',
-    avatarDesignation: 'Dialysis Patient',
+    avatarDesignation: 'डायलिसिस मरीज',
+  },
+  {
+    text: `Vituscare में समर्थक महिला स्टाफ ने मेरे इलाज को बहुत आसान बना दिया है। उनकी देखभाल और सहानुभूति से हर सत्र में मुझे आत्मविश्वास और आराम मिलता है। वे हमेशा मेरी मदद के लिए तैयार रहती हैं, और मुझे हमेशा सहज महसूस कराती हैं।`,
+    ratingNumber: '4.5',
+    avatarImgUrl: '/images/home_1/avatar_2.png',
+    avatarName: 'सीमा',
+    avatarDesignation: 'डायलिसिस मरीज',
+  },
+  {
+    text: `Vituscare का सेंटर बहुत आसानी से पहुँचने योग्य है, और मुझे कभी भी इलाज के लिए आने में कोई दिक्कत नहीं होती। सेंटर के स्थान और शेड्यूलिंग सिस्टम ने मेरी डायलिसिस सत्रों को बहुत सुविधाजनक बना दिया है।`,
+    ratingNumber: '4.5',
+    avatarImgUrl: '/images/home_1/avatar_2.png',
+    avatarName: 'सुनील',
+    avatarDesignation: 'डायलिसिस मरीज',
+  },
+  {
+    text: `Vituscare में डायलिसिस के दौरान समर्थक शिफ्ट टाइमिंग्स ने मेरे जीवन को बहुत आसान बना दिया है। मेरे पास अन्य जिम्मेदारियाँ होती हैं, और यहाँ के लचीले शिफ्ट टाइम्स ने मेरे इलाज को बहुत सुविधाजनक बना दिया है। अब मुझे चिंता नहीं होती कि डायलिसिस के कारण मेरी बाकी कार्यों में कोई विघ्न आएगा।`,
+    ratingNumber: '4.5',
+    avatarImgUrl: '/images/home_1/avatar_2.png',
+    avatarName: 'प्रभा',
+    avatarDesignation: 'डायलिसिस मरीज',
+  },
+  {
+    text: `Vituscare में डायलिसिस करने का अनुभव बहुत अच्छा है। यहाँ की सफाई और स्वच्छता शानदार है। मुझे कभी भी इस बारे में चिंता नहीं होती, और इलाज के दौरान शांति और आराम का अहसास होता है।`,
+    ratingNumber: '4.5',
+    avatarImgUrl: '/images/home_1/avatar_2.png',
+    avatarName: 'अजय',
+    avatarDesignation: 'डायलिसिस मरीज',
   },
 ];
 

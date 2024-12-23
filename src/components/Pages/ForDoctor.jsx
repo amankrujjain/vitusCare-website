@@ -39,7 +39,7 @@ function ForDoctor() {
     return <>
         <Section topMd={145} topLg={100} topXl={100}>
             <AboutSectionStyle4
-                imgUrl="/images/home_3/about.png"
+                imgUrl="/images/home_3/BannerImage.png"
                 spiningImgUrl="/images/home_1/about_mini.svg"
                 titleUp="ABOUT US"
                 title="Partner with VitusCare: Elevate Dialysis Care in India"
