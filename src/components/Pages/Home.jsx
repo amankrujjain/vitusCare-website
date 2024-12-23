@@ -19,20 +19,20 @@ import { pageTitle } from '../../helpers/PageTitle';
 const featureListData = [
   {
     iconSrc: '/images/home_1/compassion.svg',
-    title: 'Elite Amenities',
+    title: 'Best Amenities',
     subTitle:
-      `Imported Fresenius dialysis machines deliver precision care. High-quality dialyzers and RO TDS per WHO/ISN ensure optimal safety.`,
+      `Imported dialysis machines deliver precision care. High-quality dialyzers and RO TDS per WHO/ISN ensure optimal safety.`,
   },
   {
     iconSrc: '/images/home_1/excellence.svg',
     title: 'Skilled Experts',
     subTitle:
-      'Highly-skilled technicians recruited with stringent standards, trained under VitusCare protocols, with regular training and audits.',
+      'Highly-skilled technicians recruited with stringent standards, trained under VitusCare protocols, high standards maintained via regular audits.',
   },
   {
     iconSrc: '/images/home_1/integrity.svg',
     title: 'Superior Standards',
-    subTitle: `Designed by top nephrologists, adhering to global standards. Every session audited to ensure reliable, complete, and effective dialysis care.
+    subTitle: `Designed by top nephrologists, adhering to global standards. Every session audited to ensure reliable, adequate, and effective dialysis care.
 `,
   },
   {
@@ -70,20 +70,31 @@ const faqData = [
       'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
   },
   {
+    title:'Can I avail dialysis under government schemes such as Ayushman bharat, ECHS, CGHS?'
+    ,
+    content:
+      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.'
+  },
+  {
     title: 'Do you accept insurance?',
     content:
       'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
   },
   {
-    title: 'What should I bring to my appointment?',
+    title: 'What should I bring to my visit?',
     content:
       'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
   },
   {
-    title: 'How do I request a prescription refill?',
+    title: 'Can I receive dialysis at home?',
     content:
       'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
   },
+  {
+    title:'How long does each dialysis session take?',
+    content:
+      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.'
+  }
 ];
 const blogData = [
   {
@@ -312,7 +323,7 @@ VitusCare is North India’s leading dialysis care provider, dedicated to making
         bottomXl={110}
       >
         <TestimonialSectionStyle2
-          sectionTitle="What Our Patients Say <br /> About Us"
+          sectionTitle="What Our Patients Say"
           sectionTitleUp="TESTIMONIALS"
           data={testimonialData}
         />
@@ -322,9 +333,9 @@ VitusCare is North India’s leading dialysis care provider, dedicated to making
       <Section>
         <Banner
           bgUrl="images/home_1/cta_bg.svg"
-          imgUrl="images/egfr.webp"
+          imgUrl="images/GFR.png"
           title="Find About Your Kidney Health Now !"
-          subTitle="get your quick health check up with our GFR calculator!"
+          subTitle=""
           buttonUrl="/grf-calculator"
         />
       </Section>

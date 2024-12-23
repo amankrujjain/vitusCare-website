@@ -109,11 +109,11 @@ const teamData = [
 ];
 
 const galleryData = [
-  { imgUrl: '/images/about/portfolio_2_lg.jpeg' },
-  { imgUrl: '/images/about/portfolio_3_lg.jpeg' },
-  { imgUrl: '/images/about/portfolio_1_lg.jpeg' },
-  { imgUrl: '/images/about/portfolio_4_lg.jpeg' },
-  { imgUrl: '/images/about/portfolio_5_lg.jpeg' },
+  { imgUrl: '/images/about/center791.png' },
+  { imgUrl: '/images/about/center791-2.png' },
+  { imgUrl: '/images/about/center.png' },
+  { imgUrl: '/images/about/center-1611.png' },
+  { imgUrl: '/images/about/center-1581.png' },
 ];
 
 
