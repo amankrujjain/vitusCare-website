@@ -27,7 +27,7 @@ const featureListData = [
     iconSrc: '/images/home_1/excellence.svg',
     title: 'Skilled Experts',
     subTitle:
-      'Highly-skilled technicians recruited with stringent standards, trained under VitusCare protocols, high standards maintained via regular audits.',
+      'Highly-skilled technicians recruited with stringent standards, high standards maintained via regular audits.',
   },
   {
     iconSrc: '/images/home_1/integrity.svg',
@@ -127,49 +127,49 @@ const awardData = [
     title: 'Changing Dialysis Care & Making It More Easily Available',
     subTitle:
       'This award recognizes healthcare organizations that have used health information technology to improve patient outcomes and reduce costs.',
-    iconUrl: 'images/icons/award.svg',
+    iconUrl: 'images/news/betterIndia.svg',
     url: 'https://thebetterindia.com/373563/vitus-care-renal-care-dialysis-tier-2-cities-chronic-kidney-disease-prabhat-shrivastava/'
   },
   {
     title: 'Tomorrow Capital Invests In Kidney Start Up VitusCare',
     subTitle:
       'This recognition is given to hospitals that have met rigorous standards for patient safety and quality of care.',
-    iconUrl: 'images/icons/award.svg',
+    iconUrl: 'images/news/toi.png',
     url: 'https://timesofindia.indiatimes.com/business/india-business/tomorrow-capital-invests-in-kidney-start-up-vituscare/articleshow/109354003.cms'
   },
   {
     title: 'Top 3 ways to improve kidney health',
     subTitle:
       'This award recognizes healthcare organizations that have demonstrated excellence in leadership, strategic planning, customer and employee satisfaction, and operational efficiency.',
-    iconUrl: 'images/icons/award.svg',
+    iconUrl: 'images/news/zeeNews.avif',
     url: 'https://zeenews.india.com/hindi/health/how-to-managing-diabetes-to-prevent-kidney-disease-doctor-told-steps-for-a-healthier-lifestyle/2514635'
   },
   {
     title: ' Available, accessible, affordable: VitusCare is focusing on the 3 As of kidney care in Tier II and III India',
     subTitle:
       'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
-    iconUrl: 'images/icons/award.svg',
+    iconUrl: 'images/news/yourStory.svg',
     url: "https://yourstory.com/2022/09/accessible-affordable-dialysis-therapy-vituscare-kidney-care-india"
   },
   {
     title: 'ESRD rising at alarming rate, particularly among adults aged 25-55',
     subTitle:
       'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
-    iconUrl: 'images/icons/award.svg',
+    iconUrl: 'images/news/et-now.svg',
     url: "https://health.economictimes.indiatimes.com/news/industry/esrd-rising-at-alarming-rate-particularly-among-adults-aged-25-55/113941095"
   },
   {
     title: 'VitusCare on track to achieve Rs 100 Cr ARR by 2026',
     subTitle:
       'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
-    iconUrl: 'images/icons/award.svg',
+    iconUrl: 'images/news/yourStory.svg',
     url: "https://yourstory.com/2024/12/vituscare-track-achieve-rs-100cr-arr-2026"
   },
   {
     title: 'Tomorrow Capital-Backed Dialysis Firm VitusCare On Road To Raise Fresh Funds',
     subTitle:
       'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
-    iconUrl: 'images/icons/award.svg',
+    iconUrl: 'images/news/VCC-logo.svg',
     url: "https://www.vccircle.com/tomorrowcapital-backed-dialysis-firm-vituscare-on-road-to-raise-fresh-funds"
   },
   ,
@@ -177,7 +177,7 @@ const awardData = [
     title: 'Health in 2024: The Top Trends That Shaped Preventive Care in India',
     subTitle:
       'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
-    iconUrl: 'images/icons/award.svg',
+    iconUrl: 'images/news/news18.png',
     url: "https://www.news18.com/lifestyle/health-and-fitness-health-in-2024-the-top-trends-that-shaped-preventive-care-in-india-9159413.html"
   },
 ];

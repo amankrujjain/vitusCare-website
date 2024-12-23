@@ -7,7 +7,7 @@ import ControlledCarousel from '../Carousel/ControlledCarousel';
 const funFactData = [
   { number: '50+', title: 'Operational Cities' },
   { number: '25,000', title: 'Satisfied Patients' },
-  { number: '51,00,000', title: 'Sessions Completed' },
+  { number: '5,00,000', title: 'Sessions Completed' },
 ];
 
 export default function Hero({
