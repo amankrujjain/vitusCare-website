@@ -33,9 +33,7 @@ export default function TestimonialStyle2({
         <Rating ratingNumber={ratingNumber} />
       </div>
       <div className="cs_testimonial_meta">
-        <div className="cs_testimonial_avatar">
-          <img src={avatarImgUrl} alt="Avatar" />
-        </div>
+        
         <div className="cs_testimonial_meta_right">
           <h3 className="cs_fs_24 cs_semibold m-0 text-uppercase">
             {avatarName}

@@ -85,7 +85,7 @@ export default function Layout() {
 
   return (
     <>
-      <Header logoSrc="/images/logo1.png" variant="cs_heading_color" />
+      <Header logoSrc="/images/vitusCare.png" variant="cs_heading_color" />
       <Outlet />
       <Footer2 />
 

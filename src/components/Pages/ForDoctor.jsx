@@ -57,7 +57,7 @@ function ForDoctor() {
         </Section>
         <Section topMd={145} topLg={100} topXl={100} className="cs_footer_margin_0">
             <BannerSectionStyle4
-                bgUrl="/images/about/banner_bg_2.jpeg"
+                bgUrl="/images/about/banner-multiple-people.png"
                 title="Partner with us today!"
                 subTitle="Together, Let us re-define dialysis care and create a brighter future for all kidney patients!"
                 center

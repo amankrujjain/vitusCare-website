@@ -148,7 +148,7 @@ export default function Header({ logoSrc, variant }) {
             <img src="/images/icons/close.svg" alt="Close" />
           </button>
           <div className="cs_logo_box">
-            <img src="/images/logo1.png" alt="Logo" />
+            <img src="/images/vitusCare.png" alt="Logo" />
             <Spacing md="15" />
           </div>
           <Spacing md="35" lg="50" />

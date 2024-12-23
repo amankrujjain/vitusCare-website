@@ -148,9 +148,9 @@ export default function About() {
           data={galleryData}
         />
       </Section>
-      <Section className="cs_footer_margin_0">
-        <BannerSectionStyle4
-          bgUrl="images/about/banner_bg_2.jpeg"
+      <Section className="cs_footer_margin_0" topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
+        <BannerSectionStyle4 
+          bgUrl="images/about/banner-multiple-people.png"
           title="Don’t Let Your Health <br />Take a Backseat!"
           subTitle="Schedule an appointment with one of our experienced <br />medical professionals today!"
           center

@@ -203,32 +203,46 @@ const departmentData = [
 
 const testimonialData = [
   {
-    text: 'I recently had to bring my child to VitusCare for a minor injury, and I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive.”',
+    text: 'Vituscare Dialysis has an impeccable cleanliness standard. Every time I visit, the center is spotless, which gives me peace of mind. The hygienic environment makes me feel safe, and I’m confident about the care I receive during my treatments.”',
     ratingNumber: '5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'PAULO HUBERT',
-    avatarDesignation: 'New York, USA',
+    avatarName: 'Ashish',
+    avatarDesignation: 'Dialysis Patient',
   },
   {
-    text: 'I recently had to bring my child to VitusCare for a minor injury, and I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive.”',
+    text: 'What I appreciate most about Vituscare is their supportive female staff. They are incredibly compassionate, always checking on me and making sure I’m comfortable during my treatments. Their kindness and care have made my dialysis sessions more manageable.”',
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'PAULO HUBERT',
-    avatarDesignation: 'New York, USA',
+    avatarName: 'Lata Devi',
+    avatarDesignation: 'Dialysis Patient',
   },
   {
-    text: 'I recently had to bring my child to VitusCare for a minor injury, and I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive.”',
+    text: 'I love the easy accessibility of Vituscare centers. The locations are well-planned, and it’s so convenient for me to get to the center without hassle. The straightforward scheduling system also helps me plan my visits efficiently.”',
     ratingNumber: '5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'PAULO HUBERT',
-    avatarDesignation: 'New York, USA',
+    avatarName: 'Sandeep',
+    avatarDesignation: 'Dialysis Patient',
   },
   {
-    text: 'I recently had to bring my child to VitusCare for a minor injury, and I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive.”',
+    text: `Vituscare’s supportive shift timings have made a huge difference in my life. With my busy schedule, it's hard to find time for treatments, but the flexible shift timings at Vituscare make it so easy for me to manage my dialysis sessions without stress.”`,
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'PAULO HUBERT',
-    avatarDesignation: 'New York, USA',
+    avatarName: 'Aarti',
+    avatarDesignation: 'Dialysis Patient',
+  },
+  {
+    text: `I’ve been visiting Vituscare for a few months, and I’m very impressed with the cleanliness of the center. It's always well-maintained, and I always feel at ease knowing the environment is spotless. The hygienic environment adds to my comfort during dialysis.`,
+    ratingNumber: '4.5',
+    avatarImgUrl: '/images/home_1/avatar_2.png',
+    avatarName: 'Raj',
+    avatarDesignation: 'Dialysis Patient',
+  },
+  {
+    text: `Vituscare में डायलिसिस के दौरान मुझे उनकी सफाई व्यवस्था बहुत पसंद आई। हर बार जब मैं यहाँ आता हूं, सेंटर बिल्कुल साफ-सुथरा मिलता है। इस स्वच्छ वातावरण में इलाज कराना मुझे बहुत सुरक्षित और आरामदायक महसूस कराता है।`,
+    ratingNumber: '4.5',
+    avatarImgUrl: '/images/home_1/avatar_2.png',
+    avatarName: 'रामु',
+    avatarDesignation: 'Dialysis Patient',
   },
 ];
 
