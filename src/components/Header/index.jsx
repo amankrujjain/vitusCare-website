@@ -41,7 +41,7 @@ export default function Header({ logoSrc, variant }) {
           </ul>
         </nav> */}
 
-        <div className="cs_main_header">
+        <div className="cs_main_header" style={{backgroundColor:'white'}}>
           <div className="container">
             <div className="cs_main_header_in">
               <div className="cs_main_header_left">
@@ -66,7 +66,7 @@ export default function Header({ logoSrc, variant }) {
                     {/* <li><Link to="/feedback">Feedback</Link></li> */}
 
                     {/* Mobile-only links */}
-                    <li className="your-class"><Link to="/career">Careers</Link></li>
+                    {/* <li className="your-class"><Link to="/career">Careers</Link></li>
                     <li className="menu-item-has-children your-class">
                       <Link to="/partner-with-us">Partner with us</Link>
                       <DropDown>
@@ -78,7 +78,7 @@ export default function Header({ logoSrc, variant }) {
                     </li>
                     <button className="your-class" style={{ backgroundColor: "#2C2F76", border: "none", borderRadius: "20px", color: "white", padding: "0 15px" }}>
                       <Link to="find-our-centers">Find a center</Link>
-                    </button>
+                    </button> */}
 
                     <button className='responsive-button'>
                       <Link to="tel:+919862898628">

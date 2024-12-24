@@ -62,38 +62,33 @@ const faqData = [
   {
     title: 'What services does VitusCare offer?',
     content:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
+      'VitusCare Medlife Pvt Ltd is a healthcare company founded on July 14, 2017, by Dr. Saurabh Pokhariyal, Prabhat K. Shrivastava, and Pankaj Tandon, intending to offer quality dialysis at affordable rates across all underserved markets globally.',
   },
   {
     title: 'How do I schedule an appointment with VitusCare?',
     content:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
+      'You can walk into any of our nearby VitusCare dialysis centres. You can also give a call on our helpline number: 98628 98628',
   },
   {
     title:'Can I avail dialysis under government schemes such as Ayushman bharat, ECHS, CGHS?'
     ,
     content:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.'
+      'Yes, you can avail dialysis under various health schemes with us such as Ayushman Bharat, ECHS, CGHS, NHA, SGHS, Ministry of Health and Family Welfare, NFHS and Pradhan Mantri National Dialysis Programme'
   },
   {
     title: 'Do you accept insurance?',
     content:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
-  },
-  {
-    title: 'What should I bring to my visit?',
-    content:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
+      ' Yes, we offer dialysis services under various TPAs (Third Party Administrators).',
   },
   {
     title: 'Can I receive dialysis at home?',
     content:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
+      'Yes, we provide Home Hemodialysis Facility. Kindly contact us at 98628 98628 to know more.',
   },
   {
     title:'How long does each dialysis session take?',
     content:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.'
+      'On an average a dialysis session takes around 4 hours to be completed.'
   }
 ];
 const blogData = [
