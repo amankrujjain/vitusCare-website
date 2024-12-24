@@ -49,13 +49,13 @@ const featureListData = [
   },
 ];
 const brandData = [
-  { imgUrl: 'images/brand_1.png', imgAlt: 'Brand' },
-  { imgUrl: 'images/brand_2.png', imgAlt: 'Brand' },
-  { imgUrl: 'images/brand_3.png', imgAlt: 'Brand' },
-  { imgUrl: 'images/brand_4.png', imgAlt: 'Brand' },
-  { imgUrl: 'images/brand_5.png', imgAlt: 'Brand' },
-  { imgUrl: 'images/brand_6.png', imgAlt: 'Brand' },
-  { imgUrl: 'images/brand_7.png', imgAlt: 'Brand' },
+  { imgUrl: 'images/brand_1.png', imgAlt: 'Haryana Govt' },
+  { imgUrl: 'images/brand_2.png', imgAlt: 'Aayushman' },
+  { imgUrl: 'images/brand_3.png', imgAlt: 'ESIC' },
+  { imgUrl: 'images/brand_4.png', imgAlt: 'CGHS' },
+  { imgUrl: 'images/brand_5.png', imgAlt: 'Star Health' },
+  { imgUrl: 'images/brand_6.png', imgAlt: 'TATA AIG' },
+  { imgUrl: 'images/brand_7.png', imgAlt: 'MD India' },
   { imgUrl: 'images/brand_8.png', imgAlt: 'Brand' },
 ];
 const faqData = [

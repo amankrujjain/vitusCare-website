@@ -5,27 +5,27 @@ import IconBox from '../../IconBox/IconBox'; // Import the new IconBox component
 
 const gfrData = [
   {
-    iconUrl: "",
+    iconUrl: "/images/gfr_icons/icon_1.svg",
     title: "What is GFR Calculator?",
     description: "The GFR calculator is a tool used to estimate how well your kidneys are functioning. It calculates the rate at which your kidneys filter waste and excess fluids from the blood."
   },
   {
-    iconUrl: "",
+    iconUrl: "/images/gfr_icons/icon_2.svg",
     title: "Why is GFR Important?",
     description: "GFR is essential in diagnosing and monitoring chronic kidney disease (CKD). It helps detect kidney damage early and guides decisions regarding treatments and interventions."
   },
   {
-    iconUrl: "",
+    iconUrl: "/images/gfr_icons/icon_3.svg",
     title: "How to Calculate GFR?",
     description: "GFR is calculated using factors such as age, gender, serum creatinine levels, and sometimes race. The most common formula is the CKD-EPI equation, which estimates your kidney filtration rate."
   },
   {
-    iconUrl: "",
+    iconUrl: "/images/gfr_icons/icon_4.svg",
     title: "Interpreting GFR Results",
     description: "A GFR above 90 is normal, 60-89 is mild, 30-59 indicates moderate kidney damage, 15-29 suggests severe damage, and below 15 is kidney failure, requiring dialysis or transplant."
   },
   {
-    iconUrl: "",
+    iconUrl: "/images/gfr_icons/icon_5.svg",
     title: "Good and Dangerous Signs in GFR Test",
     description: "A GFR of 90+ is considered healthy, but values below 60 can indicate kidney disease. A GFR of 15 or lower is a sign of kidney failure and requires immediate medical attention."
   }
