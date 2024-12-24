@@ -74,14 +74,14 @@ const OutsourceUnit = () => {
             title: 'MARKETING',
             subTitle:
                 'CO-branded marketing initiatives across <br/> multiple channels to each patints',
-            iconUrl: '/images/home_2/wording_process_icon_5.svg',
+            iconUrl: '/images/home_2/wording_process_icon_6.svg',
             number: '06',
         },
         {
             title: 'EQUIPMENT MAINTENANCE',
             subTitle:
                 'Rigorous preventive maintenance schedule <br/> and dedicated terms for reactivee maintenance',
-            iconUrl: '/images/home_2/wording_process_icon_5.svg',
+            iconUrl: '/images/home_2/wording_process_icon_7.svg',
             number: '07',
         }
     ];

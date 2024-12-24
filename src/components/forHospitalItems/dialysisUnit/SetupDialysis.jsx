@@ -75,21 +75,21 @@ const SetupDialysis = () => {
             title: 'MARKETING',
             subTitle:
                 'Co-branded marketing initiatives across multiple channels to onboard patients',
-            iconUrl: '/images/home_2/wording_process_icon_5.svg',
+            iconUrl: '/images/home_2/wording_process_icon_6.svg',
             number: '06',
         },
         {
             title: 'EQUIPMENT MAINTENANCE',
             subTitle:
                 'Rigorous preventive maintenance schedule and dedicated teams for reactive maintenance to ensure longevity and quality of equipment',
-            iconUrl: '/images/home_2/wording_process_icon_5.svg',
+            iconUrl: '/images/home_2/wording_process_icon_7.svg',
             number: '07',
         },
         {
             title: 'HOLISTIC SOLUTION',
             subTitle:
                 'Billing support and management + Nephrologist tie-up',
-            iconUrl: '/images/home_2/wording_process_icon_5.svg',
+            iconUrl: '/images/home_2/wording_process_icon_8.svg',
             number: '08',
         },
     ];
@@ -174,17 +174,17 @@ const SetupDialysis = () => {
     const imageBoxData = [
         {
             imgSrc: "/images/capex.png",
-            title: "Advanced Dialysis Solutions",
+            title: "CAPEX",
             subtitle: "Cutting-edge technology to ensure the best care for patients.",
         },
         {
             imgSrc: "/images/opex.png",
-            title: "Comprehensive Revenue Model",
+            title: "OPEX",
             subtitle: "Unlock multiple revenue streams with our tailored approach.",
         },
         {
             imgSrc: "/images/operational-involvement.png",
-            title: "Expert Guidance",
+            title: "ZERO OPERATIONAL COST",
             subtitle: "Experienced professionals to assist you every step of the way.",
         },
     ];
@@ -353,93 +353,99 @@ const SetupDialysis = () => {
             {/* why  choose us */}
 
             <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
-                <Container>
-                    {/* Section Title */}
-                    <div className="text-center mb-4">
-                        <h2 className="fw-bold" style={{ fontSize: "46px", color: "#002060" }}>
-                            <span className="red_color"> 3X BENEFITS</span> WITH VITUSCARE
-                        </h2>
-                        <p className="text-muted blue_color" style={{ fontSize: "28px" }}>
-                            YOUR PLUG AND PLAY QUALITY DIALYSIS
-                        </p>
-                    </div>
+    <Container>
+        {/* Section Title */}
+        <div className="text-center mb-4">
+            <h2 className="fw-bold" style={{ fontSize: "46px", color: "#002060" }}>
+                <span className="red_color">3X BENEFITS</span> WITH VITUSCARE
+            </h2>
+            <p className="text-muted blue_color" style={{ fontSize: "28px" }}>
+                YOUR PLUG AND PLAY QUALITY DIALYSIS
+            </p>
+        </div>
 
-                    {/* Image Boxes */}
-                    <Row>
-                        {imageBoxData.map((item, index) => (
-                            <Col md={4} className="mb-4" key={index}>
-                                <div
-                                    className="image-box-wrapper"
-                                    style={{
-                                        position: "relative",
-                                        overflow: "hidden",
-                                        borderRadius: "10px",
-                                        cursor: "pointer",
-                                    }}
-                                >
-                                    {/* Image */}
-                                    <img
-                                        src={item.imgSrc}
-                                        alt={item.title}
-                                        className="image-box-image"
-                                        style={{
-                                            width: "450px",
-                                            height: "350px",
-                                            borderRadius: "10%", // Initial rounded corners
-                                            objectFit: "cover",
-                                            transition: "transform 0.6s ease-in-out", // Smooth scaling
-                                        }}
-                                    />
-                                    {/* Title and Subtitle */}
-                                    <div
-                                        className="image-box-overlay"
-                                        style={{
-                                            position: "absolute",
-                                            top: 0,
-                                            left: 0,
-                                            width: "100%",
-                                            height: "100%",
-                                            backgroundColor: "rgba(0, 0, 0, 0.7)", // Overlay background
-                                            color: "#fff",
-                                            display: "flex",
-                                            flexDirection: "column",
-                                            justifyContent: "center",
-                                            alignItems: "center",
-                                            opacity: 0, // Hidden by default
-                                            transform: "scale(0.9) rotateX(-10deg)", // Shrink and tilt initially
-                                            transition: "opacity 0.6s ease, transform 0.6s ease", // Smooth appearance
-                                        }}
-                                    >
-                                        <h5
-                                            className="fw-bold"
-                                            style={{
-                                                fontSize: "20px",
-                                                marginBottom: "10px",
-                                                transform: "translateY(20px)",
-                                                opacity: 0,
-                                                transition: "all 0.5s ease-in-out 0.2s", // Delay for the title
-                                            }}
-                                        >
-                                            {item.title}
-                                        </h5>
-                                        <p
-                                            style={{
-                                                fontSize: "16px",
-                                                textAlign: "center",
-                                                transform: "translateY(20px)",
-                                                opacity: 0,
-                                                transition: "all 0.5s ease-in-out 0.4s", // Delay for the description
-                                            }}
-                                        >
-                                            {item.subtitle}
-                                        </p>
-                                    </div>
-                                </div>
-                            </Col>
-                        ))}
-                    </Row>
-                </Container>
-            </Section>
+        {/* Image Boxes */}
+        <Row>
+            {imageBoxData.map((item, index) => (
+                <Col md={4} className="mb-4" key={index}>
+                    <div className="image-box-wrapper">
+                        {/* Image */}
+                        <img
+                            src={item.imgSrc}
+                            alt={item.title}
+                            className="image-box-image"
+                        />
+
+                        {/* Overlay */}
+                        <div className="image-box-overlay">
+                            <h5 className="image-box-title" style={{color:'white'}}>{item.title}</h5>
+                        </div>
+                    </div>
+                </Col>
+            ))}
+        </Row>
+    </Container>
+
+    {/* Inline CSS */}
+    <style jsx>{`
+        .image-box-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .image-box-wrapper:hover {
+            transform: scale(1.05);
+        }
+
+        .image-box-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image-box-wrapper:hover .image-box-image {
+            transform: scale(1.1);
+        }
+
+        .image-box-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(44, 47, 118, 0);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .image-box-wrapper:hover .image-box-overlay {
+            background-color: #2C2F76;
+            opacity: 1;
+        }
+
+        .image-box-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .image-box-subtitle {
+            font-size: 16px;
+            text-align: center;
+        }
+    `}</style>
+</Section>
+
+
 
 
             {/* Working Process Section */}
@@ -453,7 +459,7 @@ const SetupDialysis = () => {
                 />
             </Section>
             <Section topMd={100} topLg={120} topXl={100}>
-                <div className="col-lg-7" style={{width:'70%', margin:'0 auto', padding:'4px'}}>
+                <div className="col-lg-7" style={{ width: '70%', margin: '0 auto', padding: '4px' }}>
                     <h2 className="red_color cs_fs_40 cs_medium mb-0">Reach Out To Us</h2>
                     <div className="cs_height_42 cs_height_xl_25" />
                     <NewUnitForm />
