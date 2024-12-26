@@ -501,3 +501,55 @@ input[type='time']::-webkit-calendar-picker-indicator {
   transform: translateY(0); /* Move text to original position */
   opacity: 1; /* Fade in the text */
 }
+
+// Whatsapp icon 
+
+/* General styles for WhatsApp icon */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2000;
+  cursor: pointer;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Default size for large screens */
+.whatsapp-icon svg {
+  width: 80px;
+  height: 80px;
+  padding: 15px;
+}
+
+/* Medium screens (e.g., tablets) */
+@media (max-width: 1024px) {
+  .whatsapp-icon svg {
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+  }
+}
+
+/* Small screens (e.g., mobile in portrait mode) */
+@media (max-width: 768px) {
+  .whatsapp-icon svg {
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    bottom: 60px;
+  }
+}
+
+/* Extra small screens (e.g., smaller phones) */
+@media (max-width: 480px) {
+  .whatsapp-icon {
+    bottom: 80px; /* Adjust bottom for smaller phones */
+  }
+  .whatsapp-icon svg {
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+  }
+}

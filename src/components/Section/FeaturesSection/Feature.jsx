@@ -39,7 +39,7 @@ export default function Feature({ sectionTitle, imgUrl }) {
         <div className="row flex-xl-row flex-column-reverse">
           <div className="col-xl-5">
             <div className="cs_pr_95 text-center cs_img_filed">
-              <img src={imgUrl} alt={sectionTitle} className="cs_radius_30" />
+              <img style={{height:'80%'}} src={imgUrl} alt={sectionTitle} className="cs_radius_30"  />
             </div>
           </div>
           <div className="col-xl-7">

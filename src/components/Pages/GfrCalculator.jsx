@@ -127,7 +127,7 @@ export default function GFRCalculator() {
             <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
                 <Feature
                     sectionTitle="What Is GFR Calculator"
-                    imgUrl="images/about/why_choose_us.jpeg"
+                    imgUrl="images/about/GFR-banner.png"
                 />
             </Section>
         </>
