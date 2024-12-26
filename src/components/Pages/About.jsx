@@ -44,25 +44,25 @@ const featureListData = [
   {
     title: 'Experienced Medical Professionals',
     subTitle:
-      'Our team includes experienced doctors, nurses, <br />and other healthcare professionals who are <br />dedicated to providing the best possible care to <br />our patients.',
+      'At VitusCare, our team of experienced medical professionals is committed to providing the highest quality of care. Each specialist is highly trained in hemodialysis treatment, with years of expertise in managing complex renal conditions. Our staff is compassionate, ensuring personalized care for every patient in a comfortable and supportive environment.',
     iconUrl: 'images/icons/professional.svg',
   },
   {
     title: 'Comprehensive <br />Services',
     subTitle:
-      'We offer a wide range of healthcare services, <br />from preventive care to specialized treatment <br />for complex conditions.',
+      'VitusCare offers a wide range of comprehensive services to meet the unique needs of our patients. From hemodialysis to post-treatment care and consultations, we provide holistic support for those with renal conditions. ',
     iconUrl: 'images/icons/comprehensive.svg',
   },
   {
     title: 'Patient-centered <br />Approach',
     subTitle:
-      'We believe in treating each patient as an <br />individual, and we take the time to understand <br />your unique health needs and concerns.',
+      'At VitusCare, we put our patients at the heart of everything we do. Our patient-centered approach means we listen to your concerns, understand your specific needs, and provide tailored treatments. We prioritize your comfort, well-being, and overall quality of life, ensuring a supportive and empathetic environment throughout your treatment journey.',
     iconUrl: 'images/icons/patient.svg',
   },
   {
     title: 'State-of-the-art <br />Facilities',
     subTitle:
-      'Our healthcare center is equipped with the <br />latest technology and equipment to provide our <br />patients with the most advanced care possible.',
+      'Our state-of-the-art dialysis facilities are equipped with the latest technology to ensure the highest standards of care. With advanced equipment for efficient and safe hemodialysis treatment, our clean and modern facilities provide a comfortable space for patients. At VitusCare, we are committed to delivering top-tier medical services in a cutting-edge, patient-friendly environment.',
     iconUrl: 'images/icons/facilities.svg',
   },
 ];
