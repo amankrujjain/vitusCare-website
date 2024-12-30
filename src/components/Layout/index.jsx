@@ -80,7 +80,7 @@ export default function Layout() {
       <Footer2 />
       <div className="whatsapp-icon">
         <a
-          href="https://wa.me/your-phone-number"
+          href="https://wa.me/+919971832008"
           target="_blank"
           rel="noopener noreferrer"
         >
