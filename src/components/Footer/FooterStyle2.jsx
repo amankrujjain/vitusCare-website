@@ -33,7 +33,7 @@ export default function FooterStyle2() {
             <div className="cs_footer_item">
               <TextWidget
                 logoUrl="/images/vc-logo.png"
-                text="VitusCare Medife PVT LTD"
+                text="VitusCare Medife Pvt. Ltd."
               />
               <ContactInfoWidget />
             </div>

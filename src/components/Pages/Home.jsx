@@ -13,39 +13,34 @@ import FaqSection from '../Section/FaqSection';
 import AwardSection from '../Section/AwardSection';
 import DepartmentSection from '../Section/DepartmentSection';
 import { pageTitle } from '../../helpers/PageTitle';
+import { Link } from 'react-router-dom';
 
 
 // the subtitle to be set with in 50 words 
 const featureListData = [
   {
     iconSrc: '/images/home_1/compassion.svg',
-    title: 'Best Amenities',
+    title: 'Best Infrastructure',
     subTitle:
-      `Imported dialysis machines deliver precision care. High-quality dialyzers and RO TDS per WHO/ISN ensure optimal safety.`,
+      `Best-in-class dialysis machines and consumables to deliver precision care. RO TDS as per WHO guidelines to ensure optimal safety.`,
   },
   {
     iconSrc: '/images/home_1/excellence.svg',
-    title: 'Skilled Experts',
+    title: 'Skilled Team',
     subTitle:
-      'Highly-skilled technicians recruited with stringent standards, high standards maintained via regular audits.',
+      'Highly-skilled work force recruited with stringent standards, upheld via regular audits.',
   },
   {
     iconSrc: '/images/home_1/integrity.svg',
-    title: 'Superior Standards',
+    title: 'Clinical Excellence',
     subTitle: `Designed by top nephrologists, adhering to global standards. Every session audited to ensure reliable, adequate, and effective dialysis care.
 `,
   },
   {
-    iconSrc: '/images/home_1/respect.svg',
-    title: 'Respect',
-    subTitle:
-      'We treat all individuals with respect and dignity, regardless of their background, beliefs, or circumstances. We believe that every person deserves to be treated with compassion and kindness.',
-  },
-  {
     iconSrc: '/images/home_1/teamwork.svg',
-    title: 'Rigorous Hygiene',
+    title: 'Patient Safety',
     subTitle:
-      'Strict infection control with regular sterilization. Dedicated machines, staff, and consumables for patients ensuring safety and hygiene.',
+      'Strict infection control protocols ensured via dedicated machines, staff, and consumables for positive patients.',
   },
 ];
 const brandData = [
@@ -66,14 +61,26 @@ const faqData = [
   },
   {
     title: 'How do I schedule an appointment with VitusCare?',
-    content:
-      'You can walk into any of our nearby VitusCare dialysis centres. You can also give a call on our helpline number: 98628 98628',
+    content: (
+      <>
+      Dail For Dialysis:
+        <Link style={{color:'red'}} to="tel:+919862898628"> 98628 98628</Link>.
+        You can walk into any of our nearby VitusCare dialysis centres.
+      </>
+    ),
   },
   {
     title:'Can I avail dialysis under government schemes such as Ayushman bharat, ECHS, CGHS?'
     ,
-    content:
-      'Yes, you can avail dialysis under various health schemes with us such as Ayushman Bharat, ECHS, CGHS, NHA, SGHS, Ministry of Health and Family Welfare, NFHS and Pradhan Mantri National Dialysis Programme'
+    content: (
+      <>
+        Yes, you can avail dialysis under various health schemes with us such as Ayushman Bharat, ECHS, CGHS, NHA, SGHS, Ministry of Health and Family Welfare, NFHS and Pradhan Mantri National Dialysis Programme. 
+        Find more about applicable schemes at your nearest vituscare center by{' '}
+        <Link style={{color:"red"}} to="/centers" target="_blank" rel="noopener noreferrer">
+          clicking here
+        </Link>.
+      </>
+    ),
   },
   {
     title: 'Do you accept insurance?',
@@ -82,13 +89,17 @@ const faqData = [
   },
   {
     title: 'Can I receive dialysis at home?',
-    content:
-      'Yes, we provide Home Hemodialysis Facility. Kindly contact us at 98628 98628 to know more.',
+    content: (
+      <>
+        Yes, we provide Home Hemodialysis Facility. Kindly contact us at{' '}
+        <Link style={{color:"red"}} to="tel:+919862898628">98628 98628</Link> to know more.
+      </>
+    ),
   },
   {
     title:'How long does each dialysis session take?',
     content:
-      'On an average a dialysis session takes around 4 hours to be completed.'
+      `On an average a dialysis session takes around 4.5 - 5 hours to be completed including all the pre and post dialysis formalities.`
   }
 ];
 const blogData = [
@@ -198,71 +209,71 @@ const departmentData = [
 
 const testimonialData = [
   {
-    text: 'Vituscare Dialysis has an impeccable cleanliness standard. Every time I visit, the center is spotless, which gives me peace of mind. The hygienic environment makes me feel safe, and I’m confident about the care I receive during my treatments.”',
+    text: 'VitusCare Dialysis has an impeccable cleanliness standard. Every time I visit, the center is spotless, which gives me peace of mind. The hygienic environment makes me feel safe, and I’m confident about the care I receive during my treatments.”',
     ratingNumber: '5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Ashish',
     avatarDesignation: 'Dialysis Patient',
   },
   {
-    text: 'What I appreciate most about Vituscare is their supportive female staff. They are incredibly compassionate, always checking on me and making sure I’m comfortable during my treatments. Their kindness and care have made my dialysis sessions more manageable.”',
+    text: 'What I appreciate most about VitusCare is their supportive female staff. They are incredibly compassionate, always checking on me and making sure I’m comfortable during my treatments. Their kindness and care have made my dialysis sessions more manageable.”',
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Lata Devi',
     avatarDesignation: 'Dialysis Patient',
   },
   {
-    text: 'I love the easy accessibility of Vituscare centers. The locations are well-planned, and it’s so convenient for me to get to the center without hassle. The straightforward scheduling system also helps me plan my visits efficiently.”',
-    ratingNumber: '5',
+    text: 'I love the easy accessibility of VitusCare centers. The locations are well-planned, and it’s so convenient for me to get to the center without hassle. The straightforward scheduling system also helps me plan my visits efficiently.”',
+    ratingNumber: '4',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Sandeep',
     avatarDesignation: 'Dialysis Patient',
   },
   {
-    text: `Vituscare’s supportive shift timings have made a huge difference in my life. With my busy schedule, it's hard to find time for treatments, but the flexible shift timings at Vituscare make it so easy for me to manage my dialysis sessions without stress.”`,
+    text: `VitusCare’s supportive shift timings have made a huge difference in my life. With my busy schedule, it's hard to find time for treatments, but the flexible shift timings at VitusCare make it so easy for me to manage my dialysis sessions without stress.”`,
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Aarti',
     avatarDesignation: 'Dialysis Patient',
   },
   {
-    text: `I’ve been visiting Vituscare for a few months, and I’m very impressed with the cleanliness of the center. It's always well-maintained, and I always feel at ease knowing the environment is spotless. The hygienic environment adds to my comfort during dialysis.`,
-    ratingNumber: '4.5',
+    text: `I’ve been visiting VitusCare for a few months, and I’m very impressed with the cleanliness of the center. It's always well-maintained, and I always feel at ease knowing the environment is spotless. The hygienic environment adds to my comfort during dialysis.`,
+    ratingNumber: '5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Raj',
     avatarDesignation: 'Dialysis Patient',
   },
   {
-    text: `Vituscare में डायलिसिस के दौरान मुझे उनकी सफाई व्यवस्था बहुत पसंद आई। हर बार जब मैं यहाँ आता हूं, सेंटर बिल्कुल साफ-सुथरा मिलता है। इस स्वच्छ वातावरण में इलाज कराना मुझे बहुत सुरक्षित और आरामदायक महसूस कराता है।`,
-    ratingNumber: '4.5',
+    text: `VitusCare में डायलिसिस के दौरान मुझे उनकी सफाई व्यवस्था बहुत पसंद आई। हर बार जब मैं यहाँ आता हूं, सेंटर बिल्कुल साफ-सुथरा मिलता है। इस स्वच्छ वातावरण में इलाज कराना मुझे बहुत सुरक्षित और आरामदायक महसूस कराता है।`,
+    ratingNumber: '4',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'रामु',
+    avatarName: 'रामेश्वर',
     avatarDesignation: 'डायलिसिस मरीज',
   },
   {
-    text: `Vituscare में समर्थक महिला स्टाफ ने मेरे इलाज को बहुत आसान बना दिया है। उनकी देखभाल और सहानुभूति से हर सत्र में मुझे आत्मविश्वास और आराम मिलता है। वे हमेशा मेरी मदद के लिए तैयार रहती हैं, और मुझे हमेशा सहज महसूस कराती हैं।`,
+    text: `VitusCare में समर्थक महिला स्टाफ ने मेरे इलाज को बहुत आसान बना दिया है। उनकी देखभाल और सहानुभूति से हर सत्र में मुझे आत्मविश्वास और आराम मिलता है। वे हमेशा मेरी मदद के लिए तैयार रहती हैं, और मुझे हमेशा सहज महसूस कराती हैं।`,
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'सीमा',
     avatarDesignation: 'डायलिसिस मरीज',
   },
   {
-    text: `Vituscare का सेंटर बहुत आसानी से पहुँचने योग्य है, और मुझे कभी भी इलाज के लिए आने में कोई दिक्कत नहीं होती। सेंटर के स्थान और शेड्यूलिंग सिस्टम ने मेरी डायलिसिस सत्रों को बहुत सुविधाजनक बना दिया है।`,
-    ratingNumber: '4.5',
+    text: `VitusCare का सेंटर बहुत आसानी से पहुँचने योग्य है, और मुझे कभी भी इलाज के लिए आने में कोई दिक्कत नहीं होती। सेंटर के स्थान और शेड्यूलिंग सिस्टम ने मेरी डायलिसिस सत्रों को बहुत सुविधाजनक बना दिया है।`,
+    ratingNumber: '5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'सुनील',
     avatarDesignation: 'डायलिसिस मरीज',
   },
   {
-    text: `Vituscare में डायलिसिस के दौरान समर्थक शिफ्ट टाइमिंग्स ने मेरे जीवन को बहुत आसान बना दिया है। मेरे पास अन्य जिम्मेदारियाँ होती हैं, और यहाँ के लचीले शिफ्ट टाइम्स ने मेरे इलाज को बहुत सुविधाजनक बना दिया है। अब मुझे चिंता नहीं होती कि डायलिसिस के कारण मेरी बाकी कार्यों में कोई विघ्न आएगा।`,
+    text: `VitusCare में डायलिसिस के दौरान समर्थक शिफ्ट टाइमिंग्स ने मेरे जीवन को बहुत आसान बना दिया है। मेरे पास अन्य जिम्मेदारियाँ होती हैं, और यहाँ के लचीले शिफ्ट टाइम्स ने मेरे इलाज को बहुत सुविधाजनक बना दिया है। अब मुझे चिंता नहीं होती कि डायलिसिस के कारण मेरी बाकी कार्यों में कोई विघ्न आएगा।`,
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'प्रभा',
     avatarDesignation: 'डायलिसिस मरीज',
   },
   {
-    text: `Vituscare में डायलिसिस करने का अनुभव बहुत अच्छा है। यहाँ की सफाई और स्वच्छता शानदार है। मुझे कभी भी इस बारे में चिंता नहीं होती, और इलाज के दौरान शांति और आराम का अहसास होता है।`,
-    ratingNumber: '4.5',
+    text: `VitusCare में डायलिसिस करने का अनुभव बहुत अच्छा है। यहाँ की सफाई और स्वच्छता शानदार है। मुझे कभी भी इस बारे में चिंता नहीं होती, और इलाज के दौरान शांति और आराम का अहसास होता है।`,
+    ratingNumber: '4',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'अजय',
     avatarDesignation: 'डायलिसिस मरीज',
@@ -325,7 +336,7 @@ export default function Home() {
                 '',
               featureListSubTitle:
                 `
-VitusCare is North India’s leading dialysis care provider, dedicated to making quality dialysis accessible across Tier 2, 3, and 4 cities. With over 50 centers and a focus on Accessibility, Affordability, and Awareness, we ensure every patient receives reliable, affordable, and informed care. </br > Our state-of-the-art facilities, expert teams, and adherence to global protocols set us apart as a trusted partner in improving lives through exceptional dialysis services. 
+VitusCare is North India’s leading dialysis care provider, dedicated to making quality dialysis accessible across Tier 2, 3, and 4 cities. With over 50 centers and a focus on Accessibility, Affordability, and Awareness, we ensure every patient receives reliable, affordable, and informed care. <br /> Our state-of-the-art facilities, expert teams, and adherence to global protocols set us apart as a trusted partner in improving lives through exceptional dialysis services. 
 `,
             },
           ]}
