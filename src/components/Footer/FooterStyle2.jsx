@@ -54,7 +54,7 @@ export default function FooterStyle2() {
       <div className="cs_footer_bottom">
         <div className="container">
           <div className="cs_copyright">
-            Copyright © 2024 VitusCare. All rights reserved.
+            Copyright © 2025 VitusCare. All rights reserved.
           </div>
         </div>
       </div>

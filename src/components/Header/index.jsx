@@ -162,7 +162,7 @@ export default function Header({ logoSrc, variant }) {
           <Spacing md="30" lg="30" />
           <IconBoxStyle11
             title="Email"
-            subTitle="support@vituscare.com"
+            subTitle="info@vituscare.com"
             iconSrc="/images/contact/icon_2.svg"
           />
           <Spacing md="70" lg="50" />

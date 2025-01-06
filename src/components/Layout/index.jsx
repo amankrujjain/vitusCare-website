@@ -117,7 +117,7 @@ export default function Layout() {
               textAlign: 'center',
             }}
           >
-            <p style={{ margin: '0', color: '#2c2f76', fontWeight: 'bold' }}>Book an Appointment</p>
+            <p style={{ margin: '0', color: '#2c2f76', fontWeight: 'bold' }}>I Need <br />Dialysis</p>
             <div
               style={{
                 marginTop: '7px',

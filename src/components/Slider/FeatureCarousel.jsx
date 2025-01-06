@@ -3,11 +3,14 @@ import Slider from 'react-slick';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
 import IconBoxStyle10 from '../IconBox/IconBoxStyle10';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 export default function FeatureCarousel({ sectionTitle, data }) {
   console.log("Checking data inside icon box", data)
   const sliderRef = useRef(null);
-
+  console.log(sliderRef.current)
   const next = () => {
     sliderRef.current.slickNext();
   };
@@ -24,6 +27,8 @@ export default function FeatureCarousel({ sectionTitle, data }) {
     slidesToScroll: 1,
     arrows: false,
     swipeToSlide: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1700,

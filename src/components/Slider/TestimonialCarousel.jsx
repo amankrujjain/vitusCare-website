@@ -1,6 +1,10 @@
 import React from 'react';
 import Slider from 'react-slick';
 import TestimonialStyle2 from '../Testimonial/TestimonialStyle2';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+
 
 export default function TestimonialCarousel({ data }) {
   /** Slider Settings **/
@@ -35,7 +39,7 @@ export default function TestimonialCarousel({ data }) {
     prevArrow: <SlickArrowLeft />,
     nextArrow: <SlickArrowRight />,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 4000,
     speed: 1000,
     slidesToShow: 2,

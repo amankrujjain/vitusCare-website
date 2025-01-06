@@ -50,7 +50,7 @@ const featureListData = [
   {
     title: 'Comprehensive <br />Services',
     subTitle:
-      'VitusCare offers a wide range of comprehensive services to meet the unique needs of our patients. From hemodialysis to post-treatment care and consultations, we provide holistic support for those with renal conditions. ',
+      'In addition to regular hemodialysis, VitusCare offers a wide range of services such as CRRT dialysis, SLED, Plasmapheresis, blood transfusion and access creation support to meet the unique needs of our patients. This allows us to provide holistic support for individuals with renal conditions. ',
     iconUrl: 'images/icons/comprehensive.svg',
   },
   {
@@ -81,9 +81,9 @@ const teamData = [
     name: 'Dr. Saurabh, MD',
     designation: ' Founder and Chief Medical Officer',
     description:
-      'With expertise in treating acute illnesses and injuries in medicine physician',
+      '',
     social: [
-      { icon: 'fa6-brands:linkedin-in', href: '/about' },
+      { icon: 'fa6-brands:linkedin-in', href: 'https://www.linkedin.com/in/spokhariyal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
     ],
   },
   {
@@ -91,9 +91,9 @@ const teamData = [
     name: 'Prabhat Shrivastava',
     designation: 'Founder and CEO',
     description:
-      'With experience in managing complex medical conditions in children',
+      '',
     social: [
-      { icon: 'fa6-brands:linkedin-in', href: '/about' },
+      { icon: 'fa6-brands:linkedin-in', href: 'https://www.linkedin.com/in/prabhatkshrivastava?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
     ],
   },
   {
@@ -101,9 +101,9 @@ const teamData = [
     name: 'Pankaj Tandon',
     designation: ' Founder and CFO',
     description:
-      'With experience in managing complex medical conditions in children',
+      '',
     social: [
-      { icon: 'fa6-brands:linkedin-in', href: '/about' },
+      { icon: 'fa6-brands:linkedin-in', href: 'https://www.linkedin.com/in/pankaj-tandon-06867214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
     ],
   },
 ];
@@ -136,15 +136,15 @@ export default function About() {
       </Section>
       <Section topMd={190} topLg={145} topXl={105}>
         <TeamSection
-          sectionTitle="Expert Team"
+          sectionTitle="Team"
           sectionTitleUp="MEET OUR"
           data={teamData}
         />
       </Section>
       <Section topMd={170} topLg={120} topXl={80}>
         <GallerySection
-          sectionTitle="Our Facilities and <br />Latest Activities"
-          sectionTitleUp="HAVE A LOOK AT"
+          sectionTitle="Our Facilities"
+          sectionTitleUp="SOME OF"
           data={galleryData}
         />
       </Section>

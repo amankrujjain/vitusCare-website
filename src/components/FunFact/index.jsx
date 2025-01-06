@@ -4,11 +4,31 @@ export default function FunFact({ number, title }) {
   const [animatedNumber, setAnimatedNumber] = useState(0);
 
   useEffect(() => {
-    // Check if the number needs to be animated (only animate if it's the last number, "Sessions Completed")
     if (title === 'Sessions Completed') {
-      const targetNumber = 550000; // Target number for "Sessions Completed"
-      const start = 534312; // Starting number
-      const duration = 10000000; // Total duration in ms
+      // Animation logic for "Sessions Completed"
+      const targetNumber = 550000;
+      const start = 534312;
+      const duration = 10000000;
+      const stepTime = 30;
+      const steps = Math.ceil(duration / stepTime);
+      const increment = (targetNumber - start) / steps;
+
+      let currentNumber = start;
+      const interval = setInterval(() => {
+        currentNumber += increment;
+        if (currentNumber >= targetNumber) {
+          currentNumber = targetNumber;
+          clearInterval(interval);
+        }
+        setAnimatedNumber(Math.floor(currentNumber)); // Update state
+      }, stepTime);
+
+      return () => clearInterval(interval); // Cleanup on unmount
+    } else if (title === 'Satisfied Patients') {
+      // Animation logic for "Satisfied Patients"
+      const targetNumber = 25000;
+      const start = 23000;
+      const duration = 3500000; // Total duration in ms
       const stepTime = 30; // Interval between updates in ms
       const steps = Math.ceil(duration / stepTime);
       const increment = (targetNumber - start) / steps;
@@ -25,8 +45,8 @@ export default function FunFact({ number, title }) {
 
       return () => clearInterval(interval); // Cleanup on unmount
     } else {
-      // If the title is not "Sessions Completed", set the number as is (with the "+" sign)
-      setAnimatedNumber(0); // No animation for the first two
+      // For other titles, set the number as is (no animation)
+      setAnimatedNumber(0);
     }
   }, [number, title]);
 
@@ -37,8 +57,8 @@ export default function FunFact({ number, title }) {
   return (
     <div className="cs_funfact cs_style_1 text-center">
       <h2 className="cs_funfact_number cs_fs_72">
-        {title === 'Sessions Completed' 
-          ? formatIndianNumber(animatedNumber) 
+        {(title === 'Sessions Completed' || title === 'Satisfied Patients')
+          ? formatIndianNumber(animatedNumber)
           : number}
       </h2>
       <p className="cs_funfact_title m-0 cs_heading_color">{title}</p>

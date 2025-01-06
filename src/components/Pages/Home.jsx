@@ -50,14 +50,14 @@ const brandData = [
   { imgUrl: 'images/brand_4.png', imgAlt: 'CGHS' },
   { imgUrl: 'images/brand_5.png', imgAlt: 'Star Health' },
   { imgUrl: 'images/brand_6.png', imgAlt: 'TATA AIG' },
-  { imgUrl: 'images/brand_7.png', imgAlt: 'MD India' },
+  { imgUrl: 'images/brand_7.png', imgAlt: 'National Insurance' },
   { imgUrl: 'images/brand_8.png', imgAlt: 'Brand' },
 ];
 const faqData = [
   {
     title: 'What services does VitusCare offer?',
     content:
-      'VitusCare Medlife Pvt Ltd is a healthcare company founded on July 14, 2017, by Dr. Saurabh Pokhariyal, Prabhat K. Shrivastava, and Pankaj Tandon, intending to offer quality dialysis at affordable rates across all underserved markets globally.',
+      'VitusCare offers comprehensive renal care services across India, including in-center and home dialysis options. Our team of expert nephrologists provides personalized care and support, empowering patients to effectively manage their kidney health and improve their quality of life.',
   },
   {
     title: 'How do I schedule an appointment with VitusCare?',
@@ -76,8 +76,20 @@ const faqData = [
       <>
         Yes, you can avail dialysis under various health schemes with us such as Ayushman Bharat, ECHS, CGHS, NHA, SGHS, Ministry of Health and Family Welfare, NFHS and Pradhan Mantri National Dialysis Programme. 
         Find more about applicable schemes at your nearest vituscare center by{' '}
-        <Link style={{color:"red"}} to="/centers" target="_blank" rel="noopener noreferrer">
-          clicking here
+        <Link style={{color:"red"}} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
+          click here
+        </Link>.
+      </>
+    ),
+  },
+  {
+    title:'Do you offer SLED dialysis?'
+    ,
+    content: (
+      <>
+        Yes, we offer SLED dialysis at most of our centres. For more information regarding {' '}
+        <Link style={{color:"red"}} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
+          click here
         </Link>.
       </>
     ),
@@ -209,75 +221,68 @@ const departmentData = [
 
 const testimonialData = [
   {
-    text: 'VitusCare Dialysis has an impeccable cleanliness standard. Every time I visit, the center is spotless, which gives me peace of mind. The hygienic environment makes me feel safe, and I’m confident about the care I receive during my treatments.”',
+    text: 'I like that they have flexible timings for sessions. It helps me to come when I am free.',
     ratingNumber: '5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Ashish',
     avatarDesignation: 'Dialysis Patient',
   },
   {
-    text: 'What I appreciate most about VitusCare is their supportive female staff. They are incredibly compassionate, always checking on me and making sure I’m comfortable during my treatments. Their kindness and care have made my dialysis sessions more manageable.”',
+    text: 'The technicians are very good. They know how to do everything right, and I feel safe.',
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Lata Devi',
     avatarDesignation: 'Dialysis Patient',
   },
   {
-    text: 'I love the easy accessibility of VitusCare centers. The locations are well-planned, and it’s so convenient for me to get to the center without hassle. The straightforward scheduling system also helps me plan my visits efficiently.”',
+    text: 'They explain everything to me. I always know what is happening.',
     ratingNumber: '4',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Sandeep',
     avatarDesignation: 'Dialysis Patient',
   },
   {
-    text: `VitusCare’s supportive shift timings have made a huge difference in my life. With my busy schedule, it's hard to find time for treatments, but the flexible shift timings at VitusCare make it so easy for me to manage my dialysis sessions without stress.”`,
+    text: `The machines are good. They don’t make noise and I never have problems.`,
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Aarti',
     avatarDesignation: 'Dialysis Patient',
   },
   {
-    text: `I’ve been visiting VitusCare for a few months, and I’m very impressed with the cleanliness of the center. It's always well-maintained, and I always feel at ease knowing the environment is spotless. The hygienic environment adds to my comfort during dialysis.`,
+    text: `The centre is always very clean. Everything looks neat and tidy.`,
     ratingNumber: '5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Raj',
     avatarDesignation: 'Dialysis Patient',
   },
   {
-    text: `VitusCare में डायलिसिस के दौरान मुझे उनकी सफाई व्यवस्था बहुत पसंद आई। हर बार जब मैं यहाँ आता हूं, सेंटर बिल्कुल साफ-सुथरा मिलता है। इस स्वच्छ वातावरण में इलाज कराना मुझे बहुत सुरक्षित और आरामदायक महसूस कराता है।`,
+    text: `मुझे कभी वेट करना नहीं पड़ता, डायलिसिस टाइम पे शुरू हो जाता है। वो मुझे बहुत सुविधाजनक लगता है।`,
     ratingNumber: '4',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'रामेश्वर',
     avatarDesignation: 'डायलिसिस मरीज',
   },
   {
-    text: `VitusCare में समर्थक महिला स्टाफ ने मेरे इलाज को बहुत आसान बना दिया है। उनकी देखभाल और सहानुभूति से हर सत्र में मुझे आत्मविश्वास और आराम मिलता है। वे हमेशा मेरी मदद के लिए तैयार रहती हैं, और मुझे हमेशा सहज महसूस कराती हैं।`,
+    text: `यहां पर परिवार को इलाज के दौरान साथ रहने की सुविधा मिलती है, जो मुझे बहुत अच्छा लगता है।`,
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'सीमा',
     avatarDesignation: 'डायलिसिस मरीज',
   },
   {
-    text: `VitusCare का सेंटर बहुत आसानी से पहुँचने योग्य है, और मुझे कभी भी इलाज के लिए आने में कोई दिक्कत नहीं होती। सेंटर के स्थान और शेड्यूलिंग सिस्टम ने मेरी डायलिसिस सत्रों को बहुत सुविधाजनक बना दिया है।`,
+    text: `डॉक्टर्स बहुत अनुभवी हैं और वे मेरी बीमारी के बारे में पूरी जानकारी देते हैं।`,
     ratingNumber: '5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'सुनील',
     avatarDesignation: 'डायलिसिस मरीज',
   },
   {
-    text: `VitusCare में डायलिसिस के दौरान समर्थक शिफ्ट टाइमिंग्स ने मेरे जीवन को बहुत आसान बना दिया है। मेरे पास अन्य जिम्मेदारियाँ होती हैं, और यहाँ के लचीले शिफ्ट टाइम्स ने मेरे इलाज को बहुत सुविधाजनक बना दिया है। अब मुझे चिंता नहीं होती कि डायलिसिस के कारण मेरी बाकी कार्यों में कोई विघ्न आएगा।`,
+    text: `अस्पताल का वातावरण शांत और आरामदायक होता है, जिससे मुझे तनाव कम होता है।`,
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'प्रभा',
     avatarDesignation: 'डायलिसिस मरीज',
-  },
-  {
-    text: `VitusCare में डायलिसिस करने का अनुभव बहुत अच्छा है। यहाँ की सफाई और स्वच्छता शानदार है। मुझे कभी भी इस बारे में चिंता नहीं होती, और इलाज के दौरान शांति और आराम का अहसास होता है।`,
-    ratingNumber: '4',
-    avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'अजय',
-    avatarDesignation: 'डायलिसिस मरीज',
-  },
+  }
 ];
 
 export default function Home() {
@@ -319,6 +324,8 @@ export default function Home() {
         bottomMd={185}
         bottomLg={140}
         bottomXl={100}
+        className="customised_section_bd"
+        style={{ backgroundImage: `url(/images/home_1/department_bg.svg)` }}
       >
         <FeaturesSection sectionTitle="Our Values" data={featureListData} />
       </Section>
@@ -335,9 +342,7 @@ export default function Home() {
               featureListTitle:
                 '',
               featureListSubTitle:
-                `
-VitusCare is North India’s leading dialysis care provider, dedicated to making quality dialysis accessible across Tier 2, 3, and 4 cities. With over 50 centers and a focus on Accessibility, Affordability, and Awareness, we ensure every patient receives reliable, affordable, and informed care. <br /> Our state-of-the-art facilities, expert teams, and adherence to global protocols set us apart as a trusted partner in improving lives through exceptional dialysis services. 
-`,
+                ` `,
             },
           ]}
         />
@@ -424,7 +429,7 @@ VitusCare is North India’s leading dialysis care provider, dedicated to making
         bottomLg={150}
         bottomXl={110}
       >
-        <BrandsSection data={brandData} />
+        <BrandsSection sectionTitle={'Empanelment Supported'} data={brandData} />
       </Section>
       {/* End Brand Section */}
     </>

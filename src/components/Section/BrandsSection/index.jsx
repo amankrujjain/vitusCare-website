@@ -6,7 +6,7 @@ export default function BrandsSection({ data, sectionTitle }) {
     <div className="container">
       {sectionTitle && (
         <>
-          <h2 className="cs_fs_40 text-center mb-0 cs_semibold">
+          <h2 className="blue_color cs_fs_40 text-center mb-0 cs_semibold" style={{ fontSize: '60px' }}>
             {sectionTitle}
           </h2>
           <Spacing md="60" />

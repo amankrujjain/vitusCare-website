@@ -62,7 +62,9 @@ export default function AboutSection({
                     <h3 className="cs_normal cs_fs_32 cs_body_color">
                       {item.featureListTitle}
                     </h3>
-                    <p className="m-0">{item.featureListSubTitle}</p>
+                    <p className="m-0">VitusCare is India’s leading dialysis care provider, dedicated to making quality dialysis accessible across Tier 2, 3, and 4 cities. With over 50 centers and a focus on Accessibility, Affordability, and Awareness, we ensure every patient receives reliable, affordable, and informed care.</p>
+                    <br />
+                    <p>Our state-of-the-art facilities, expert teams, and adherence to global protocols set us apart as a trusted partner in improving lives through exceptional dialysis services.</p>
                   </li>
                 ))}
               </ul>
