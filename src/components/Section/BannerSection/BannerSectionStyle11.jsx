@@ -18,14 +18,15 @@ export default function BannerSectionStyle11({
           filter:'brightness(0.9)'
         }}
       >
+         <p className="red_color cs_banner_subtitle cs_fs_20 m-0" style={{fontSize:'60px'}}>
+          {parser(subTitle)}
+        </p>
         <h2 className="blue_color cs_banner_title cs_fs_72">
           {parser(title)}
         </h2>
-        <hr style={{ marginTop:"50px",marginBottom:"50px",color: "red", height: "3px", border: "none", backgroundColor: "red" }} />
-        <p className="red_color cs_banner_subtitle cs_fs_20 m-0">
-          {parser(subTitle)}
-        </p>
-        <hr style={{ marginTop:"50px",color: "red", height: "3px", border: "none", backgroundColor: "red" }} />
+        {/* <hr style={{ marginTop:"50px",marginBottom:"50px",color: "red", height: "3px", border: "none", backgroundColor: "red" }} /> */}
+       
+        {/* <hr style={{ marginTop:"50px",color: "red", height: "3px", border: "none", backgroundColor: "red" }} /> */}
       </div>
     </div>
   );

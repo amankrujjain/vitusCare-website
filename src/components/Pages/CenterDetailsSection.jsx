@@ -101,7 +101,7 @@ export default function CenterDetailsSection({
             <Spacing md="35" lg="0" />
             <List
               heading={degreesHeading}
-              iconUrl="/images/icons/graduation.svg"
+              iconUrl="/images/icons/hospital.svg"
               data={degrees}
             />
             <Spacing md="70" lg="50" />

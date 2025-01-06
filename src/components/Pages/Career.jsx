@@ -6,7 +6,7 @@ import BannerSectionStyle11 from '../Section/BannerSection/BannerSectionStyle11'
 const Career = () => {
   return (
     <>
-      {/* <Section
+      <Section
         topMd={185}
         topLg={140}
         topXl={180}
@@ -16,14 +16,15 @@ const Career = () => {
       >
         <BannerSectionStyle11
           bgUrl="images/about/career.png"
-          title="Don’t Let Your Health <br />Take a Backseat!"
-          subTitle="Schedule an appointment with one of our experienced <br />medical professionals today!"
+          title="Take A Career Boost!"
+          subTitle="Join Us"
+          // Schedule an appointment with one of our experienced <br />medical professionals today!
           center
         />
-      </Section> */}
+      </Section>
 
       <Section
-        topMd={185}
+        topMd={15}
         topLg={140}
         topXl={180}
         bottomMd={185}

@@ -27,7 +27,7 @@ function Feedback() {
 
   return (
     <>
-
+{/* 
       <Section
         topMd={185}
         topLg={140}
@@ -51,7 +51,7 @@ function Feedback() {
 
           </div>
         </div>
-      </Section>
+      </Section> */}
       <Section
             topMd={185}
             topLg={140}

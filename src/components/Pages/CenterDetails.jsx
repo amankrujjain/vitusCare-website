@@ -21,7 +21,7 @@ export default function CenterDetails() {
     const fetchCenterDetails = async () => {
       try {
         const response = await axios.get(`http://localhost:7000/api/centers/${id}`);
-        console.log("Response in the center details", response)
+        console.log("Response in the center details", response);
         setCenterData(response.data); // Update the state with fetched data
         setLoading(false); // Set loading to false
       } catch (error) {
@@ -40,7 +40,60 @@ export default function CenterDetails() {
   if (!centerData) {
     return <div>Center details not found.</div>; // Handle no data
   }
+  const nephrologistOpd =
+  centerData.center.additional_details?.Nephrologist_OPD?.toLowerCase() === "yes"
+    ? "Nephrologist OPD Available"
+    : null;
 
+    const doctorAvailable =
+  centerData.center.additional_details?.Emergency_doctor?.toLowerCase() === "yes"
+    ? "Emergency Doctor Available"
+    : null;
+  // Prepare schedules data from Timing_of_centre
+  const schedules = centerData.center.additional_details?.Timing_of_centre || [];
+
+  const nabhLevel =
+  centerData.center.additional_details?.NABH_level
+    ? `NABH ${centerData.center.additional_details.NABH_level} Accredited`
+    : null;
+
+    const empaneledWith = [
+      centerData.center.additional_details?.CGHS?.toLowerCase() === "yes"
+        ? "CGHS"
+        : null,
+      centerData.center.additional_details?.ESI?.toLowerCase() === "yes"
+        ? "ESI"
+        : null,
+        centerData.center.additional_details?.RGHS?.toLowerCase() === "yes"
+        ? "RGHS"
+        : null,
+    ]
+      .filter(Boolean) // Remove falsy values
+      .join(", "); // Join with ", " if both are truthy
+    
+    const empaneledTitle = `Empaneled with ${empaneledWith}${
+      empaneledWith ? ", " : ""
+    }all major TPA partners`; // Add "all major TPA partners" after dynamic values
+    
+    const multiSpecialtyIcu =
+  centerData.center.additional_details?.multi_speciality_icu_facility?.toLowerCase() === "yes"
+    ? "Multi - Specialty Hospital with ICU facility"
+    : null;
+    const experiences = [
+      {
+        title: nabhLevel, // Dynamically generated
+      },
+      {
+        title: empaneledTitle, // Dynamically generated
+      },
+      {
+        title: multiSpecialtyIcu, // Dynamically generated
+      },
+    ];
+    
+    // Filter out invalid titles
+    const filteredExperiences = experiences.filter((experience) => experience.title);
+    
   return (
     <>
       <BreadcrumbStyleCenter centerName={centerData.center.name_of_centre} />
@@ -54,63 +107,71 @@ export default function CenterDetails() {
           designation={centerData.center.name_of_centre}
           description={centerData.center.address_of_centre}
           social={[
-            { icon: 'fa:map-marker', href: 'https://maps.app.goo.gl/tS6UsCPW4jb4vjBA9' },
+            { icon: 'fa:map-marker', href: centerData.center.map_location },
           ]}
           Enquiry={[
-            { iconUrl: '/images/icons/call.svg', title: '98628 98628' },
+            { iconUrl: '/images/icons/call.svg', title: centerData.center.phone },
             {
               iconUrl: '/images/icons/envlope.svg',
               title: 'support@vituscare.com',
             },
           ]}
           contactInfoHeading="Enquiry"
-          schedules={[
-            { day: 'Monday', time: '8:30 AM - 6:30 PM' },
-            { day: 'Tuesday', time: '8:30 AM - 6:30 PM' },
-            { day: 'Wednesday', time: '8:30 AM - 6:30 PM' },
-            { day: 'Thrusday', time: '8:30 AM - 6:30 PM' },
-            { day: 'Friday', time: '8:30 AM - 6:30 PM' },
-            { day: 'Saturday', time: '8:30 AM - 6:30 PM' },
-          ]}
-          scheduleHeading="Nephro OPD Timings"
+          schedules={schedules} // Pass dynamically fetched schedules
+          scheduleHeading="Timings"
           degrees={[
             {
               title: 'Types Of Dialysis Available',
               subTitle: 'Single-use | Re-use | Emergency',
             },
             {
-              title:
-                '100% free dialysis ',
-              subTitle: 'CM Fund | TPA ( All major partners) | Cash Option also avaiilable',
+              title: '100% free dialysis',
+              subTitle: [
+
+                centerData.center.additional_details?.Ayushman
+                  ? 'Ayushman'
+                  : '',
+                centerData.center.additional_details?.ESI
+                  ? 'ESI'
+                  : '',
+                'CM Fund',
+                centerData.center.additional_details?.TPA
+                  ? 'TPA ( All major partners)'
+                  : '',
+                'Cash Option also available',
+              ]
+                .filter(Boolean) // Remove falsy values
+                .join(' | '), // Join remaining truthy values with "|"
             },
             {
               subTitle: 'All types of dialysis ( Leading brands only)',
             },
             {
-              subTitle:"Nephrologist OPD"
+              subTitle: nephrologistOpd,
             },
             {
-              subTitle:'Emergency Doctor'
+              subTitle: doctorAvailable,
             },
             {
-              subTitle:'EPO, Supplements'
+              subTitle: [
+                centerData.center.additional_details?.EPO? "EPO":"",
+                centerData.center.additional_details?.supplements? "Supplements":""
+              ].filter(Boolean).join(' | '),
             },
           ]}
           degreesHeading="Available At The Center"
           experiences={[
             {
-              title:
-                'NABH Level 2 Accredited',
+              title: nabhLevel,
             },
             {
-              title:
-                'Empaneled with CGHS, ESI, all major TPA partners',
+              title: empaneledTitle,
             },
-            {
-              title:
-                'Multi - Speciaity Hospital with ICU facility',
-            },
+            ...filteredExperiences.map((experience) => ({
+              title: experience.title,
+            })), // Map over filteredExperiences to create individual objects
           ]}
+          
           experiencesHeading="About the hospital"
         />
       </Section>
