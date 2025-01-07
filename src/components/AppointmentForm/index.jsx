@@ -25,6 +25,11 @@ export default function AppointmentForm({onSuccess}) {
         <div className="cs_height_42 cs_height_xl_25" />
       </div>
       <div className="col-lg-6">
+        <label className="cs_input_label cs_heading_color">Email</label>
+        <input type="email" className="cs_form_field" placeholder="Enter Your Email" />
+        <div className="cs_height_42 cs_height_xl_25" />
+      </div>
+      <div className="col-lg-6">
         <label className="cs_input_label cs_heading_color">Phone Number</label>
         <input
           type="text"

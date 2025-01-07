@@ -161,12 +161,6 @@ export default function CenterDetails() {
           ]}
           degreesHeading="Available At The Center"
           experiences={[
-            {
-              title: nabhLevel,
-            },
-            {
-              title: empaneledTitle,
-            },
             ...filteredExperiences.map((experience) => ({
               title: experience.title,
             })), // Map over filteredExperiences to create individual objects
@@ -183,13 +177,13 @@ export default function CenterDetails() {
           sectionTitleUp="BOOK AN"
         />
       </Section>
-      <Section className="cs_footer_margin_0">
+      {/* <Section className="cs_footer_margin_0">
         <BannerSectionStyle9
           title="Don’t Let Your Health <br />Take a Backseat!"
           subTitle="Schedule an appointment with one of our experienced <br />medical professionals today!"
           imgUrl="/images/centers/banner_img_3.png"
         />
-      </Section>
+      </Section> */}
     </>
   );
 }
