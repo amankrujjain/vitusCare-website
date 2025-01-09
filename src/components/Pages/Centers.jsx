@@ -40,20 +40,20 @@ export default function Centers() {
     return <p>{error}</p>;
   }
 
-  // Map center data to match the card design
-  const centerData = centers.map((center) => ({
-    imgUrl: '/images/centers/center_placeholder.png', // Placeholder image
-    department: center.city, // Use city as the department
-    name: center.name_of_centre, // Center name
-    address: center.address_of_centre, // Address of the center
-    phone: center.phone, // Phone number
-    state: center.state, // State
-    city: center.city, // City
-    mapLocation: center.map_location, // Google Maps location link
-    pinCode: center.pin_code, // Pin code
-    social: [] // If you have social links or can leave empty
-  }));
-  console.log("Centre data", centerData)
+  // // Map center data to match the card design
+  // const centerData = centers.map((center) => ({
+  //   imgUrl: '/images/centers/center_placeholder.png', // Placeholder image
+  //   department: center.city, // Use city as the department
+  //   name: center.name_of_centre, // Center name
+  //   address: center.address_of_centre, // Address of the center
+  //   phone: center.phone, // Phone number
+  //   state: center.state, // State
+  //   city: center.city, // City
+  //   mapLocation: center.map_location, // Google Maps location link
+  //   pinCode: center.pin_code, // Pin code
+  //   social: [] // If you have social links or can leave empty
+  // }));
+  // console.log("Centre data", centerData)
   
 
   return (
@@ -64,7 +64,7 @@ export default function Centers() {
       />
 
       <Section topMd={65} bottomMd={200} bottomLg={150} bottomXl={110}>
-        <CenterListStyle data={centerData} />
+        <CenterListStyle data={centers} />
       </Section>
 
       <Section className="cs_footer_margin_0">

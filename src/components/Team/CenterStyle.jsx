@@ -51,7 +51,10 @@ export default function CenterStyle({
           </Link>
         </p>
         <p className="cs_member_distance">
-          <span style={{ color: 'red' }}>Distance</span>: {distance ? `${distance.toFixed(2)} km` : 'Distance not available'}
+          <span style={{ color: 'red' }}>Distance</span>: 
+          {distance && !isNaN(parseFloat(distance))
+            ? `${parseFloat(distance).toFixed(2)} km`
+            : 'Distance not available'}
         </p>
       </div>
     </div>
