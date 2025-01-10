@@ -37,7 +37,10 @@ export default function CenterStyle({
           </Link>
         </h3>
         <p className="cs_member_designation cs_heading_color cs_medium">
-          City: {city}, State: {state}
+          City: {city}
+        </p>
+        <p className="cs_member_designation cs_heading_color cs_medium">
+          State: {state}
         </p>
         <p className="cs_member_description">
           <span style={{ color: 'red' }}>Full Address</span>: {address}
@@ -47,7 +50,7 @@ export default function CenterStyle({
         </p>
         <p className="cs_member_phone">
           <Link to={`tel:${phone}`} style={{ textDecoration: 'none', color: '#2C2F76' }}>
-            <span style={{ color: 'red' }}>Phone</span>: {phone}
+            <span style={{ color: 'red' }}>Phone</span>: {phone?"98628 98628":"Phone number not available"}
           </Link>
         </p>
         <p className="cs_member_distance">

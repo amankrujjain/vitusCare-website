@@ -121,7 +121,7 @@ export default function CenterListStyle() {
  const handleSearchInput = (e) => {
   const input = e.target.value.trim();
   setSearchTerm(input);
-
+  console.log(searchTerm)
   if (input.length > 2) {
     fetchSuggestions(input); // Fetch suggestions if input length > 2
   } else {
@@ -138,19 +138,27 @@ export default function CenterListStyle() {
     // If the search term is empty, show all centers
     if (!normalizedSearchTerm) return true;
   
-    // Split the search term into keywords
-    const keywords = normalizedSearchTerm.split(',').map((word) => word.trim());
+    // Split the search term into keywords (handle multiple separators like ',' or space)
+    const keywords = normalizedSearchTerm.split(/[,\s]+/).map((word) => word.trim());
   
     // Normalize center fields
     const name = (center.name_of_centre || '').toLowerCase();
     const city = (center.city || '').toLowerCase();
     const state = (center.state || '').toLowerCase();
   
-    // Check if any keyword matches any of the fields
-    return keywords.some((keyword) =>
+    // Check if any keyword matches the center name, city, or state
+    const matches = keywords.some((keyword) =>
       name.includes(keyword) || city.includes(keyword) || state.includes(keyword)
     );
+  
+    // Debug logs
+    console.log('Center:', center);
+    console.log('Keywords:', keywords);
+    console.log('Match:', matches);
+  
+    return matches;
   });
+  
   
   
   console.log("displayed data", displayedData)
