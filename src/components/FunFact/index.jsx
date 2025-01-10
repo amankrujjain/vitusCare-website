@@ -27,7 +27,7 @@ export default function FunFact({ number, title }) {
     } else if (title === 'Satisfied Patients') {
       // Animation logic for "Satisfied Patients"
       const targetNumber = 25000;
-      const start = 23000;
+      const start = 23325;
       const duration = 3500000; // Total duration in ms
       const stepTime = 30; // Interval between updates in ms
       const steps = Math.ceil(duration / stepTime);

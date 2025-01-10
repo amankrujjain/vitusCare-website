@@ -15,6 +15,7 @@ import Timetable from './components/Pages/Timetable';
 import Contact from './components/Pages/Contact';
 import ForHospitals from './components/Pages/ForHospitals';
 import CenterDetails from './components/Pages/CenterDetails';
+import PrivacyPolicy from './components/Pages/PrivacyPolicy';
 
 import { useEffect } from 'react';
 import ErrorPage from './components/Pages/ErrorPage';
@@ -65,6 +66,7 @@ function App() {
           <Route path='/partner-with-us/hospitals/outsource-vituscare' element={<OutsourceUnit/>}/>
           <Route path='/feedback' element={<Feedback/>}/>
           <Route path='/career' element={<Career/>}/>
+          <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
 
         </Route>
 

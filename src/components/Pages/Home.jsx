@@ -65,7 +65,7 @@ const faqData = [
       <>
       Dail For Dialysis:
         <Link style={{color:'red'}} to="tel:+919862898628"> 98628 98628</Link>.
-        You can walk into any of our nearby VitusCare dialysis centres.
+        To find vituscare centers nearest to you please <Link style={{color:'red'}} to='/find-our-centers'>Click here</Link>.
       </>
     ),
   },
@@ -77,7 +77,7 @@ const faqData = [
         Yes, you can avail dialysis under various health schemes with us such as Ayushman Bharat, ECHS, CGHS, NHA, SGHS, Ministry of Health and Family Welfare, NFHS and Pradhan Mantri National Dialysis Programme. 
         Find more about applicable schemes at your nearest vituscare center by{' '}
         <Link style={{color:"red"}} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
-          click here
+          clicking here
         </Link>.
       </>
     ),
@@ -87,7 +87,7 @@ const faqData = [
     ,
     content: (
       <>
-        Yes, we offer SLED dialysis at most of our centres. For more information regarding {' '}
+        Yes, we offer SLED dialysis at most of our centres. To find vituscare centers nearest to you please{' '}
         <Link style={{color:"red"}} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
           click here
         </Link>.
@@ -96,8 +96,15 @@ const faqData = [
   },
   {
     title: 'Do you accept insurance?',
-    content:
-      ' Yes, we offer dialysis services under various TPAs (Third Party Administrators).',
+    content:(
+      <>
+        Yes, we offer dialysis services under various TPAs (Third Party Administrators) at most of our centers.
+        To find vituscare centers nearest to you please{' '}
+        <Link style={{color:"red"}} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
+          click here
+        </Link>.
+      </>
+    )
   },
   {
     title: 'Can I receive dialysis at home?',
@@ -110,8 +117,15 @@ const faqData = [
   },
   {
     title:'How long does each dialysis session take?',
-    content:
-      `On an average a dialysis session takes around 4.5 - 5 hours to be completed including all the pre and post dialysis formalities.`
+    content:(
+      <>
+      On an average a dialysis session takes around 4.5 - 5 hours to be completed including all the pre and post dialysis formalities.
+      To find vituscare centers nearest to you please{' '}
+        <Link style={{color:"red"}} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
+          click here
+        </Link>.
+      </>
+    )
   }
 ];
 const blogData = [
@@ -259,29 +273,29 @@ const testimonialData = [
     text: `मुझे कभी वेट करना नहीं पड़ता, डायलिसिस टाइम पे शुरू हो जाता है। वो मुझे बहुत सुविधाजनक लगता है।`,
     ratingNumber: '4',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'रामेश्वर',
-    avatarDesignation: 'डायलिसिस मरीज',
+    avatarName: 'Rameshwar',
+    avatarDesignation: 'Dialysis Patient',
   },
   {
     text: `यहां पर परिवार को इलाज के दौरान साथ रहने की सुविधा मिलती है, जो मुझे बहुत अच्छा लगता है।`,
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'सीमा',
-    avatarDesignation: 'डायलिसिस मरीज',
+    avatarName: 'Seema',
+    avatarDesignation: 'Dialysis Patient',
   },
   {
     text: `डॉक्टर्स बहुत अनुभवी हैं और वे मेरी बीमारी के बारे में पूरी जानकारी देते हैं।`,
     ratingNumber: '5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'सुनील',
-    avatarDesignation: 'डायलिसिस मरीज',
+    avatarName: 'Sunil',
+    avatarDesignation: 'Dialysis Patient',
   },
   {
     text: `अस्पताल का वातावरण शांत और आरामदायक होता है, जिससे मुझे तनाव कम होता है।`,
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'प्रभा',
-    avatarDesignation: 'डायलिसिस मरीज',
+    avatarName: 'Prabha',
+    avatarDesignation: 'Dialysis Patient',
   }
 ];
 

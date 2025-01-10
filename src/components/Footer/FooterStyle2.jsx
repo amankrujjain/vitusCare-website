@@ -20,8 +20,7 @@ const menuDataTwo = [
   { title: 'FAQs', href: '/' },
 ];
 const menuDataThree = [
-  { title: 'Privacy Policy', href: '/' },
-  { title: 'Terms and Conditions', href: '/blog' },
+  { title: 'Privacy Policy', href: '/privacy-policy' },
 ];
 
 export default function FooterStyle2() {
