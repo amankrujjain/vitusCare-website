@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
 
 export default function FeedbackForm({ onSuccess }) {
@@ -13,7 +13,9 @@ export default function FeedbackForm({ onSuccess }) {
     yesNoAnswers: {},
     suggestions: '',
   });
-
+  const [allData, setAllData] = useState([])
+  const [filteredCities, setFilteredCities] = useState([]); // Holds cities filtered by state
+  const [filteredCenters, setFilteredCenters] = useState([]); // Holds centers filtered by city
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -39,8 +41,62 @@ export default function FeedbackForm({ onSuccess }) {
     if (onSuccess) onSuccess();
   };
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:7000/api/get-all-centres');
+        const result = await response.json();
+  
+        // Log the response to confirm
+        console.log(result);
+  
+        // Check if the response contains the expected data
+        if (result.success && Array.isArray(result.centres)) {
+          const data = result.centres;
+  
+          // Organize data by state and city
+          const structuredData = {};
+          data.forEach((center) => {
+            const { state, city, name_of_centre } = center;
+            if (!structuredData[state]) structuredData[state] = {};
+            if (!structuredData[state][city]) structuredData[state][city] = [];
+            structuredData[state][city].push(name_of_centre);
+          });
+  
+          setAllData(structuredData);
+        } else {
+          throw new Error('Unexpected API response format');
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+  
+    fetchData();
+  }, []);
+  
+
+  const handleStateChange = (e) => {
+    const selectedState = e.target.value;
+    setFormData((prev) => ({ ...prev, state: selectedState, city: '', center: '' }));
+    setFilteredCities(Object.keys(allData[selectedState] || {}));
+    setFilteredCenters([]);
+  };
+
+  const handleCityChange = (e) => {
+    const selectedCity = e.target.value;
+    setFormData((prev) => ({ ...prev, city: selectedCity, center: '' }));
+    setFilteredCenters(allData[formData.state]?.[selectedCity] || []);
+  };
+
+  const handleCenterChange = (e) => {
+    const selectedCenter = e.target.value;
+    setFormData((prev) => ({ ...prev, center: selectedCenter }));
+  };
+
+
   return (
-    <form style={{ padding: '50px' }} action="#" className="row" onSubmit={handleSubmit}>
+    <form style={{ padding: '100px' }} action="#" className="row" onSubmit={handleSubmit}>
       {/* Name and Contact Number */}
       <div className="col-lg-6" style={{ marginBottom: '20px' }}>
         <label className="cs_input_label cs_heading_color">Name</label>
@@ -72,11 +128,14 @@ export default function FeedbackForm({ onSuccess }) {
           className="cs_form_field"
           name="state"
           value={formData.state}
-          onChange={handleInputChange}
+          onChange={handleStateChange}
         >
           <option value="">Select State</option>
-          <option value="state1">State 1</option>
-          <option value="state2">State 2</option>
+          {Object.keys(allData).map((state) => (
+            <option key={state} value={state}>
+              {state}
+            </option>
+          ))}
         </select>
       </div>
       <div className="col-lg-6" style={{ marginBottom: '20px' }}>
@@ -85,11 +144,15 @@ export default function FeedbackForm({ onSuccess }) {
           className="cs_form_field"
           name="city"
           value={formData.city}
-          onChange={handleInputChange}
+          onChange={handleCityChange}
+          disabled={!filteredCities.length}
         >
           <option value="">Select City</option>
-          <option value="city1">City 1</option>
-          <option value="city2">City 2</option>
+          {filteredCities.map((city) => (
+            <option key={city} value={city}>
+              {city}
+            </option>
+          ))}
         </select>
       </div>
 
@@ -100,11 +163,15 @@ export default function FeedbackForm({ onSuccess }) {
           className="cs_form_field"
           name="center"
           value={formData.center}
-          onChange={handleInputChange}
+          onChange={handleCenterChange}
+          disabled={!filteredCenters.length}
         >
           <option value="">Select Center</option>
-          <option value="center1">Center 1</option>
-          <option value="center2">Center 2</option>
+          {filteredCenters.map((center) => (
+            <option key={center} value={center}>
+              {center}
+            </option>
+          ))}
         </select>
       </div>
 
