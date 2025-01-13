@@ -50,15 +50,15 @@ export default function CenterStyle({
         </p>
         <p className="cs_member_phone">
           <Link to={`tel:${phone}`} style={{ textDecoration: 'none', color: '#2C2F76' }}>
-            <span style={{ color: 'red' }}>Phone</span>: {phone?"98628 98628":"Phone number not available"}
+            <span style={{ color: 'red' }}>Phone</span>: {phone ? "98628 98628" : "Phone number not available"}
           </Link>
         </p>
-        <p className="cs_member_distance">
-          <span style={{ color: 'red' }}>Distance</span>: 
-          {distance && !isNaN(parseFloat(distance))
-            ? `${parseFloat(distance).toFixed(2)} km`
-            : 'Distance not available'}
-        </p>
+        {distance && !isNaN(parseFloat(distance)) && (
+          <p className="cs_member_distance">
+            <span style={{ color: 'red' }}>Distance</span>: {`${parseFloat(distance).toFixed(2)} km`}
+          </p>
+        )}
+
       </div>
     </div>
   );

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Spacing from '../../Spacing';
-import Pagination from '../../Pagination';
+
 import CenterStyle from '../../Team/CenterStyle';
+
+let debounceTimer;
 
 export default function CenterListStyle() {
   const [filteredData, setFilteredData] = useState([]); // Centers data
@@ -83,25 +85,38 @@ export default function CenterListStyle() {
   };
   
   // Handle geolocation on component mount
-  useEffect(() => {
+ // Handle geolocation on component mount
+useEffect(() => {
+  const requestLocation = () => {
     if (navigator.geolocation) {
+      // Request location permission
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
           setUserLocation({ latitude, longitude });
-          fetchNearbyCenters(latitude, longitude);
+          fetchNearbyCenters(latitude, longitude); // Fetch nearby centers with the approved location
         },
         (error) => {
+          // Handle errors gracefully
           console.error('Error fetching geolocation:', error.message);
-          setError('Unable to fetch geolocation. Fetching all centers instead.');
-          fetchAllCenters();
+          if (error.code === error.PERMISSION_DENIED) {
+            setError('Location access denied. Fetching all centers instead.');
+          } else {
+            setError('Unable to fetch geolocation. Fetching all centers instead.');
+          }
+          fetchAllCenters(); // Fallback to fetching all centers
         }
       );
     } else {
       setError('Geolocation is not supported by your browser.');
       fetchAllCenters();
     }
-  }, []);
+  };
+
+  // Trigger location request on component mount
+  requestLocation();
+}, []);
+
 
   // Closing when clicked outside
 
@@ -118,16 +133,22 @@ export default function CenterListStyle() {
 
 
   // Handle search input
- const handleSearchInput = (e) => {
-  const input = e.target.value.trim();
-  setSearchTerm(input);
-  console.log(searchTerm)
-  if (input.length > 2) {
-    fetchSuggestions(input); // Fetch suggestions if input length > 2
-  } else {
-    setSuggestions([]); // Clear suggestions for shorter inputs
-  }
-};
+  const handleSearchInput = (e) => {
+    const input = e.target.value.trim();
+    setSearchTerm(input);
+
+    // Clear the previous timer
+    clearTimeout(debounceTimer);
+
+    // Set a new debounce timer
+    debounceTimer = setTimeout(() => {
+      if (input.length > 2) {
+        fetchSuggestions(input);
+        setSuggestions([]); 
+      }
+    }, 1000); 
+  };
+
 
   console.log('Filtered data', filteredData)
   console.log("filtered data", filteredData.length)
@@ -237,7 +258,7 @@ export default function CenterListStyle() {
       </div>
 
       <Spacing md="90" />
-      <Pagination />
+      {/* <Pagination /> */}
     </div>
   );
 }
