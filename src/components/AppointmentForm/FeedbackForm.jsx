@@ -96,7 +96,7 @@ export default function FeedbackForm({ onSuccess }) {
 
 
   return (
-    <form style={{ padding: '100px' }} action="#" className="row" onSubmit={handleSubmit}>
+    <form action="#" className="row custom" onSubmit={handleSubmit}>
       {/* Name and Contact Number */}
       <div className="col-lg-6" style={{ marginBottom: '20px' }}>
         <label className="cs_input_label cs_heading_color">Name</label>

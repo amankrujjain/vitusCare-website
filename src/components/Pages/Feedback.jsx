@@ -1,29 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Lottie from 'react-lottie';
 import Section from '../Section';
 import FeedbackForm from '../AppointmentForm/FeedbackForm';
 
 
 function Feedback() {
-  const [animationData, setAnimationData] = useState(null);
-
-  useEffect(() => {
-    // Fetch the Lottie JSON file
-    fetch('/images/comingsoon-lottie.json')
-      .then((response) => response.json())
-      .then((data) => setAnimationData(data))
-      .catch((error) => console.error('Error loading Lottie animation:', error));
-  }, []);
-
-  const lottieOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData, // Use fetched data
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
-  };
+  
 
   return (
     <>

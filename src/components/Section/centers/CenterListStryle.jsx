@@ -134,7 +134,7 @@ useEffect(() => {
 
   // Handle search input
   const handleSearchInput = (e) => {
-    const input = e.target.value.trim();
+    const input = e.target.value;
     setSearchTerm(input);
 
     // Clear the previous timer
@@ -143,7 +143,7 @@ useEffect(() => {
     // Set a new debounce timer
     debounceTimer = setTimeout(() => {
       if (input.length > 2) {
-        fetchSuggestions(input);
+        fetchSuggestions(input.trim());
         setSuggestions([]); 
       }
     }, 1000); 

@@ -600,3 +600,22 @@ input[type='time']::-webkit-calendar-picker-indicator {
   border-bottom: none; /* Remove the bottom border for the last item */
 }
 
+
+// feedBack form
+
+.custom{
+  padding: 100px;
+}
+@media (max-width: 768px) {
+  .custom{
+    padding: 20px;
+  }
+}
+
+/* Extra small screens (e.g., smaller phones) */
+@media (max-width: 480px) {
+  .custom{
+    padding: 10px;
+  }
+}
+

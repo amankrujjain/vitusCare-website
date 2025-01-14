@@ -110,7 +110,7 @@ export default function CenterDetails() {
             { icon: 'fa:map-marker', href: centerData.center.map_location },
           ]}
           Enquiry={[
-            { iconUrl: '/images/icons/call.svg', title: centerData.center.phone },
+            { iconUrl: '/images/icons/call.svg', title: centerData.center.phone?"98628 98628":"" },
             {
               iconUrl: '/images/icons/envlope.svg',
               title: 'support@vituscare.com',

@@ -83,7 +83,7 @@ export default function CenterDetailsSection({
           </div>
           <div className="col-lg-6 offset-lg-1 position-relative">
             <Spacing md="55" />
-            <h2 className="cs_fs_48 mb-0 cs_semibold">{slogan}</h2>
+            <h2 className="red_color cs_fs_48 mb-0 cs_semibold">{slogan}</h2>
             <Spacing md="55" />
             <h2 className="cs_fs_30 mb-0 cs_semibold">{'Now In '+name}</h2>
             <Spacing md="12" />
