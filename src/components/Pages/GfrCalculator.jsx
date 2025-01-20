@@ -115,7 +115,7 @@ export default function GFRCalculator() {
                                     <div className="col-lg-12" style={{ marginTop: '20px', textAlign: 'center' }}>
                                         <hr />
                                         <h1>Result is:</h1>
-                                        <span style={{color:'red'}}>{gfr}</span><strong> milliliters per minute</strong>
+                                        <span style={{color:'red', fontSize:'30px'}}>{gfr}</span><strong style={{fontSize:"25px"}}> milliliters per minute</strong>
                                         <hr />
                                     </div>
                                 )}

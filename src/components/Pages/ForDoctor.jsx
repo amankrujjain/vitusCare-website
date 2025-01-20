@@ -3,6 +3,7 @@ import Section from '../Section';
 import AboutSectionStyle4 from '../Section/AboutSection/AboutSectionStyle4';
 import BannerSectionStyle4 from "../Section/BannerSection/BannerSectionStyle4";
 import WorkingProcess from "../Section/WorkingProcess";
+import { pageTitle } from '../../helpers/PageTitle';
 
 const workingProcessData = [
     {
@@ -36,6 +37,7 @@ const workingProcessData = [
 ];
 
 function ForDoctor() {
+    pageTitle("For Doctors")
     return <>
         <Section topMd={145} topLg={100} topXl={100}>
             <AboutSectionStyle4
@@ -55,7 +57,7 @@ function ForDoctor() {
                 data={workingProcessData}
             />
         </Section>
-        <Section topMd={145} topLg={100} topXl={100} className="cs_footer_margin_0">
+        <Section topMd={145} topLg={100} topXl={100} bottomMd={100} className="cs_footer_margin_0">
             <BannerSectionStyle4
                 bgUrl="/images/about/banner-multiple-people.png"
                 title="Partner with us today!"

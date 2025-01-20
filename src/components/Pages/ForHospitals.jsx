@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from '../Section';
 import DividedOptionSection from '../forHospitalItems/DividedOptionSection';
+import { pageTitle } from '../../helpers/PageTitle';
 
 const hospitalData = [
   {
@@ -30,6 +31,7 @@ const hospitalData = [
 ];
 
 const ForHospitals = () => {
+  pageTitle("For Hospital")
   return (
     <>
       <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>

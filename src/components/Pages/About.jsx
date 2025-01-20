@@ -78,7 +78,7 @@ const funFactData = [
 const teamData = [
   {
     imgUrl: '/images/about/Mr.Saurabh.png',
-    name: 'Dr. Saurabh, MD',
+    name: 'Dr. Saurabh Pokhariyal',
     designation: ' Founder and Chief Medical Officer',
     description:
       '',
@@ -136,26 +136,26 @@ export default function About() {
       </Section>
       <Section topMd={190} topLg={145} topXl={105}>
         <TeamSection
-          sectionTitle="Team"
+          sectionTitle="Founders"
           sectionTitleUp="MEET OUR"
           data={teamData}
         />
       </Section>
-      <Section topMd={170} topLg={120} topXl={80}>
+      <Section topMd={170} topLg={120} topXl={80} bottomMd={100}>
         <GallerySection
           sectionTitle="Our Facilities"
-          sectionTitleUp="SOME OF"
+          sectionTitleUp=""
           data={galleryData}
         />
       </Section>
-      <Section className="cs_footer_margin_0" topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
+      {/* <Section className="cs_footer_margin_0" topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
         <BannerSectionStyle4 
           bgUrl="images/about/banner-multiple-people.png"
           title="Don’t Let Your Health <br />Take a Backseat!"
           subTitle="Schedule an appointment with one of our experienced <br />medical professionals today!"
           center
         />
-      </Section>
+      </Section> */}
     </>
   );
 }

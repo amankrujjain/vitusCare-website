@@ -57,7 +57,7 @@ const faqData = [
   {
     title: 'What services does VitusCare offer?',
     content:
-      'VitusCare offers comprehensive renal care services across India, including in-center and home dialysis options. Our team of expert nephrologists provides personalized care and support, empowering patients to effectively manage their kidney health and improve their quality of life.',
+      'VitusCare offers comprehensive renal care services across India, including in-center and home dialysis options. Our team of senior technicians and expert nephrologists provides personalized care and support, empowering patients to effectively manage their kidney health and improve their quality of life.',
   },
   {
     title: 'How do I schedule an appointment with VitusCare?',
@@ -65,17 +65,17 @@ const faqData = [
       <>
         Dail For Dialysis:
         <Link style={{ color: 'red' }} to="tel:+919862898628"> 98628 98628</Link>.
-        To find vituscare centers nearest to you please <Link style={{ color: 'red' }} to='/find-our-centers'>Click here</Link>.
+        To find VitusCare centers nearest to you please <Link style={{ color: 'red' }} to='/find-our-centers'>Click here</Link>.
       </>
     ),
   },
   {
-    title: 'Can I avail dialysis under government schemes such as Ayushman bharat, ECHS, CGHS?'
+    title: 'Can I avail dialysis under government schemes such as Ayushman Bharat, ECHS, CGHS?'
     ,
     content: (
       <>
         Yes, you can avail dialysis under various health schemes with us such as Ayushman Bharat, ECHS, CGHS, NHA, SGHS, Ministry of Health and Family Welfare, NFHS and Pradhan Mantri National Dialysis Programme.
-        Find more about applicable schemes at your nearest vituscare center by{' '}
+        Find more about applicable schemes at your nearest VitusCare center by{' '}
         <Link style={{ color: "red" }} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
           clicking here
         </Link>.
@@ -87,7 +87,7 @@ const faqData = [
     ,
     content: (
       <>
-        Yes, we offer SLED dialysis at most of our centres. To find vituscare centers nearest to you please{' '}
+        Yes, we offer SLED dialysis at most of our centres. To find VitusCare centers nearest to you please{' '}
         <Link style={{ color: "red" }} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
           click here
         </Link>.
@@ -99,7 +99,7 @@ const faqData = [
     content: (
       <>
         Yes, we offer dialysis services under various TPAs (Third Party Administrators) at most of our centers.
-        To find vituscare centers nearest to you please{' '}
+        To find VitusCare centers nearest to you please{' '}
         <Link style={{ color: "red" }} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
           click here
         </Link>.
@@ -120,7 +120,7 @@ const faqData = [
     content: (
       <>
         On an average a dialysis session takes around 4.5 - 5 hours to be completed including all the pre and post dialysis formalities.
-        To find vituscare centers nearest to you please{' '}
+        To find VitusCare centers nearest to you please{' '}
         <Link style={{ color: "red" }} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
           click here
         </Link>.

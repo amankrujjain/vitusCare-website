@@ -2,8 +2,9 @@ import React from 'react';
 import CareerForm from '../AppointmentForm/CareerForm';
 import Section from '../Section';
 import BannerSectionStyle11 from '../Section/BannerSection/BannerSectionStyle11';
-
+import { pageTitle } from '../../helpers/PageTitle';
 const Career = () => {
+  pageTitle('Career')
   return (
     <>
       <Section
