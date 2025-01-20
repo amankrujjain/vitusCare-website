@@ -7,6 +7,7 @@ export default function TestimonialStyle2({
   avatarImgUrl,
   avatarName,
   avatarDesignation,
+  centre
 }) {
   return (
     <div className="cs_testimonial cs_style_2">
@@ -41,6 +42,8 @@ export default function TestimonialStyle2({
             {avatarName}
           </h3>
           <p className="cs_heading_color m-0">{avatarDesignation}</p>
+          <p className="cs_heading_color m-0">{centre}</p>
+
         </div>
       </div>
     </div>

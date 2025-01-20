@@ -63,32 +63,32 @@ const faqData = [
     title: 'How do I schedule an appointment with VitusCare?',
     content: (
       <>
-      Dail For Dialysis:
-        <Link style={{color:'red'}} to="tel:+919862898628"> 98628 98628</Link>.
-        To find vituscare centers nearest to you please <Link style={{color:'red'}} to='/find-our-centers'>Click here</Link>.
+        Dail For Dialysis:
+        <Link style={{ color: 'red' }} to="tel:+919862898628"> 98628 98628</Link>.
+        To find vituscare centers nearest to you please <Link style={{ color: 'red' }} to='/find-our-centers'>Click here</Link>.
       </>
     ),
   },
   {
-    title:'Can I avail dialysis under government schemes such as Ayushman bharat, ECHS, CGHS?'
+    title: 'Can I avail dialysis under government schemes such as Ayushman bharat, ECHS, CGHS?'
     ,
     content: (
       <>
-        Yes, you can avail dialysis under various health schemes with us such as Ayushman Bharat, ECHS, CGHS, NHA, SGHS, Ministry of Health and Family Welfare, NFHS and Pradhan Mantri National Dialysis Programme. 
+        Yes, you can avail dialysis under various health schemes with us such as Ayushman Bharat, ECHS, CGHS, NHA, SGHS, Ministry of Health and Family Welfare, NFHS and Pradhan Mantri National Dialysis Programme.
         Find more about applicable schemes at your nearest vituscare center by{' '}
-        <Link style={{color:"red"}} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
+        <Link style={{ color: "red" }} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
           clicking here
         </Link>.
       </>
     ),
   },
   {
-    title:'Do you offer SLED dialysis?'
+    title: 'Do you offer SLED dialysis?'
     ,
     content: (
       <>
         Yes, we offer SLED dialysis at most of our centres. To find vituscare centers nearest to you please{' '}
-        <Link style={{color:"red"}} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
+        <Link style={{ color: "red" }} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
           click here
         </Link>.
       </>
@@ -96,11 +96,11 @@ const faqData = [
   },
   {
     title: 'Do you accept insurance?',
-    content:(
+    content: (
       <>
         Yes, we offer dialysis services under various TPAs (Third Party Administrators) at most of our centers.
         To find vituscare centers nearest to you please{' '}
-        <Link style={{color:"red"}} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
+        <Link style={{ color: "red" }} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
           click here
         </Link>.
       </>
@@ -111,17 +111,17 @@ const faqData = [
     content: (
       <>
         Yes, we provide Home Hemodialysis Facility. Kindly contact us at{' '}
-        <Link style={{color:"red"}} to="tel:+919862898628">98628 98628</Link> to know more.
+        <Link style={{ color: "red" }} to="tel:+919862898628">98628 98628</Link> to know more.
       </>
     ),
   },
   {
-    title:'How long does each dialysis session take?',
-    content:(
+    title: 'How long does each dialysis session take?',
+    content: (
       <>
-      On an average a dialysis session takes around 4.5 - 5 hours to be completed including all the pre and post dialysis formalities.
-      To find vituscare centers nearest to you please{' '}
-        <Link style={{color:"red"}} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
+        On an average a dialysis session takes around 4.5 - 5 hours to be completed including all the pre and post dialysis formalities.
+        To find vituscare centers nearest to you please{' '}
+        <Link style={{ color: "red" }} to="/find-our-centers" target="_blank" rel="noopener noreferrer">
           click here
         </Link>.
       </>
@@ -158,49 +158,49 @@ const awardData = [
   {
     title: 'Changing Dialysis Care & Making It More Easily Available',
     subTitle:
-      'This award recognizes healthcare organizations that have used health information technology to improve patient outcomes and reduce costs.',
+      '',
     iconUrl: 'images/news/betterIndia.svg',
     url: 'https://thebetterindia.com/373563/vitus-care-renal-care-dialysis-tier-2-cities-chronic-kidney-disease-prabhat-shrivastava/'
   },
   {
     title: 'Tomorrow Capital Invests In Kidney Start Up VitusCare',
     subTitle:
-      'This recognition is given to hospitals that have met rigorous standards for patient safety and quality of care.',
+      '',
     iconUrl: 'images/news/toi.png',
     url: 'https://timesofindia.indiatimes.com/business/india-business/tomorrow-capital-invests-in-kidney-start-up-vituscare/articleshow/109354003.cms'
   },
   {
     title: 'Top 3 ways to improve kidney health',
     subTitle:
-      'This award recognizes healthcare organizations that have demonstrated excellence in leadership, strategic planning, customer and employee satisfaction, and operational efficiency.',
+      '',
     iconUrl: 'images/news/zeeNews.avif',
     url: 'https://zeenews.india.com/hindi/health/how-to-managing-diabetes-to-prevent-kidney-disease-doctor-told-steps-for-a-healthier-lifestyle/2514635'
   },
   {
-    title: ' Available, accessible, affordable: VitusCare is focusing on the 3 As of kidney care in Tier II and III India',
+    title: ' Available, accessible, affordable: VitusCare is focusing on the 3 As of kidney care',
     subTitle:
-      'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
+      '',
     iconUrl: 'images/news/yourStory.svg',
     url: "https://yourstory.com/2022/09/accessible-affordable-dialysis-therapy-vituscare-kidney-care-india"
   },
   {
     title: 'ESRD rising at alarming rate, particularly among adults aged 25-55',
     subTitle:
-      'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
+      '',
     iconUrl: 'images/news/et-now.svg',
     url: "https://health.economictimes.indiatimes.com/news/industry/esrd-rising-at-alarming-rate-particularly-among-adults-aged-25-55/113941095"
   },
   {
     title: 'VitusCare on track to achieve Rs 100 Cr ARR by 2026',
     subTitle:
-      'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
+      '',
     iconUrl: 'images/news/yourStory.svg',
     url: "https://yourstory.com/2024/12/vituscare-track-achieve-rs-100cr-arr-2026"
   },
   {
     title: 'Tomorrow Capital-Backed Dialysis Firm VitusCare On Road To Raise Fresh Funds',
     subTitle:
-      'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
+      '',
     iconUrl: 'images/news/VCC-logo.svg',
     url: "https://www.vccircle.com/tomorrowcapital-backed-dialysis-firm-vituscare-on-road-to-raise-fresh-funds"
   },
@@ -208,7 +208,7 @@ const awardData = [
   {
     title: 'Health in 2024: The Top Trends That Shaped Preventive Care in India',
     subTitle:
-      'This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.',
+      '',
     iconUrl: 'images/news/news18.png',
     url: "https://www.news18.com/lifestyle/health-and-fitness-health-in-2024-the-top-trends-that-shaped-preventive-care-in-india-9159413.html"
   },
@@ -229,7 +229,7 @@ const departmentData = [
     iconUrl: 'images/home_1/nephrology.svg',
     href: '#',
   },
- 
+
 
 ];
 
@@ -240,6 +240,7 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Ashish',
     avatarDesignation: 'Dialysis Patient',
+    centre: "Vatsalya Hospital, Allahabad"
   },
   {
     text: 'The technicians are very good. They know how to do everything right, and I feel safe.',
@@ -247,6 +248,7 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Lata Devi',
     avatarDesignation: 'Dialysis Patient',
+    centre: "Jeewan Hospital, Delhi"
   },
   {
     text: 'They explain everything to me. I always know what is happening.',
@@ -254,6 +256,7 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Sandeep',
     avatarDesignation: 'Dialysis Patient',
+    centre: "Priyanka Hospital, Jaipur"
   },
   {
     text: `The machines are good. They don’t make noise and I never have problems.`,
@@ -261,6 +264,7 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Aarti',
     avatarDesignation: 'Dialysis Patient',
+    centre: "Fortune Hospital, Meerut"
   },
   {
     text: `The centre is always very clean. Everything looks neat and tidy.`,
@@ -268,6 +272,7 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Raj',
     avatarDesignation: 'Dialysis Patient',
+    centre: "Atlantis Hospital, Amritsar"
   },
   {
     text: `मुझे कभी वेट करना नहीं पड़ता, डायलिसिस टाइम पे शुरू हो जाता है। वो मुझे बहुत सुविधाजनक लगता है।`,
@@ -275,6 +280,7 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Rameshwar',
     avatarDesignation: 'Dialysis Patient',
+    centre: "Apex Hospital, Solan"
   },
   {
     text: `यहां पर परिवार को इलाज के दौरान साथ रहने की सुविधा मिलती है, जो मुझे बहुत अच्छा लगता है।`,
@@ -282,6 +288,7 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Seema',
     avatarDesignation: 'Dialysis Patient',
+    centre: "Lotus Hospital, Agra"
   },
   {
     text: `डॉक्टर्स बहुत अनुभवी हैं और वे मेरी बीमारी के बारे में पूरी जानकारी देते हैं।`,
@@ -289,6 +296,7 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Sunil',
     avatarDesignation: 'Dialysis Patient',
+    centre: "Oscar Hospital, Jhajjar"
   },
   {
     text: `अस्पताल का वातावरण शांत और आरामदायक होता है, जिससे मुझे तनाव कम होता है।`,
@@ -296,6 +304,7 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Prabha',
     avatarDesignation: 'Dialysis Patient',
+    centre: "Mithraaj Hospital, Aligarh"
   }
 ];
 
