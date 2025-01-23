@@ -39,13 +39,12 @@ const SetupDialysis = () => {
         {
             title: 'CAPEX INVESTMENT',
             subTitle: `Upto 1 crore depending on scale of operations and potential to invest further with growth.`,
-            iconUrl: '/images/home_2/wording_process_icon_1.svg',
+            iconUrl: '/images/home_2/streamline--investment-selection.svg',
             number: '01',
         },
         {
             title: 'COMPLETE SOURCING',
-            subTitle: `Equipment & consumables (25+ unique consumables required for every session) Hence, several treatment combinations are required while administering the therapy.
-`,
+            subTitle: `Equipment & consumables (25+ unique consumables required for every session) Hence, several treatment combinations are required while administering the therapy.`,
             iconUrl: '/images/home_2/wording_process_icon_2.svg',
             number: '02',
         },
@@ -53,14 +52,14 @@ const SetupDialysis = () => {
             title: 'INVENTORY CONTROL',
             subTitle: `No single supplier of all consumables, requires managing 25 different vendors each with a different MOQ, payment terms and delivery timelines
 `,
-            iconUrl: '/images/home_2/wording_process_icon_3.svg',
+            iconUrl: '/images/home_2/ic--outline-inventory.svg',
             number: '03',
         },
         {
             title: 'HUMAN RESOURCE',
             subTitle: `Onboarding, skilling and regular refresher training of technicians and nurses, apart from interventions by Clinical & Biomedical specialists (high attrition roles managed efficiently by our hub & spoke approach)
 `,
-            iconUrl: '/images/home_2/wording_process_icon_4.svg',
+            iconUrl: '/images/home_2/healthicons--i-training-class-outline.svg',
             number: '04',
         },
         {
@@ -82,7 +81,7 @@ const SetupDialysis = () => {
             title: 'EQUIPMENT MAINTENANCE',
             subTitle:
                 'Rigorous preventive maintenance schedule and dedicated teams for reactive maintenance to ensure longevity and quality of equipment',
-            iconUrl: '/images/home_2/wording_process_icon_7.svg',
+            iconUrl: '/images/home_2/pajamas--issue-type-maintenance.svg',
             number: '07',
         },
         {
