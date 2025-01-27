@@ -52,7 +52,7 @@ export default function Header({ logoSrc, variant }) {
                   <ul className={`${mobileToggle ? 'cs_nav_list cs_active' : 'cs_nav_list'}`}>
                     <li className="cs_nav"><Link to="/">Home</Link></li>
                     <li className="cs_nav"><Link to="/about">About</Link></li>
-                    <li><Link to="/blog">Kidney Knowledge Center</Link></li>
+                    {/* <li><Link to="/blog">Kidney Knowledge Center</Link></li> */}
                     <li><Link to="/career">Careers</Link></li>
                     <li className="menu-item-has-children justify-end">
                       <Link to="#">Partner with us</Link>

@@ -90,6 +90,10 @@ export default function CenterDetails() {
         title: multiSpecialtyIcu, // Dynamically generated
       },
     ];
+    const processedImages = centerData.center.pic?.map(
+      (img) => `http://localhost:7000${img}`
+    ) || ['/images/doctors/doctor_details.jpeg'];
+    
     
     // Filter out invalid titles
     const filteredExperiences = experiences.filter((experience) => experience.title);
@@ -100,14 +104,15 @@ export default function CenterDetails() {
       <Section bottomMd={190} bottomLg={150} bottomXl={110}>
         <CenterDetailsSection
           bgUrl="/images/doctors/doctor_details_bg.svg"
-          imgUrl="/images/doctors/doctor_details.jpeg"
+          imgUrl={processedImages}
+
           slogan={"#SirfQualityDialysis"}
           name={centerData.center.city}
           department={centerData.center.name_of_centre}
           designation={centerData.center.name_of_centre}
           description={centerData.center.address_of_centre}
           social={[
-            { icon: 'fa:map-marker', href: centerData.center.map_location },
+            { icon: 'fa:map-marker', href: centerData.center.location },
           ]}
           Enquiry={[
             { iconUrl: '/images/icons/call.svg', title: centerData.center.phone?"98628 98628":"" },

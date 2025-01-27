@@ -1,14 +1,17 @@
-import { Icon } from '@iconify/react';
 import React from 'react';
+import Slider from 'react-slick';
+import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
 import List from '../List';
 import ListStyle3 from '../List/ListStyle3';
 import ListStyle2 from '../List/ListStyle2';
 import Spacing from '../Spacing';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function CenterDetailsSection({
   bgUrl,
-  imgUrl,
+  imgUrl, // Array of image URLs passed as prop
   name,
   department,
   designation,
@@ -20,12 +23,22 @@ export default function CenterDetailsSection({
   degreesHeading,
   experiences,
   experiencesHeading,
-  awards,
-  awardHeading,
   schedules,
   scheduleHeading,
   slogan
 }) {
+  // Slick slider settings
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+  };
+console.log("images path", imgUrl)
   return (
     <div className="cs_doctor_details">
       <div
@@ -57,7 +70,24 @@ export default function CenterDetailsSection({
               >
                 slots available Call Now !!
               </div>
-              <img src={imgUrl} alt="Doctor" className="w-100" />
+
+              {/* Slick Carousel */}
+              {imgUrl?.length > 0 ? (
+                <Slider {...sliderSettings}>
+                  {imgUrl.map((img, index) => (
+                    <div key={index}>
+                      <img src={img} alt={`Slide ${index + 1}`} className="w-100" />
+                    </div>
+                  ))}
+                </Slider>
+              ) : (
+                <Slider {...sliderSettings}>
+                  <div>
+                    <img src="/images/doctors/doctor_details.jpeg" alt="Fallback" className="w-100" />
+                  </div>
+                </Slider>
+              )}
+
               <h3 className="cs_white_color cs_accent_bg mb-0 text-center cs_semibold cs_fs_24">
                 {department}
               </h3>
@@ -74,18 +104,12 @@ export default function CenterDetailsSection({
               iconUrl="/images/icons/schedule.svg"
               data={schedules}
             />
-            {/* <Spacing md="66" lg="60" />
-            <ListStyle3
-              heading={scheduleHeading}
-              iconUrl="/images/icons/schedule.svg"
-              data={schedules}
-            /> */}
           </div>
           <div className="col-lg-6 offset-lg-1 position-relative">
             <Spacing md="55" />
             <h2 className="red_color cs_fs_48 mb-0 cs_semibold">{slogan}</h2>
             <Spacing md="55" />
-            <h2 className="cs_fs_30 mb-0 cs_semibold">{'Now In '+name}</h2>
+            <h2 className="cs_fs_30 mb-0 cs_semibold">{'Now In ' + name}</h2>
             <Spacing md="12" />
             <h3 className="cs_semibold cs_fs_24 mb-0">{designation}</h3>
             <Spacing md="32" />

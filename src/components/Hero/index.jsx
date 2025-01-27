@@ -5,7 +5,7 @@ import Section from '../Section';
 import ControlledCarousel from '../Carousel/ControlledCarousel';
 
 const funFactData = [
-  { number: '50+', title: 'Operational Cities' },
+  { number: '50+', title: 'Operational Centres' },
   { number: '25,000', title: 'Satisfied Patients' },
   { number: '5,50,000', title: 'Sessions Completed' },
 ];

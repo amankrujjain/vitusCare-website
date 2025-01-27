@@ -452,7 +452,7 @@ export default function Home() {
         bottomLg={150}
         bottomXl={110}
       >
-        <BrandsSection sectionTitle={'Empanelment Supported'} data={brandData} />
+        <BrandsSection sectionTitle={'Empanelments Supported'} data={brandData} />
       </Section>
       {/* End Brand Section */}
     </>
