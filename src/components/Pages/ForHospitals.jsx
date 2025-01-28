@@ -14,7 +14,7 @@ const hospitalData = [
     popular: false,
   },
   {
-    title: 'Outsource Dialysis Unit',
+    title: 'Outsource An Existing Dialysis Unit',
     subTitle:
       'Already have a dialysis unit? Outsource to VitusCare for expert management, advanced technology, and streamlined operations. Elevate patient care while optimizing costs with our trusted renal care solutions tailored for your hospital.',
     featureList: [

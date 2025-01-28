@@ -105,7 +105,6 @@ export default function CareerForm({ onSuccess }) {
                             <option value="Clinical Technician">Clinical Technician</option>
                             <option value="Biomedical Engineer">Biomedical Engineer</option>
                             <option value="RO Engineer">RO Engineer</option>
-                            <option value="Sales">Sales</option>
                             <option value="Customer Support">Customer Support</option>
                             <option value="Accounts/Finance">Accounts/Finance</option>
                             <option value="Procurement/Supply Chain">Procurement/Supply Chain</option>

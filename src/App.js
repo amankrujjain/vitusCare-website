@@ -28,6 +28,7 @@ import OutsourceUnit from './components/forHospitalItems/dialysisUnit/OutsourceU
 import ForDoctor from './components/Pages/ForDoctor';
 import Feedback from './components/Pages/Feedback';
 import Career from './components/Pages/Career';
+import ThankYou from './components/Pages/ThankYou';
 
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
           <Route path='/feedback' element={<Feedback/>}/>
           <Route path='/career' element={<Career/>}/>
           <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
+          <Route path='/thank-you' element={<ThankYou/>}/>
 
         </Route>
 
@@ -82,7 +84,7 @@ function App() {
         toastOptions={{
           // Define default options
           className: '',
-          duration: 5000,
+          duration: 2000,
           style: {
             background: '#2C2F76',
             color: '#fff',

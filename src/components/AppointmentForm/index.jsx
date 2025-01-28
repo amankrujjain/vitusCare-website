@@ -3,15 +3,17 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 export default function AppointmentForm({ onSuccess }) {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     age: '',
     appointmentDate: null,
-    service: 'homeodialysis',
+    service: 'in-centre-dialysis',
   });
 
   const handleChange = (e) => {
@@ -31,48 +33,40 @@ export default function AppointmentForm({ onSuccess }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    console.log('Validation Debug:', {
-      name: formData.name,
-      email: formData.email,
-      phone: formData.phone,
-      age: formData.age,
-      appointmentDate: formData.appointmentDate,
-      service: formData.service,
-    });
-  
+
     // Validate the form
     if (
-      !formData.name.trim() || 
-      !formData.email.trim() || 
-      !formData.phone.trim() || 
-      !formData.age.trim() || 
-      !formData.service.trim() || 
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.phone.trim() ||
+      !formData.age.trim() ||
+      !formData.service.trim() ||
       !formData.appointmentDate
     ) {
       toast.error('Please fill in all required fields!');
       return;
     }
-  
+
+    // Show loading toast
+    const toastId = toast.loading('Submitting your appointment...');
+
     // Format appointmentDate as "dd/MM/yyyy"
     const formattedDate = new Intl.DateTimeFormat('en-GB', {
       day: '2-digit',
       month: '2-digit',
       year: 'numeric',
     }).format(formData.appointmentDate);
-  
-    console.log('Formatted Date:', formattedDate);
-  
+
     // Prepare the API payload
     const payload = {
       name: formData.name,
       email: formData.email,
-      phoneNumber: formData.phone, // Updated to "phoneNumber" to match your API
-      age: parseInt(formData.age, 10), // Ensure age is sent as a number
-      appointmentDate: formattedDate, // Use the formatted date here
+      phoneNumber: formData.phone, 
+      age: parseInt(formData.age, 10), 
+      appointmentDate: formattedDate, 
       service: formData.service,
     };
-  
+
     try {
       const response = await fetch('http://localhost:7000/api/appointment-booking', {
         method: 'POST',
@@ -81,29 +75,32 @@ export default function AppointmentForm({ onSuccess }) {
         },
         body: JSON.stringify(payload),
       });
-  
+
       if (response.ok) {
-        toast.success('Appointment booked successfully!');
+        // Update the toast with success message
+        toast.success('Appointment booked successfully!', { id: toastId });
         if (onSuccess) {
-          onSuccess();
+          onSuccess(); 
         }
+        // Navigate to a Thank You page
+        navigate('/thank-you');
+        // Reset form
         setFormData({
           name: '',
           email: '',
           phone: '',
           age: '',
           appointmentDate: null,
-          service: 'homeodialysis',
-        }); // Reset form
+          service: 'in-centre-dialysis',
+        });
       } else {
         const errorData = await response.json();
-        toast.error(`Error: ${errorData.message}`);
+        toast.error(`Error: ${errorData.message}`, { id: toastId });
       }
     } catch (error) {
-      toast.error('Failed to book the appointment. Please try again.');
+      toast.error('Failed to book the appointment. Please try again.', { id: toastId });
     }
   };
-    
 
   return (
     <form action="#" className="row" onSubmit={handleSubmit}>
@@ -187,8 +184,8 @@ export default function AppointmentForm({ onSuccess }) {
             onChange={handleChange}
             required
           >
-            <option value="homeodialysis">Home Dialysis</option>
             <option value="in-centre-dialysis">In-centre Dialysis</option>
+            <option value="homeodialysis">Home Dialysis</option>
             <option value="nephrologist-consultation">Nephrologist Consultation</option>
           </select>
         </div>

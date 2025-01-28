@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import Footer2 from '../Footer/FooterStyle2';
 import Header from '../Header';
 import Appointment from '../AppointmentForm/index';
@@ -7,7 +7,7 @@ import Appointment from '../AppointmentForm/index';
 export default function Layout() {
   const [showModal, setShowModal] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-
+  const location = useLocation();
   // Toggle modal visibility
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
@@ -89,7 +89,7 @@ export default function Layout() {
       </div>
 
       {/* Fixed "Book an Appointment" Div for PC View */}
-      {!isMobile && (
+      {!isMobile && (location.pathname !== '/thank-you' && location.pathname !== '/career' && location.pathname !== '/feedback') && (
         <div
           style={{
             position: 'fixed',
@@ -126,11 +126,24 @@ export default function Layout() {
                 padding: '10px',
               }}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" viewBox="0 0 24 24">
-                <path
-                  fill="#2c2f76"
-                  d="M19 4h-1V3c0-.6-.4-1-1-1s-1 .4-1 1v1H8V3c0-.6-.4-1-1-1s-1 .4-1 1v1H5C3.3 4 2 5.3 2 7v1h20V7c0-1.7-1.3-3-3-3M2 19c0 1.7 1.3 3 3 3h14c1.7 0 3-1.3 3-3v-9H2zm15-7c.6 0 1 .4 1 1s-.4 1-1 1s-1-.4-1-1s.4-1 1-1m0 4c.6 0 1 .4 1 1s-.4 1-1 1s-1-.4-1-1s.4-1 1-1m-5-4c.6 0 1 .4 1 1s-.4 1-1 1s-1-.4-1-1s.4-1 1-1m0 4c.6 0 1 .4 1 1s-.4 1-1 1s-1-.4-1-1s.4-1 1-1m-5-4c.6 0 1 .4 1 1s-.4 1-1 1s-1-.4-1-1s.4-1 1-1"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" width="44" height="40" viewBox="0 0 24 24">
+                <rect width="14" height="0" x="5" y="5" fill="#2C2F76">
+                  <animate fill="freeze" attributeName="height" dur="3.7s" values="0;3;3" keyTimes="0;0.73;1" repeatCount="indefinite" />
+                </rect>
+                <g fill="none" stroke="#2C2F76" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path stroke-dasharray="64" stroke-dashoffset="64" d="M12 4h7c0.55 0 1 0.45 1 1v14c0 0.55 -0.45 1 -1 1h-14c-0.55 0 -1 -0.45 -1 -1v-14c0 -0.55 0.45 -1 1 -1Z">
+                    <animate fill="freeze" attributeName="stroke-dashoffset" dur="3.7s" values="64;0;0" keyTimes="0;0.73;1" repeatCount="indefinite" />
+                  </path>
+                  <path stroke-dasharray="4" stroke-dashoffset="4" d="M7 4v-2M17 4v-2">
+                    <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="3.7s" values="4;0;0" keyTimes="0;0.73;1" repeatCount="indefinite" />
+                  </path>
+                  <path stroke-dasharray="12" stroke-dashoffset="12" d="M7 11h10">
+                    <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.8s" dur="3.7s" values="12;0;0" keyTimes="0;0.73;1" repeatCount="indefinite" />
+                  </path>
+                  <path stroke-dasharray="8" stroke-dashoffset="8" d="M7 15h7">
+                    <animate fill="freeze" attributeName="stroke-dashoffset" begin="1s" dur="3.7s" values="8;0;0" keyTimes="0;0.73;1" repeatCount="indefinite" />
+                  </path>
+                </g>
               </svg>
             </div>
           </div>
@@ -138,7 +151,7 @@ export default function Layout() {
       )}
 
       {/* Mobile Navigation Bar */}
-      {isMobile && (
+      {isMobile  && (
         <div
           style={{
             position: 'fixed',
@@ -177,7 +190,7 @@ export default function Layout() {
       )}
 
       {/* Modal for Appointment Form */}
-      {showModal && (
+      {showModal && (location.pathname !== '/thank-you' && location.pathname !== '/career' && location.pathname !== '/feedback') && (
         <div
           style={{
             position: 'fixed',
