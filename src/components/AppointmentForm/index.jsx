@@ -78,7 +78,7 @@ export default function AppointmentForm({ onSuccess }) {
 
       if (response.ok) {
         // Update the toast with success message
-        toast.success('Appointment booked successfully!', { id: toastId });
+        toast.success('Appointment request sent successfully!', { id: toastId });
         if (onSuccess) {
           onSuccess(); 
         }

@@ -1,62 +1,9 @@
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-const data = {
-    states: [
-        {
-            name: "California",
-            cities: [
-                {
-                    name: "Los Angeles",
-                    centers: ["Center A", "Center B", "Center C"]
-                },
-                {
-                    name: "San Francisco",
-                    centers: ["Center D", "Center E"]
-                },
-                {
-                    name: "San Diego",
-                    centers: ["Center F", "Center G", "Center H"]
-                }
-            ]
-        },
-        {
-            name: "Texas",
-            cities: [
-                {
-                    name: "Houston",
-                    centers: ["Center I", "Center J"]
-                },
-                {
-                    name: "Dallas",
-                    centers: ["Center K", "Center L", "Center M"]
-                },
-                {
-                    name: "Austin",
-                    centers: ["Center N", "Center O"]
-                }
-            ]
-        },
-        {
-            name: "New York",
-            cities: [
-                {
-                    name: "New York City",
-                    centers: ["Center P", "Center Q", "Center R"]
-                },
-                {
-                    name: "Buffalo",
-                    centers: ["Center S", "Center T"]
-                },
-                {
-                    name: "Rochester",
-                    centers: ["Center U", "Center V"]
-                }
-            ]
-        }
-    ]
-};
+import { useNavigate } from 'react-router-dom';
 
 export default function NewUnitForm({ onSuccess }) {
+    const navigate = useNavigate()
     const [formData, setFormData] = useState({
         state: '',
         city: '',
@@ -72,26 +19,58 @@ export default function NewUnitForm({ onSuccess }) {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Validation can be added here
-
-        toast.success("Form successfully submitted!");
-        setFormData({
-            state: '',
-            city: '',
-            hospital: '',
-            name: '',
-            phone: '',
-            email: '',
-            description: ''
-        });
-
-        if (onSuccess) {
-            onSuccess();
+        if (
+            !formData.state.trim() ||
+            !formData.city.trim() ||
+            !formData.hospital.trim() ||
+            !formData.name.trim() ||
+            !formData.email.trim() ||
+            !formData.phone.trim() ||
+            !formData.description.trim()
+        ) {
+            toast.error('Please fill in all required fields!');
+            return;
         }
-    };
+
+        const toastId = toast.loading('Submitting your inquiry...');
+        try {
+            const response = await fetch('http://localhost:7000/api/green-field-enquiry', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify(formData),
+            })
+
+            if (response.ok) {
+                toast.success('Inquiry submitted successfully !', { id: toastId })
+                if (onSuccess) {
+                    onSuccess();
+                };
+
+                navigate('/thank-you')
+                setFormData({
+                    state: '',
+                    city: '',
+                    hospital: '',
+                    name: '',
+                    phone: '',
+                    email: '',
+                    description: ''
+                });
+            } else {
+                const errorData = await response.json();
+                toast.error(`Error: ${errorData.message}`, { id: toastId });
+            }
+        } catch (error) {
+            toast.error('Failed to book the appointment. Please try again.', { id: toastId });
+        }
+
+    }
 
     return (
         <form action="#" className="row" onSubmit={handleSubmit}>
@@ -111,35 +90,29 @@ export default function NewUnitForm({ onSuccess }) {
 
             {/* Select State */}
             <div className="col-lg-6">
-                <label className="cs_input_label cs_heading_color">Select State</label>
-                <select
+                <label className="cs_input_label cs_heading_color">Enter State</label>
+                <input
+                    type="text"
                     name="state"
                     className="cs_form_field"
+                    placeholder="Enter State"
                     value={formData.state}
                     onChange={handleChange}
-                >
-                    <option value="">Select State</option>
-                    <option value="state1">State 1</option>
-                    <option value="state2">State 2</option>
-                    <option value="state3">State 3</option>
-                </select>
+                />
                 <div className="cs_height_42 cs_height_xl_25" />
             </div>
 
             {/* Select City */}
             <div className="col-lg-6">
-                <label className="cs_input_label cs_heading_color">Select City</label>
-                <select
+                <label className="cs_input_label cs_heading_color">Ennter City</label>
+                <input
+                    type="text"
                     name="city"
                     className="cs_form_field"
+                    placeholder="Enter City"
                     value={formData.city}
                     onChange={handleChange}
-                >
-                    <option value="">Select City</option>
-                    <option value="city1">City 1</option>
-                    <option value="city2">City 2</option>
-                    <option value="city3">City 3</option>
-                </select>
+                />
                 <div className="cs_height_42 cs_height_xl_25" />
             </div>
 
@@ -161,7 +134,7 @@ export default function NewUnitForm({ onSuccess }) {
             <div className="col-lg-6">
                 <label className="cs_input_label cs_heading_color">Your Phone Number</label>
                 <input
-                    type="text"
+                    type="tel"
                     name="phone"
                     className="cs_form_field"
                     placeholder="Enter Your Phone Number"

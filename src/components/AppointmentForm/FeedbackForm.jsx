@@ -1,18 +1,21 @@
 import { Icon } from '@iconify/react';
 import React, { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 export default function FeedbackForm({ onSuccess }) {
   const [formData, setFormData] = useState({
     name: '',
     contactNumber: '',
     state: '',
+    email:'',
     city: '',
     center: '',
     ratings: {},
     yesNoAnswers: {},
     suggestions: '',
   });
+  const navigate = useNavigate();
   const [allData, setAllData] = useState([])
   const [filteredCities, setFilteredCities] = useState([]); // Holds cities filtered by state
   const [filteredCenters, setFilteredCenters] = useState([]); // Holds centers filtered by city
@@ -35,10 +38,44 @@ export default function FeedbackForm({ onSuccess }) {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    toast.success('Feedback submitted successfully!');
-    if (onSuccess) onSuccess();
+    const toastId = toast.loading('Submitting your appointment...');
+    try {
+      const response = await fetch("http://localhost:7000/api/feedback-form", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      let result = await response.json()
+
+      if (response.ok) {
+        toast.success('Appointment booked successfully!', { id: toastId });
+        if (onSuccess) onSuccess();
+
+        navigate('/thank-you');
+        // Reset the form after submission
+        setFormData({
+          name: '',
+          contactNumber: '',
+          state: '',
+          email:'',
+          city: '',
+          center: '',
+          ratings: {},
+          yesNoAnswers: {},
+          suggestions: '',
+        });
+      } else {
+        throw new Error(result.message || 'Something went wrong');
+      }
+    } catch (error) {
+      console.error('Error submitting feedback:', error);
+      toast.error('Failed to book the appointment. Please try again.', { id: toastId });
+    }
   };
 
   useEffect(() => {
@@ -46,14 +83,14 @@ export default function FeedbackForm({ onSuccess }) {
       try {
         const response = await fetch('http://localhost:7000/api/get-all-centres');
         const result = await response.json();
-  
+
         // Log the response to confirm
         console.log(result);
-  
+
         // Check if the response contains the expected data
         if (result.success && Array.isArray(result.centres)) {
           const data = result.centres;
-  
+
           // Organize data by state and city
           const structuredData = {};
           data.forEach((center) => {
@@ -62,7 +99,7 @@ export default function FeedbackForm({ onSuccess }) {
             if (!structuredData[state][city]) structuredData[state][city] = [];
             structuredData[state][city].push(name_of_centre);
           });
-  
+
           setAllData(structuredData);
         } else {
           throw new Error('Unexpected API response format');
@@ -71,10 +108,10 @@ export default function FeedbackForm({ onSuccess }) {
         console.error('Error fetching data:', error);
       }
     };
-  
+
     fetchData();
   }, []);
-  
+
 
   const handleStateChange = (e) => {
     const selectedState = e.target.value;
@@ -112,11 +149,22 @@ export default function FeedbackForm({ onSuccess }) {
       <div className="col-lg-6" style={{ marginBottom: '20px' }}>
         <label className="cs_input_label cs_heading_color">Contact Number</label>
         <input
-          type="text"
+          type="tel"
           className="cs_form_field"
           placeholder="Enter Contact Number"
           name="contactNumber"
           value={formData.contactNumber}
+          onChange={handleInputChange}
+        />
+      </div>
+      <div className="col-lg-6" style={{ marginBottom: '20px' }}>
+        <label className="cs_input_label cs_heading_color">Email</label>
+        <input
+          type="email"
+          className="cs_form_field"
+          placeholder="Enter Email"
+          name="email"
+          value={formData.email}
           onChange={handleInputChange}
         />
       </div>
@@ -192,7 +240,7 @@ export default function FeedbackForm({ onSuccess }) {
               onChange={(e) => handleRatingChange(question, e.target.value)}
             >
               <option value="">Select Rating</option>
-              {[1, 2, 3, 4, 5].map((rating) => (
+              {['1 😖', '2 😞', '3 😑', '4 😊', '5 😃'].map((rating) => (
                 <option key={rating} value={rating}>
                   {rating}
                 </option>
@@ -218,8 +266,8 @@ export default function FeedbackForm({ onSuccess }) {
               onChange={(e) => handleYesNoChange(question, e.target.value)}
             >
               <option value="">Select Option</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
+              <option value="Yes">Yes 👍</option>
+              <option value="No">No 👎</option>
             </select>
           </div>
         ))}

@@ -73,7 +73,7 @@ function App() {
         </Route>
 
         <Route path="*" element={<ErrorPage />} />
-      {/* <Test/> */}
+
       </Routes>
       <Toaster
         position="top-center"
@@ -82,7 +82,7 @@ function App() {
         containerClassName=""
         containerStyle={{}}
         toastOptions={{
-          // Define default options
+       
           className: '',
           duration: 2000,
           style: {
@@ -90,7 +90,7 @@ function App() {
             color: '#fff',
           },
 
-          // Default options for specific types
+        
           success: {
             duration: 2000,
             theme: {
