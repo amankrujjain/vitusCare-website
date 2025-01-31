@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function DialysisUnitForm({ onSuccess }) {
+    const navigate = useNavigate()
     const [formData, setFormData] = useState({
         hospital: '',
         state: '',
@@ -17,25 +20,59 @@ export default function DialysisUnitForm({ onSuccess }) {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
 
-        // Validation can be added here
-
-        toast.success("Form successfully submitted!");
-        setFormData({
-            hospital: '',
-            state: '',
-            city: '',
-            dialysisCount: '',
-            name: '',
-            phone: '',
-            email: ''
-        });
-
-        if (onSuccess) {
-            onSuccess();
+        if(!formData.name.trim() ||
+        !formData.city.trim() ||
+        !formData.hospital.trim() ||
+        !formData.name.trim() ||
+        !formData.email.trim() ||
+        !formData.phone.trim() ||
+        !formData.dialysisCount.trim()){
+            toast.error('Please fill in all the required fields!');
+            return;
         }
+
+        const toastId = toast.loading('Submitting your inquiry...');
+        
+        try {
+            const response = await fetch("http://localhost:7000/api/setup-new-dialysis-unit",{
+                method:'POST',
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify(formData)
+            })
+
+            if(response.ok){
+                toast.success("Inquiry successfully submitted!", {id: toastId});
+                if (onSuccess) {
+                    onSuccess();
+                }
+                navigate('/thank-you')
+
+                setFormData({
+                    hospital: '',
+                    state: '',
+                    city: '',
+                    dialysisCount: '',
+                    name: '',
+                    phone: '',
+                    email: ''
+                });
+            }else {
+                const errorData = await response.json();
+                toast.error(`Error: ${errorData.message}`, { id: toastId });
+            }
+    
+            
+        } catch (error) {
+            console.log("Error in brown field", error)
+            toast.error('Failed to book the appointment. Please try again.', { id: toastId });
+        }
+
+      
     };
 
     return (
