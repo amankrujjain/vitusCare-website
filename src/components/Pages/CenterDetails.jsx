@@ -12,7 +12,7 @@ import BreadcrumbStyleCenter from '../Breadcrumb/BreadcrumbStyleCenter';
 export default function CenterDetails() {
   pageTitle('Center Details');
 
-  const { id } = useParams(); // Get the ID from the URL
+  const { id } = useParams(); 
   const [centerData, setCenterData] = useState(null); // State for fetched data
   const [loading, setLoading] = useState(true); // Loading state
 
@@ -73,7 +73,7 @@ export default function CenterDetails() {
     
     const empaneledTitle = `Empaneled with ${empaneledWith}${
       empaneledWith ? ", " : ""
-    }all major TPA partners`; // Add "all major TPA partners" after dynamic values
+    }All major TPA partners`; // Add "all major TPA partners" after dynamic values
     
     const multiSpecialtyIcu =
   centerData.center.additional_details?.multi_speciality_icu_facility?.toLowerCase() === "yes"
@@ -81,13 +81,13 @@ export default function CenterDetails() {
     : null;
     const experiences = [
       {
-        title: nabhLevel, // Dynamically generated
+        title: nabhLevel,
       },
       {
-        title: empaneledTitle, // Dynamically generated
+        title: empaneledTitle,
       },
       {
-        title: multiSpecialtyIcu, // Dynamically generated
+        title: multiSpecialtyIcu,
       },
     ];
     const processedImages = centerData.center.pic?.map(
@@ -122,7 +122,7 @@ export default function CenterDetails() {
             },
           ]}
           contactInfoHeading="Enquiry"
-          schedules={schedules} // Pass dynamically fetched schedules
+          schedules={schedules} 
           scheduleHeading="Timings"
           degrees={[
             {
@@ -133,20 +133,19 @@ export default function CenterDetails() {
               title: '100% free dialysis',
               subTitle: [
 
-                centerData.center.additional_details?.Ayushman
+                centerData.center.additional_details?.Ayushman?.toLowerCase() === "yes"
                   ? 'Ayushman'
                   : '',
-                centerData.center.additional_details?.ESI
+                centerData.center.additional_details?.ESI?.toLowerCase() === 'yes'
                   ? 'ESI'
                   : '',
-                'CM Fund',
-                centerData.center.additional_details?.TPA
+                centerData.center.additional_details?.TPA?.toLowerCase() === "yes"
                   ? 'TPA ( All major partners)'
                   : '',
                 'Cash Option also available',
               ]
-                .filter(Boolean) // Remove falsy values
-                .join(' | '), // Join remaining truthy values with "|"
+                .filter(Boolean) 
+                .join(' | '), 
             },
             {
               subTitle: 'All types of dialysis ( Leading brands only)',
@@ -168,7 +167,7 @@ export default function CenterDetails() {
           experiences={[
             ...filteredExperiences.map((experience) => ({
               title: experience.title,
-            })), // Map over filteredExperiences to create individual objects
+            })), 
           ]}
           
           experiencesHeading="About the hospital"
@@ -182,13 +181,6 @@ export default function CenterDetails() {
           sectionTitleUp="BOOK AN"
         />
       </Section>
-      {/* <Section className="cs_footer_margin_0">
-        <BannerSectionStyle9
-          title="Don’t Let Your Health <br />Take a Backseat!"
-          subTitle="Schedule an appointment with one of our experienced <br />medical professionals today!"
-          imgUrl="/images/centers/banner_img_3.png"
-        />
-      </Section> */}
     </>
   );
 }

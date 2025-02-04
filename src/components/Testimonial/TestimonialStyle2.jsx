@@ -7,7 +7,8 @@ export default function TestimonialStyle2({
   avatarImgUrl,
   avatarName,
   avatarDesignation,
-  centre
+  centre,
+  youtubeLink
 }) {
   return (
     <div className="cs_testimonial cs_style_2">
@@ -34,8 +35,15 @@ export default function TestimonialStyle2({
         <Rating ratingNumber={ratingNumber} />
       </div>
       <div className="cs_testimonial_meta">
-      <div className="cs_testimonial_avatar">
-          <img src={avatarImgUrl} alt="Avatar" />
+        <div>
+          {/* Open YouTube link when clicking on the avatar */}
+          {youtubeLink ? (
+            <a className='cs_testimonial_avatar' href={youtubeLink} target="_blank" rel="noopener noreferrer">
+              <img src={avatarImgUrl} alt="Avatar" />
+            </a>
+          ) : (
+            <img className='cs_testimonial_avatar' src={avatarImgUrl} alt="Avatar" />
+          )}
         </div>
         <div className="cs_testimonial_meta_right">
           <h3 className="cs_fs_24 cs_semibold m-0 text-uppercase">
@@ -43,7 +51,6 @@ export default function TestimonialStyle2({
           </h3>
           <p className="cs_heading_color m-0">{avatarDesignation}</p>
           <p className="cs_heading_color m-0">{centre}</p>
-
         </div>
       </div>
     </div>

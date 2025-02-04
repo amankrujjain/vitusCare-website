@@ -240,7 +240,8 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Ashish',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Vatsalya Hospital, Allahabad"
+    centre: "Vatsalya Hospital, Allahabad",
+    youtubeLink:"https://youtube.com"
   },
   {
     text: 'The technicians are very good. They know how to do everything right, and I feel safe.',
@@ -248,7 +249,8 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Lata Devi',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Jeewan Hospital, Delhi"
+    centre: "Jeewan Hospital, Delhi",
+    youtubeLink:"https://youtube.com"
   },
   {
     text: 'They explain everything to me. I always know what is happening.',
@@ -256,7 +258,8 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Sandeep',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Priyanka Hospital, Jaipur"
+    centre: "Priyanka Hospital, Jaipur",
+    youtubeLink:"https://youtube.com"
   },
   {
     text: `The machines are good. They don’t make noise and I never have problems.`,
@@ -264,7 +267,8 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Aarti',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Fortune Hospital, Meerut"
+    centre: "Fortune Hospital, Meerut",
+    youtubeLink:"https://youtube.com"
   },
   {
     text: `The centre is always very clean. Everything looks neat and tidy.`,
@@ -272,7 +276,8 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Raj',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Atlantis Hospital, Amritsar"
+    centre: "Atlantis Hospital, Amritsar",
+    youtubeLink:"https://youtube.com"
   },
   {
     text: `मुझे कभी वेट करना नहीं पड़ता, डायलिसिस टाइम पे शुरू हो जाता है। वो मुझे बहुत सुविधाजनक लगता है।`,
@@ -280,7 +285,8 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Rameshwar',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Apex Hospital, Solan"
+    centre: "Apex Hospital, Solan",
+    youtubeLink:"https://youtube.com"
   },
   {
     text: `यहां पर परिवार को इलाज के दौरान साथ रहने की सुविधा मिलती है, जो मुझे बहुत अच्छा लगता है।`,
@@ -288,7 +294,8 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Seema',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Lotus Hospital, Agra"
+    centre: "Lotus Hospital, Agra",
+    youtubeLink:"https://youtube.com"
   },
   {
     text: `डॉक्टर्स बहुत अनुभवी हैं और वे मेरी बीमारी के बारे में पूरी जानकारी देते हैं।`,
@@ -296,7 +303,8 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Sunil',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Oscar Hospital, Jhajjar"
+    centre: "Oscar Hospital, Jhajjar",
+    youtubeLink:"https://youtube.com"
   },
   {
     text: `अस्पताल का वातावरण शांत और आरामदायक होता है, जिससे मुझे तनाव कम होता है।`,
@@ -304,7 +312,8 @@ const testimonialData = [
     avatarImgUrl: '/images/home_1/avatar_2.png',
     avatarName: 'Prabha',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Mithraaj Hospital, Aligarh"
+    centre: "Mithraaj Hospital, Aligarh",
+    youtubeLink:"https://youtube.com"
   }
 ];
 
