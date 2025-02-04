@@ -33,8 +33,7 @@ export default function AppointmentForm({ onSuccess }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Validate the form
+  
     if (
       !formData.name.trim() ||
       !formData.email.trim() ||
@@ -46,18 +45,16 @@ export default function AppointmentForm({ onSuccess }) {
       toast.error('Please fill in all required fields!');
       return;
     }
-
+  
     // Show loading toast
     const toastId = toast.loading('Submitting your appointment...');
-
-    // Format appointmentDate as "dd/MM/yyyy"
+  
     const formattedDate = new Intl.DateTimeFormat('en-GB', {
       day: '2-digit',
       month: '2-digit',
       year: 'numeric',
     }).format(formData.appointmentDate);
-
-    // Prepare the API payload
+  
     const payload = {
       name: formData.name,
       email: formData.email,
@@ -66,7 +63,7 @@ export default function AppointmentForm({ onSuccess }) {
       appointmentDate: formattedDate, 
       service: formData.service,
     };
-
+  
     try {
       const response = await fetch('http://localhost:7000/api/appointment-booking', {
         method: 'POST',
@@ -75,16 +72,16 @@ export default function AppointmentForm({ onSuccess }) {
         },
         body: JSON.stringify(payload),
       });
-
+  
       if (response.ok) {
-        // Update the toast with success message
-        toast.success('Appointment request sent successfully!', { id: toastId });
+        toast.success('Request sent successfully!', { id: toastId });
+  
         if (onSuccess) {
-          onSuccess(); 
+          onSuccess();
         }
-        // Navigate to a Thank You page
+        
         navigate('/thank-you');
-        // Reset form
+        
         setFormData({
           name: '',
           email: '',
@@ -101,6 +98,8 @@ export default function AppointmentForm({ onSuccess }) {
       toast.error('Failed to book the appointment. Please try again.', { id: toastId });
     }
   };
+  
+  
 
   return (
     <form action="#" className="row" onSubmit={handleSubmit}>

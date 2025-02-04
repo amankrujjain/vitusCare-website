@@ -54,21 +54,21 @@ function App() {
             path="departments/:departmentId"
             element={<DepartmentDetails />}
           />
-          <Route path='/find-our-centers'element={<Centers/>}/>
+          <Route path='/find-our-centers' element={<Centers />} />
           <Route path="/centers/:id" element={<CenterDetails />} />
-          <Route path='/partner-with-us/doctors' element={<ForDoctor/>}/>
-          <Route path='/gfr-calculator' element={<GfrCalculator/>}/>
+          <Route path='/partner-with-us/doctors' element={<ForDoctor />} />
+          <Route path='/gfr-calculator' element={<GfrCalculator />} />
           <Route path="pricing-plan" element={<PricingPlan />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="timetable" element={<Timetable />} />
           <Route path="contact" element={<Contact />} />
-          <Route path='/partner-with-us/hospitals' element={<ForHospitals/>}/>
-          <Route path='/partner-with-us/hospitals/new-dialysis-unit' element={<SetupDialysis/>}/>
-          <Route path='/partner-with-us/hospitals/outsource-vituscare' element={<OutsourceUnit/>}/>
-          <Route path='/feedback' element={<Feedback/>}/>
-          <Route path='/career' element={<Career/>}/>
-          <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
-          <Route path='/thank-you' element={<ThankYou/>}/>
+          <Route path='/partner-with-us/hospitals' element={<ForHospitals />} />
+          <Route path='/partner-with-us/hospitals/new-dialysis-unit' element={<SetupDialysis />} />
+          <Route path='/partner-with-us/hospitals/outsource-vituscare' element={<OutsourceUnit />} />
+          <Route path='/feedback' element={<Feedback />} />
+          <Route path='/career' element={<Career />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+          <Route path='/thank-you' element={<ThankYou />} />
 
         </Route>
 
@@ -82,15 +82,17 @@ function App() {
         containerClassName=""
         containerStyle={{}}
         toastOptions={{
-       
           className: '',
-          duration: 2000,
+          duration: 3000, 
           style: {
             background: '#2C2F76',
             color: '#fff',
           },
 
-        
+          loading: {
+            duration: Infinity,
+          },
+
           success: {
             duration: 2000,
             theme: {
@@ -100,6 +102,7 @@ function App() {
           },
         }}
       />
+
     </>
   );
 }

@@ -22,14 +22,14 @@ const ThankYou = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/');
-    }, 2000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, [navigate]);
 
   return (
     <Section topMd={170} topLg={120} topXl={80} bottomMd={100}>
-      <div style={{ textAlign: 'center' }}>
+      <div style={{ textAlign: 'center', justifySelf:'center' }}>
         {animationData ? (
           <Lottie animationData={animationData} loop={true} style={{ width: 300, height: 300 }} />
         ) : (
@@ -37,7 +37,7 @@ const ThankYou = () => {
         )}
         <h1 style={{ marginTop: '20px', color: '#2C2F76' }}>Thank You!</h1>
         <p style={{ marginTop: '10px', fontSize: '16px', color: '#555' }}>
-          Your appointment has been successfully booked.
+          We have received your request, we will be in touch shortly.
         </p>
       </div>
     </Section>

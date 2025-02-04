@@ -7,7 +7,6 @@ import NewsletterStyle2 from '../Widget/NewsletterStyle2';
 const menuDataOne = [
   { title: 'Home', href: '/' },
   { title: 'About Us', href: '/about' },
-  { title: 'Blogs', href: '/blogs' },
   { title: 'Career', href: '/career' },
   { title: 'FeedBack', href: '/feedback' },
 

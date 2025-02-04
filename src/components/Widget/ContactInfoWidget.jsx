@@ -9,7 +9,7 @@ export default function ContactInfoWidget() {
         <i className="cs_accent_bg">
           <Icon icon="ep:location" />
         </i>
-        6th Floor, Awfis, Suncity Success Tower, Sector 65, Gurugram, Haryana
+        6th Floor, Awfis, Suncity Success Tower, Sector 65, Gurugram, Haryana, 122018
       </li>
       <li>
         <i className="cs_accent_bg">
