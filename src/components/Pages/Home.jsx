@@ -238,82 +238,82 @@ const testimonialData = [
     text: 'I like that they have flexible timings for sessions. It helps me to come when I am free.',
     ratingNumber: '5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'Ashish',
+    avatarName: 'Ankit',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Vatsalya Hospital, Allahabad",
-    youtubeLink:"https://youtube.com"
+    centre: "Oscar Hospital, Panipat",
+    youtubeLink:"https://youtube.com/shorts/oj9YbvOyCRg?feature=share"
   },
   {
     text: 'The technicians are very good. They know how to do everything right, and I feel safe.',
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'Lata Devi',
+    avatarName: 'Baljinder',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Jeewan Hospital, Delhi",
-    youtubeLink:"https://youtube.com"
+    centre: "Indrani Hospital, Bathinda",
+    youtubeLink:"https://youtube.com/shorts/eDX6yX9g_Jw?feature=share"
   },
   {
     text: 'They explain everything to me. I always know what is happening.',
     ratingNumber: '4',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'Sandeep',
+    avatarName: 'Harish Chandra',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Priyanka Hospital, Jaipur",
-    youtubeLink:"https://youtube.com"
+    centre: "Fortune Hospital, kanpur",
+    youtubeLink:"https://youtube.com/shorts/9bXn-eOKVpM?feature=share"
   },
   {
     text: `The machines are good. They don’t make noise and I never have problems.`,
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'Aarti',
+    avatarName: 'Satyabhawna',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Fortune Hospital, Meerut",
-    youtubeLink:"https://youtube.com"
+    centre: "Fortune Hospital, kanpur",
+    youtubeLink:"https://youtube.com/shorts/_MnEen3ZErU?feature=share"
   },
   {
     text: `The centre is always very clean. Everything looks neat and tidy.`,
     ratingNumber: '5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'Raj',
+    avatarName: 'Samreen',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Atlantis Hospital, Amritsar",
-    youtubeLink:"https://youtube.com"
+    centre: "Lotus Hospital, Agra",
+    youtubeLink:"https://youtube.com/shorts/ilUrt8C0Lnc?feature=share"
   },
   {
     text: `मुझे कभी वेट करना नहीं पड़ता, डायलिसिस टाइम पे शुरू हो जाता है। वो मुझे बहुत सुविधाजनक लगता है।`,
     ratingNumber: '4',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'Rameshwar',
-    avatarDesignation: 'Dialysis Patient',
-    centre: "Apex Hospital, Solan",
-    youtubeLink:"https://youtube.com"
+    avatarName: 'Sakshi',
+    avatarDesignation: `Patient's Attendent`,
+    centre: "Vatsalya Hospital, Allahabad",
+    youtubeLink:"https://youtube.com/shorts/QfxSyjJCORw?feature=share"
   },
   {
     text: `यहां पर परिवार को इलाज के दौरान साथ रहने की सुविधा मिलती है, जो मुझे बहुत अच्छा लगता है।`,
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'Seema',
+    avatarName: 'Rashmi Soni',
     avatarDesignation: 'Dialysis Patient',
     centre: "Lotus Hospital, Agra",
-    youtubeLink:"https://youtube.com"
+    youtubeLink:"https://youtube.com/shorts/OtPUApTjSP8?feature=share"
   },
   {
     text: `डॉक्टर्स बहुत अनुभवी हैं और वे मेरी बीमारी के बारे में पूरी जानकारी देते हैं।`,
     ratingNumber: '5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'Sunil',
+    avatarName: 'Monika Jain',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Oscar Hospital, Jhajjar",
-    youtubeLink:"https://youtube.com"
+    centre: "jai Clinic, Beawar",
+    youtubeLink:"https://youtube.com/shorts/XRKNOg4hdmQ?feature=share"
   },
   {
     text: `अस्पताल का वातावरण शांत और आरामदायक होता है, जिससे मुझे तनाव कम होता है।`,
     ratingNumber: '4.5',
     avatarImgUrl: '/images/home_1/avatar_2.png',
-    avatarName: 'Prabha',
+    avatarName: 'Pragya',
     avatarDesignation: 'Dialysis Patient',
-    centre: "Mithraaj Hospital, Aligarh",
-    youtubeLink:"https://youtube.com"
+    centre: "Jai Clinic, Beawar",
+    youtubeLink:"https://youtube.com/shorts/LSWEpjJybsQ?feature=share"
   }
 ];
 
